@@ -19,7 +19,7 @@
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Repose.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:duranje\/repose-xcode.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/duranje\/repose-xcode.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2257080697EE7977871C2412331AEEEC5DF1AF7F"
     },
