@@ -126,7 +126,7 @@ class TableViewCell: UITableViewCell, UITextFieldDelegate {
             let translation = recognizer.translationInView(self)
             center = CGPointMake(originalCenter.x + translation.x, originalCenter.y)
             // has the user dragged the item far enough to initiate a delete/complete?
-            deleteOnDragRelease = frame.origin.x < -frame.size.width / 2.0
+            deleteOnDragRelease = frame.origin.x < -frame.size.width / 1.5
             // fade the contextual clues
             let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 2.0)
             crossLabel.alpha = cueAlpha
