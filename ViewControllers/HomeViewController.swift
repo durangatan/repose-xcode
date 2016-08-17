@@ -6,11 +6,14 @@
 //  Copyright © 2016 Repo Men. All rights reserved.
 //
 
+import CoreLocation
 import UIKit
 
 class HomeViewController: UIViewController {
     
     var beginPressTime = CACurrentMediaTime()
+    
+
     
     var oldbounds:CGRect!
     
@@ -23,6 +26,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        
         if Helper.isInEventState(){}
         else{
         if self.revealViewController() != nil {
@@ -109,6 +115,10 @@ override func didReceiveMemoryWarning() {
 }
 
 
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
+    {
+        print("Errors: " + error.localizedDescription)
+    }
 
 /*
  // MARK: - Navigation

@@ -9,17 +9,17 @@
 import UIKit
 
 class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate {
-    
+
     @IBOutlet weak var toolbar: UIToolbar!
-    
+
     @IBOutlet weak var checklistTableView: UITableView!
-    
+
     @IBAction func addItem(sender: UIBarButtonItem) {
         listItemAdded()
     }
-    
+
     var listItems = [ListItem]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         checklistTableView.dataSource = self
@@ -28,7 +28,7 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
         checklistTableView.separatorStyle = .None
         checklistTableView.backgroundColor = UIColor(red: 179/255, green: 207/255, blue: 245/255, alpha:1.0)
         checklistTableView.rowHeight = 50.0
-        
+
         if listItems.count > 0 {
             return
         }
@@ -42,17 +42,17 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
             toolbar.hidden = true
         }
     }
-    
+
     // MARK: - Table view data source
-    
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listItems.count
     }
-    
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //remove the ! from the as if this doesn't work. That "as TableViewCell" is throwing errors without the !
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
@@ -65,22 +65,23 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
         return cell
     }
     // MARK: - add, delete, edit methods
-    
+
     func listItemDeleted(listItem: ListItem) {
         let index = (listItems as NSArray).indexOfObject(listItem)
         if index == NSNotFound { return }
-        
+
         // could removeAtIndex in the loop but keep it here for when indexOfObject works
         listItems.removeAtIndex(index)
-        
+
         // use the UITableView to animate the removal of this row
         checklistTableView.beginUpdates()
         let indexPathForRow = NSIndexPath(forRow: index, inSection: 0)
         checklistTableView.deleteRowsAtIndexPaths([indexPathForRow], withRowAnimation: .Fade)
         checklistTableView.endUpdates()
         checklistTableView.reloadData()
+
     }
-    
+
     func cellDidBeginEditing(editingCell: TableViewCell) {
         let editingOffset = checklistTableView.contentOffset.y - editingCell.frame.origin.y as CGFloat
         let visibleCells = checklistTableView.visibleCells as! [TableViewCell]
@@ -92,8 +93,9 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
                 }
             })
         }
+
     }
-    
+
     func cellDidEndEditing(editingCell: TableViewCell) {
         let visibleCells = checklistTableView.visibleCells as! [TableViewCell]
         for cell: TableViewCell in visibleCells {
@@ -104,8 +106,9 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
                 }
             })
         }
+        checklistTableView.reloadData()
     }
-    
+
     func listItemAdded() {
         let listItem = ListItem(text: "")
         listItems.insert(listItem, atIndex: 0)
@@ -121,15 +124,15 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
             }
         }
     }
-    
+
     // MARK: - UIScrollViewDelegate methods
     // contains scrollViewDidScroll, and other methods, to keep track of dragging the scrollView
-    
+
     // a cell that is rendered as a placeholder to indicate where a new item is added
 //    let placeHolderCell = TableViewCell(style: .Default, reuseIdentifier: "cell")
 //    // indicates the state of this behavior
 //    var pullDownInProgress = false
-//    
+//
 //    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
 //        // this behavior starts when a user pulls down while at the top of the table
 //        pullDownInProgress = scrollView.contentOffset.y <= 0.0
@@ -139,10 +142,10 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
 //            checklistTableView.insertSubview(placeHolderCell, atIndex: 0)
 //        }
 //    }
-//    
+//
 //    func scrollViewDidScroll(scrollView: UIScrollView) {
 //        let scrollViewContentOffsetY = scrollView.contentOffset.y
-//        
+//
 //        if pullDownInProgress && scrollView.contentOffset.y <= 0.0 {
 //            // maintain the location of the placeholder
 //            placeHolderCell.frame = CGRect(x: 0, y: -checklistTableView.rowHeight, width: checklistTableView.frame.size.width, height: checklistTableView.rowHeight)
@@ -152,7 +155,7 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
 //            pullDownInProgress = false
 //        }
 //    }
-//    
+//
 //    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
 //        // check whether the user pulled down far enough
 //        if pullDownInProgress && -scrollView.contentOffset.y > checklistTableView.rowHeight {
@@ -161,19 +164,19 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
 //        pullDownInProgress = false
 //        placeHolderCell.removeFromSuperview()
 //    }
-    
+
     // MARK: - Table view delegate
-    
+
     func colorForIndex(index: Int) -> UIColor {
         let itemCount = listItems.count - 1
         let val = (CGFloat(index) / CGFloat(itemCount)) * 0.6
         return UIColor(red: (20 + 62 * val)/255, green: (54 + 94 * val)/255, blue: (125 + 107 * val)/255, alpha: 1.0)
     }
-    
+
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell,
                    forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = colorForIndex(indexPath.row)
     }
-    
+
 }
 
