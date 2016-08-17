@@ -13,6 +13,9 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
     
     @IBOutlet weak var checklistTableView: UITableView!
     
+    @IBAction func addItem(sender: UIBarButtonItem) {
+        listItemAdded()
+    }
     
     var listItems = [ListItem]()
     
@@ -118,41 +121,41 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
     // contains scrollViewDidScroll, and other methods, to keep track of dragging the scrollView
     
     // a cell that is rendered as a placeholder to indicate where a new item is added
-    let placeHolderCell = TableViewCell(style: .Default, reuseIdentifier: "cell")
-    // indicates the state of this behavior
-    var pullDownInProgress = false
-    
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        // this behavior starts when a user pulls down while at the top of the table
-        pullDownInProgress = scrollView.contentOffset.y <= 0.0
-        placeHolderCell.backgroundColor = UIColor(red:0.36, green:0.77, blue:0.31, alpha:1.0)
-        if pullDownInProgress {
-            // add the placeholder
-            checklistTableView.insertSubview(placeHolderCell, atIndex: 0)
-        }
-    }
-    
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        let scrollViewContentOffsetY = scrollView.contentOffset.y
-        
-        if pullDownInProgress && scrollView.contentOffset.y <= 0.0 {
-            // maintain the location of the placeholder
-            placeHolderCell.frame = CGRect(x: 0, y: -checklistTableView.rowHeight, width: checklistTableView.frame.size.width, height: checklistTableView.rowHeight)
-            placeHolderCell.label.text = -scrollViewContentOffsetY > checklistTableView.rowHeight ?"Release to add item" : "Pull to add item"
-            placeHolderCell.alpha = min(1.0, -scrollViewContentOffsetY / checklistTableView.rowHeight)
-        } else {
-            pullDownInProgress = false
-        }
-    }
-    
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        // check whether the user pulled down far enough
-        if pullDownInProgress && -scrollView.contentOffset.y > checklistTableView.rowHeight {
-            listItemAdded()
-        }
-        pullDownInProgress = false
-        placeHolderCell.removeFromSuperview()
-    }
+//    let placeHolderCell = TableViewCell(style: .Default, reuseIdentifier: "cell")
+//    // indicates the state of this behavior
+//    var pullDownInProgress = false
+//    
+//    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+//        // this behavior starts when a user pulls down while at the top of the table
+//        pullDownInProgress = scrollView.contentOffset.y <= 0.0
+//        placeHolderCell.backgroundColor = UIColor(red:0.36, green:0.77, blue:0.31, alpha:1.0)
+//        if pullDownInProgress {
+//            // add the placeholder
+//            checklistTableView.insertSubview(placeHolderCell, atIndex: 0)
+//        }
+//    }
+//    
+//    func scrollViewDidScroll(scrollView: UIScrollView) {
+//        let scrollViewContentOffsetY = scrollView.contentOffset.y
+//        
+//        if pullDownInProgress && scrollView.contentOffset.y <= 0.0 {
+//            // maintain the location of the placeholder
+//            placeHolderCell.frame = CGRect(x: 0, y: -checklistTableView.rowHeight, width: checklistTableView.frame.size.width, height: checklistTableView.rowHeight)
+//            placeHolderCell.label.text = -scrollViewContentOffsetY > checklistTableView.rowHeight ?"Release to add item" : "Pull to add item"
+//            placeHolderCell.alpha = min(1.0, -scrollViewContentOffsetY / checklistTableView.rowHeight)
+//        } else {
+//            pullDownInProgress = false
+//        }
+//    }
+//    
+//    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+//        // check whether the user pulled down far enough
+//        if pullDownInProgress && -scrollView.contentOffset.y > checklistTableView.rowHeight {
+//            listItemAdded()
+//        }
+//        pullDownInProgress = false
+//        placeHolderCell.removeFromSuperview()
+//    }
     
     // MARK: - Table view delegate
     
