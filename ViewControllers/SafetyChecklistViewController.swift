@@ -26,7 +26,7 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
         checklistTableView.delegate = self
         checklistTableView.registerClass(TableViewCell.self, forCellReuseIdentifier: "cell")
         checklistTableView.separatorStyle = .None
-        checklistTableView.backgroundColor = UIColor(red:0.70, green:0.81, blue:0.96, alpha:1.0)
+        checklistTableView.backgroundColor = UIColor(red: 179/255, green: 207/255, blue: 245/255, alpha:1.0)
         checklistTableView.rowHeight = 50.0
         
         if listItems.count > 0 {
@@ -78,6 +78,7 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
         let indexPathForRow = NSIndexPath(forRow: index, inSection: 0)
         checklistTableView.deleteRowsAtIndexPaths([indexPathForRow], withRowAnimation: .Fade)
         checklistTableView.endUpdates()
+        checklistTableView.reloadData()
     }
     
     func cellDidBeginEditing(editingCell: TableViewCell) {
@@ -166,7 +167,7 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
     func colorForIndex(index: Int) -> UIColor {
         let itemCount = listItems.count - 1
         let val = (CGFloat(index) / CGFloat(itemCount)) * 0.6
-        return UIColor(red: 0.0, green: val, blue: 1.0, alpha: 1.0)
+        return UIColor(red: (20 + 62 * val)/255, green: (54 + 94 * val)/255, blue: (125 + 107 * val)/255, alpha: 1.0)
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell,
