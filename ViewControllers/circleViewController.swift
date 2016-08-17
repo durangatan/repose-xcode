@@ -18,15 +18,11 @@ class circleViewController: UIViewController{
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.theOrb.center.x = 0
-        self.theOrb.center.y = 0
+        self.theOrb.frame = CGRectMake(160, 240, 50, 50);
+        self.theOrb.center = CGPointMake(self.view.frame.size.width  / 2,
+                                         self.view.frame.size.height / 2);
         UIView.animateWithDuration(5, delay: 0.3, options:[.Repeat, .CurveEaseInOut, .Autoreverse], animations:{
-            let rotation = CGAffineTransformMakeRotation(1.571)
-            self.theOrb.frame.size.width += 200
-            self.theOrb.frame.size.height += 200
-            self.theOrb.transform = rotation
-            self.theOrb.cornerRadius += 100
-            self.theOrb.alpha += 0.75
+
             }, completion: nil);
     }
 }
