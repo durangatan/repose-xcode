@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		09F0B5D51D635FA7001AA084 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0B5D41D635FA7001AA084 /* LocationViewController.swift */; };
 		B5EE628724921C176E2E30CA /* Pods_Repose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979C8D81AF1E3ABD71261933 /* Pods_Repose.framework */; };
+		D81DBE481D64425B000894E6 /* LifelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBE441D64425B000894E6 /* LifelineViewController.swift */; };
+		D81DBE491D64425B000894E6 /* LifelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBE451D64425B000894E6 /* LifelineTableViewCell.swift */; };
+		D81DBE4A1D64425B000894E6 /* LifelinesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBE461D64425B000894E6 /* LifelinesTableViewController.swift */; };
+		D81DBE4B1D64425B000894E6 /* Lifeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBE471D64425B000894E6 /* Lifeline.swift */; };
 		D8436C251D623A4E00B92064 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8436C241D623A4E00B92064 /* SWRevealViewController.m */; };
 		D8436C271D623D9000B92064 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D8436C261D623ACE00B92064 /* Podfile */; };
 		D8436C2B1D623E2700B92064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84DC01C1D5D1509000FF1FA /* Assets.xcassets */; };
@@ -33,12 +37,18 @@
 		D887AEE11D62363A002B1F99 /* circleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECA1D62363A002B1F99 /* circleView.swift */; };
 		D887AEE21D62363A002B1F99 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECB1D62363A002B1F99 /* ConsentTask.swift */; };
 		D887AEE31D62363A002B1F99 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECC1D62363A002B1F99 /* LandingViewController.swift */; };
-		D887AEE41D62363A002B1F99 /* LifelinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECD1D62363A002B1F99 /* LifelinesViewController.swift */; };
 		D887AEE51D62363A002B1F99 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECE1D62363A002B1F99 /* MenuTableViewController.swift */; };
 		D887AEE61D62363A002B1F99 /* MicrophoneTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECF1D62363A002B1F99 /* MicrophoneTask.swift */; };
 		D887AEE71D62363A002B1F99 /* NewLifelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AED01D62363A002B1F99 /* NewLifelineViewController.swift */; };
 		D887AEEC1D623810002B1F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AEEB1D623810002B1F99 /* AppDelegate.swift */; };
 		D887AEEE1D623873002B1F99 /* StrikeThroughText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AEED1D623873002B1F99 /* StrikeThroughText.swift */; };
+		D8C4A3C21D6445EC00A7D2B6 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3BE1D6445EC00A7D2B6 /* Event.swift */; };
+		D8C4A3C31D6445EC00A7D2B6 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3BF1D6445EC00A7D2B6 /* EventDetailViewController.swift */; };
+		D8C4A3C41D6445EC00A7D2B6 /* EventMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3C01D6445EC00A7D2B6 /* EventMapViewController.swift */; };
+		D8C4A3C51D6445EC00A7D2B6 /* LineGraphDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3C11D6445EC00A7D2B6 /* LineGraphDataSource.swift */; };
+		D8C4A3CA1D6447C000A7D2B6 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3C91D6447C000A7D2B6 /* ProfilePageViewController.swift */; };
+		D8C4A3CD1D64498B00A7D2B6 /* VCMApView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3CC1D64498B00A7D2B6 /* VCMApView.swift */; };
+		D8C4A3D21D644EBF00A7D2B6 /* Eventable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3D11D644EBF00A7D2B6 /* Eventable.swift */; };
 		D887B4451D625BD3002FF270 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D848717E1D62323A0086B4DC /* ResearchKit.framework */; };
 		D887B4461D625BD3002FF270 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D848717E1D62323A0086B4DC /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8A6430A1D63A23100023EE8 /* EventMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A643071D63A23000023EE8 /* EventMapViewController.swift */; };
@@ -103,6 +113,12 @@
 		09F0B5D41D635FA7001AA084 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		979C8D81AF1E3ABD71261933 /* Pods_Repose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54B87118091B52614760F96 /* Pods-Repose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repose.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Repose/Pods-Repose.debug.xcconfig"; sourceTree = "<group>"; };
+		D81DBE441D64425B000894E6 /* LifelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LifelineViewController.swift; path = ViewControllers/LifelineViewController.swift; sourceTree = SOURCE_ROOT; };
+		D81DBE451D64425B000894E6 /* LifelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LifelineTableViewCell.swift; path = ViewControllers/LifelineTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D81DBE461D64425B000894E6 /* LifelinesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LifelinesTableViewController.swift; path = ViewControllers/LifelinesTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		D81DBE471D64425B000894E6 /* Lifeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lifeline.swift; path = ViewControllers/Lifeline.swift; sourceTree = SOURCE_ROOT; };
+		D841BAA81D601D170002727E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+
 		D841BAA81D601D170002727E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D8436C221D623A4D00B92064 /* Repose-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Repose-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8436C231D623A4E00B92064 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ViewControllers/SWRevealViewController.h; sourceTree = "<group>"; };
@@ -139,7 +155,6 @@
 		D887AECA1D62363A002B1F99 /* circleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = circleView.swift; path = ViewControllers/circleView.swift; sourceTree = "<group>"; };
 		D887AECB1D62363A002B1F99 /* ConsentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConsentTask.swift; path = ViewControllers/ConsentTask.swift; sourceTree = "<group>"; };
 		D887AECC1D62363A002B1F99 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LandingViewController.swift; path = ViewControllers/LandingViewController.swift; sourceTree = "<group>"; };
-		D887AECD1D62363A002B1F99 /* LifelinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LifelinesViewController.swift; path = ViewControllers/LifelinesViewController.swift; sourceTree = "<group>"; };
 		D887AECE1D62363A002B1F99 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = ViewControllers/MenuTableViewController.swift; sourceTree = "<group>"; };
 		D887AECF1D62363A002B1F99 /* MicrophoneTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MicrophoneTask.swift; path = ViewControllers/MicrophoneTask.swift; sourceTree = "<group>"; };
 		D887AED01D62363A002B1F99 /* NewLifelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewLifelineViewController.swift; path = ViewControllers/NewLifelineViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +172,13 @@
 		D8AFA53F1D60B9100095BBC5 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SurveyViewController.swift; path = ViewControllers/SurveyViewController.swift; sourceTree = "<group>"; };
 		D8AFA8551D60B9D60095BBC5 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = resources/ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		D8AFA8641D60BA850095BBC5 /* ConsentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConsentViewController.swift; path = ViewControllers/ConsentViewController.swift; sourceTree = "<group>"; };
+		D8C4A3BE1D6445EC00A7D2B6 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ViewControllers/Event.swift; sourceTree = SOURCE_ROOT; };
+		D8C4A3BF1D6445EC00A7D2B6 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailViewController.swift; path = ViewControllers/EventDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		D8C4A3C01D6445EC00A7D2B6 /* EventMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventMapViewController.swift; path = ViewControllers/EventMapViewController.swift; sourceTree = SOURCE_ROOT; };
+		D8C4A3C11D6445EC00A7D2B6 /* LineGraphDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineGraphDataSource.swift; path = ViewControllers/LineGraphDataSource.swift; sourceTree = SOURCE_ROOT; };
+		D8C4A3C91D6447C000A7D2B6 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePageViewController.swift; path = ViewControllers/ProfilePageViewController.swift; sourceTree = SOURCE_ROOT; };
+		D8C4A3CC1D64498B00A7D2B6 /* VCMApView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VCMApView.swift; path = ViewControllers/VCMApView.swift; sourceTree = "<group>"; };
+		D8C4A3D11D644EBF00A7D2B6 /* Eventable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Eventable.swift; path = ViewControllers/Eventable.swift; sourceTree = SOURCE_ROOT; };
 		D8CD251F1D60555D0058AFC7 /* AffirmationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffirmationsViewController.swift; sourceTree = "<group>"; };
 		D8CD25201D60555D0058AFC7 /* BreathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathViewController.swift; sourceTree = "<group>"; };
 		D8CD25211D60555D0058AFC7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -227,8 +249,8 @@
 		D84DC0091D5D1509000FF1FA = {
 			isa = PBXGroup;
 			children = (
+				D8C4A3CC1D64498B00A7D2B6 /* VCMApView.swift */,
 				D8436C261D623ACE00B92064 /* Podfile */,
-<<<<<<< HEAD
 				D887AEED1D623873002B1F99 /* StrikeThroughText.swift */,
 				D887AEEB1D623810002B1F99 /* AppDelegate.swift */,
 				D887AEBC1D62363A002B1F99 /* LoginViewController.swift */,
@@ -239,9 +261,6 @@
 				D887AEBD1D62363A002B1F99 /* CheckListTableViewCell.swift */,
 				D887AEBE1D62363A002B1F99 /* ListItem.swift */,
 				09F0B5D41D635FA7001AA084 /* LocationViewController.swift */,
-				D887AEBF1D62363A002B1F99 /* SafetyChecklistViewController.swift */,
-=======
->>>>>>> master
 				D887AEC01D62363A002B1F99 /* AffirmationsViewController.swift */,
 				D887AEEB1D623810002B1F99 /* AppDelegate.swift */,
 				D887AEC91D62363A002B1F99 /* BreathViewController.swift */,
@@ -254,7 +273,6 @@
 				D887AEB71D6235A7002B1F99 /* Default-568h@2x.png */,
 				D887AEC31D62363A002B1F99 /* HomeViewController.swift */,
 				D887AECC1D62363A002B1F99 /* LandingViewController.swift */,
-				D887AECD1D62363A002B1F99 /* LifelinesViewController.swift */,
 				D887AEBC1D62363A002B1F99 /* LoginViewController.swift */,
 				D887AEBE1D62363A002B1F99 /* ListItem.swift */,
 				D887AEC61D62363A002B1F99 /* MenuController.swift */,
@@ -298,6 +316,16 @@
 			isa = PBXGroup;
 			children = (
 				D8436C2D1D623FD500B92064 /* Main.storyboard */,
+				D8C4A3D11D644EBF00A7D2B6 /* Eventable.swift */,
+				D8C4A3C91D6447C000A7D2B6 /* ProfilePageViewController.swift */,
+				D8C4A3BE1D6445EC00A7D2B6 /* Event.swift */,
+				D8C4A3BF1D6445EC00A7D2B6 /* EventDetailViewController.swift */,
+				D8C4A3C01D6445EC00A7D2B6 /* EventMapViewController.swift */,
+				D8C4A3C11D6445EC00A7D2B6 /* LineGraphDataSource.swift */,
+				D81DBE441D64425B000894E6 /* LifelineViewController.swift */,
+				D81DBE451D64425B000894E6 /* LifelineTableViewCell.swift */,
+				D81DBE461D64425B000894E6 /* LifelinesTableViewController.swift */,
+				D81DBE471D64425B000894E6 /* Lifeline.swift */,
 				D8CD251E1D60555D0058AFC7 /* ViewControllers */,
 				D8CD25361D6055620058AFC7 /* resources */,
 				D852FDB01D618D79006BD316 /* ListItem.swift */,
@@ -608,12 +636,17 @@
 				D887AEEE1D623873002B1F99 /* StrikeThroughText.swift in Sources */,
 				D887AED31D62363A002B1F99 /* LoginViewController.swift in Sources */,
 				D887AED41D62363A002B1F99 /* CheckListTableViewCell.swift in Sources */,
+				D8C4A3CA1D6447C000A7D2B6 /* ProfilePageViewController.swift in Sources */,
 				D887AED51D62363A002B1F99 /* ListItem.swift in Sources */,
 				D887AED61D62363A002B1F99 /* SafetyChecklistViewController.swift in Sources */,
+				D8C4A3C31D6445EC00A7D2B6 /* EventDetailViewController.swift in Sources */,
+				D8C4A3C41D6445EC00A7D2B6 /* EventMapViewController.swift in Sources */,
 				D887AED71D62363A002B1F99 /* AffirmationsViewController.swift in Sources */,
 				D887AED81D62363A002B1F99 /* SurveyTask.swift in Sources */,
 				D887AED91D62363A002B1F99 /* SurveyViewController.swift in Sources */,
 				D887AEDB1D62363A002B1F99 /* ConsentDocument.swift in Sources */,
+				D81DBE491D64425B000894E6 /* LifelineTableViewCell.swift in Sources */,
+				D81DBE481D64425B000894E6 /* LifelineViewController.swift in Sources */,
 				09F0B5D51D635FA7001AA084 /* LocationViewController.swift in Sources */,
 				D887AEDD1D62363A002B1F99 /* MenuController.swift in Sources */,
 				D8436C251D623A4E00B92064 /* SWRevealViewController.m in Sources */,
@@ -623,16 +656,23 @@
 				D887AEE01D62363A002B1F99 /* BreathViewController.swift in Sources */,
 				D8A6430A1D63A23100023EE8 /* EventMapViewController.swift in Sources */,
 				D887AEE11D62363A002B1F99 /* circleView.swift in Sources */,
+				D8C4A3C21D6445EC00A7D2B6 /* Event.swift in Sources */,
 				D887AEE21D62363A002B1F99 /* ConsentTask.swift in Sources */,
 				D887AEE31D62363A002B1F99 /* LandingViewController.swift in Sources */,
+
 				D887AEE41D62363A002B1F99 /* LifelinesViewController.swift in Sources */,
 				D8A6430E1D63A26600023EE8 /* EventDetailViewController.swift in Sources */,
 				D8A6430B1D63A23100023EE8 /* VCMApView.swift in Sources */,
 				D887AEE51D62363A002B1F99 /* MenuTableViewController.swift in Sources */,
+				D8C4A3C51D6445EC00A7D2B6 /* LineGraphDataSource.swift in Sources */,
 				D887AEE61D62363A002B1F99 /* MicrophoneTask.swift in Sources */,
+				D8C4A3D21D644EBF00A7D2B6 /* Eventable.swift in Sources */,
 				D887AEE71D62363A002B1F99 /* NewLifelineViewController.swift in Sources */,
+				D81DBE4B1D64425B000894E6 /* Lifeline.swift in Sources */,
+				D8C4A3CD1D64498B00A7D2B6 /* VCMApView.swift in Sources */,
 				D887AEDC1D62363A002B1F99 /* ProfileViewController.swift in Sources */,
 				D887AEDA1D62363A002B1F99 /* HomeViewController.swift in Sources */,
+				D81DBE4A1D64425B000894E6 /* LifelinesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

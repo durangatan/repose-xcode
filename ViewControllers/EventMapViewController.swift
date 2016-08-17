@@ -9,9 +9,11 @@
 import UIKit
 import MapKit
 import Alamofire
-class EventMapViewController: UIViewController {
+class EventMapViewController: UIViewController{
 
-    
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+
+
     let event = Event(title: "King David Kalakaua",
                       locationName: "Waikiki Gateway Park",
                       comments: "Sculpture",

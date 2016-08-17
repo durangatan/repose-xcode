@@ -59,18 +59,19 @@ extension SurveyViewController : ORKTaskViewControllerDelegate {
                     switch response.result{
                     case .Success:
                         let alertView = UIAlertController(title: "Success!",
-                            message: "\(response)" as String, preferredStyle:.Alert)
-                        let okAction = UIAlertAction(title: "Bruh!", style: .Default, handler: nil)
+                            message: "Thanks", preferredStyle:.Alert)
+                        let okAction = UIAlertAction(title: "dismiss!", style: .Default, handler: nil)
                         alertView.addAction(okAction)
                         self.presentViewController(alertView, animated: true, completion: nil)
                     case .Failure:
-                        let alertView = UIAlertController(title: "Registration Problem",
+                        let alertView = UIAlertController(title: "Sorry",
                             message: "invalid email or password." as String, preferredStyle:.Alert)
-                        let okAction = UIAlertAction(title: "Sorry!", style: .Default, handler: nil)
+                        let okAction = UIAlertAction(title: "dismiss", style: .Default, handler: nil)
                         alertView.addAction(okAction)
                         self.presentViewController(alertView, animated: true, completion: nil)
                     }
                 }
+            defaults.setValue(nil, forKey:"eventStart")
             }
         }
 }

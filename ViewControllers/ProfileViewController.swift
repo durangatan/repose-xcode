@@ -78,21 +78,22 @@ class ProfileViewController: UIViewController, ORKGraphChartViewDataSource, ORKG
                 case .Success(let JSON):
                     let events = JSON as! NSArray
                     for event in events {
-                        let eventJSON = self.convertStringToDictionary(event as! String)
-                        let survey = eventJSON!["survey"]
-                        let severity = survey!["severity"]! ?? 0
-                        let sleepQuality = survey!["sleepQuality"]! ?? 0
-                        let severityVal = severity as! CGFloat
-                        let sleepQualityVal = sleepQuality as! CGFloat
-                        let sleepQualityPoint = ORKRangedPoint(value: sleepQualityVal)
-                        let severityPoint = ORKRangedPoint(value: severityVal)
-                        
-                        self.sleepPoints.append(sleepQualityPoint)
-                        self.severityPoints.append(severityPoint)
+//                        let eventJSON = self.convertStringToDictionary(event as! String)
+//                        let survey = eventJSON!["survey"]
+//                        let severity = survey!["severity"]! ?? 0
+//                        let sleepQuality = survey!["sleepQuality"]! ?? 0
+//                        let severityVal = severity as! CGFloat
+//                        let sleepQualityVal = sleepQuality as! CGFloat
+//                        let sleepQualityPoint = ORKRangedPoint(value: sleepQualityVal)
+//                        let severityPoint = ORKRangedPoint(value: severityVal)
+//                        
+//                        self.sleepPoints.append(sleepQualityPoint)
+//                        self.severityPoints.append(severityPoint)
                         
                     }
-                    self.plotPoints=[self.sleepPoints, self.severityPoints]
-                    self.lineChart.reloadInputViews()
+//                    self.plotPoints=[self.sleepPoints, self.severityPoints]
+//                    self.lineChart.reloadInputViews()
+
                 case .Failure:
                     let alertView = UIAlertController(title: "Registration Problem",
                         message: "invalid email or password." as String, preferredStyle:.Alert)
