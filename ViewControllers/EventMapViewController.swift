@@ -52,7 +52,7 @@ class EventMapViewController: UIViewController{
         mapView.delegate = self
 
         // show event on map
-        Alamofire.request(.GET, "https://repose.herokuapp.com/api/v1/users/9", parameters: ["bearerToken":bearerToken])
+        Alamofire.request(.GET, "https://repose.herokuapp.com/api/v1/users/36", parameters: ["bearerToken":bearerToken])
             .responseJSON { response in
                 switch response.result{
                 case .Success(let JSON):
@@ -76,11 +76,7 @@ class EventMapViewController: UIViewController{
                         
                     }
                     case .Failure:
-                    let alertView = UIAlertController(title: "Server Problem",
-                        message: "We're having trouble accessing the server." as String, preferredStyle:.Alert)
-                    let okAction = UIAlertAction(title: "Sorry!", style: .Default, handler: nil)
-                    alertView.addAction(okAction)
-                    self.presentViewController(alertView, animated: true, completion: nil)
+                    print("no dice")
                 }
         }
         
