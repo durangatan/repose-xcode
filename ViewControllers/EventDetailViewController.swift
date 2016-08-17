@@ -1,33 +1,25 @@
 //
-//  LifelinesViewController.swift
-//  Repose
+//  EventDetailViewController.swift
+//  HonoluluArt
 //
-//  Created by Joseph Duran on 8/12/16.
+//  Created by Joseph Duran on 8/16/16.
 //  Copyright © 2016 Repo Men. All rights reserved.
 //
 
 import UIKit
 
-import Contacts
+class EventDetailViewController: UIViewController {
 
-class LifelinesTableViewController: UITableViewController {
-
+    @IBOutlet weak var eventStart: UILabel!
+    @IBOutlet weak var eventEnd: UILabel!
+    @IBOutlet weak var comments: UILabel!
+    @IBOutlet weak var eventSeverity: UILabel!
     
-    // Mark: Properties
     
-    // MARK: Actions
-    
-    class func getAppDelegate() -> AppDelegate {
-        return UIApplication.sharedApplication().delegate as! AppDelegate
-    }
-    
-    @IBAction func done(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion:nil)
-    }
-    
+    @IBOutlet weak var sleepQuality: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -37,8 +29,6 @@ class LifelinesTableViewController: UITableViewController {
     }
     
 
-
-    
     /*
     // MARK: - Navigation
 

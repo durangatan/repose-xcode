@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     
     var oldbounds:CGRect!
     
+    @IBOutlet weak var lifelineButton: UIButton!
+    @IBOutlet weak var navBa: UINavigationItem!
     var drawAnimation = CABasicAnimation()
     
     @IBOutlet weak var helpButton: circleView!
@@ -21,22 +23,32 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if Helper.isInEventState(){}
+        else{
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
-        
+        if Helper.isInEventState(){
+            navBa.title = "this will pass"
+            lifelineButton.setTitle("call a lifeline", forState: .Normal)
+            let helpTapped = UITapGestureRecognizer(target: self, action: Selector("helpButtonTapped:"))
+            helpButton.addGestureRecognizer(helpTapped)
+        }
+        else{
+            navBa.title = "repose modules"
+            lifelineButton.setTitle("configure your lifelines", forState: .Normal)
         let longPress = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
         longPress.minimumPressDuration = 0.5
         helpButton.addGestureRecognizer(longPress)
         helpButton.userInteractionEnabled = true
-        
-        let helpTapped = UITapGestureRecognizer(target: self, action: Selector("helpButtonTapped:"))
-        helpButton.addGestureRecognizer(helpTapped)
+
+        }
     }
     
     func longPress(gesture:UILongPressGestureRecognizer){

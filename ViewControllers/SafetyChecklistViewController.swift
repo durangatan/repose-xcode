@@ -10,6 +10,7 @@ import UIKit
 
 class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate {
     
+    @IBOutlet weak var toolbar: UIToolbar!
     
     @IBOutlet weak var checklistTableView: UITableView!
     
@@ -37,6 +38,9 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
         listItems.append(ListItem(text: "Accept your feelings"))
         listItems.append(ListItem(text: "Call a loved one"))
         listItems.append(ListItem(text: "You are loved"))
+        if Helper.isInEventState(){
+            toolbar.hidden = true
+        }
     }
     
     // MARK: - Table view data source
