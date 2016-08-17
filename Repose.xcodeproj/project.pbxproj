@@ -49,6 +49,12 @@
 		D8C4A3CA1D6447C000A7D2B6 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3C91D6447C000A7D2B6 /* ProfilePageViewController.swift */; };
 		D8C4A3CD1D64498B00A7D2B6 /* VCMApView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3CC1D64498B00A7D2B6 /* VCMApView.swift */; };
 		D8C4A3D21D644EBF00A7D2B6 /* Eventable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3D11D644EBF00A7D2B6 /* Eventable.swift */; };
+		D887B4451D625BD3002FF270 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D848717E1D62323A0086B4DC /* ResearchKit.framework */; };
+		D887B4461D625BD3002FF270 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D848717E1D62323A0086B4DC /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8A6430A1D63A23100023EE8 /* EventMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A643071D63A23000023EE8 /* EventMapViewController.swift */; };
+		D8A6430B1D63A23100023EE8 /* VCMApView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A643081D63A23000023EE8 /* VCMApView.swift */; };
+		D8A6430C1D63A23100023EE8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A643091D63A23000023EE8 /* Event.swift */; };
+		D8A6430E1D63A26600023EE8 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A6430D1D63A26600023EE8 /* EventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +86,13 @@
 			remoteGlobalIDString = D84DC0111D5D1509000FF1FA;
 			remoteInfo = Repose;
 		};
+		D887B4471D625BD3002FF270 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8AFA8551D60B9D60095BBC5 /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,6 +102,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D887B4461D625BD3002FF270 /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,10 +118,12 @@
 		D81DBE461D64425B000894E6 /* LifelinesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LifelinesTableViewController.swift; path = ViewControllers/LifelinesTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		D81DBE471D64425B000894E6 /* Lifeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lifeline.swift; path = ViewControllers/Lifeline.swift; sourceTree = SOURCE_ROOT; };
 		D841BAA81D601D170002727E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+
+		D841BAA81D601D170002727E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D8436C221D623A4D00B92064 /* Repose-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Repose-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8436C231D623A4E00B92064 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ViewControllers/SWRevealViewController.h; sourceTree = "<group>"; };
 		D8436C241D623A4E00B92064 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ViewControllers/SWRevealViewController.m; sourceTree = "<group>"; };
-		D8436C261D623ACE00B92064 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D8436C261D623ACE00B92064 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D8436C2E1D623FD500B92064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		D84DC0121D5D1509000FF1FA /* Repose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Repose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D84DC01C1D5D1509000FF1FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +160,10 @@
 		D887AED01D62363A002B1F99 /* NewLifelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewLifelineViewController.swift; path = ViewControllers/NewLifelineViewController.swift; sourceTree = "<group>"; };
 		D887AEEB1D623810002B1F99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = resources/AppDelegate.swift; sourceTree = "<group>"; };
 		D887AEED1D623873002B1F99 /* StrikeThroughText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StrikeThroughText.swift; path = ViewControllers/StrikeThroughText.swift; sourceTree = "<group>"; };
+		D8A643071D63A23000023EE8 /* EventMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventMapViewController.swift; path = ViewControllers/EventMapViewController.swift; sourceTree = "<group>"; };
+		D8A643081D63A23000023EE8 /* VCMApView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VCMApView.swift; path = ViewControllers/VCMApView.swift; sourceTree = "<group>"; };
+		D8A643091D63A23000023EE8 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ViewControllers/Event.swift; sourceTree = "<group>"; };
+		D8A6430D1D63A26600023EE8 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailViewController.swift; path = ViewControllers/EventDetailViewController.swift; sourceTree = "<group>"; };
 		D8AFA5341D60A2F50095BBC5 /* circleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circleViewController.swift; sourceTree = "<group>"; };
 		D8AFA5361D60A2FA0095BBC5 /* circleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circleView.swift; sourceTree = "<group>"; };
 		D8AFA53B1D60B9100095BBC5 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConsentDocument.swift; path = ViewControllers/ConsentDocument.swift; sourceTree = "<group>"; };
@@ -178,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D887B4451D625BD3002FF270 /* ResearchKit.framework in Frameworks */,
 				B5EE628724921C176E2E30CA /* Pods_Repose.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +251,15 @@
 			children = (
 				D8C4A3CC1D64498B00A7D2B6 /* VCMApView.swift */,
 				D8436C261D623ACE00B92064 /* Podfile */,
+				D887AEED1D623873002B1F99 /* StrikeThroughText.swift */,
+				D887AEEB1D623810002B1F99 /* AppDelegate.swift */,
+				D887AEBC1D62363A002B1F99 /* LoginViewController.swift */,
+				D8A643071D63A23000023EE8 /* EventMapViewController.swift */,
+				D8A6430D1D63A26600023EE8 /* EventDetailViewController.swift */,
+				D8A643081D63A23000023EE8 /* VCMApView.swift */,
+				D8A643091D63A23000023EE8 /* Event.swift */,
+				D887AEBD1D62363A002B1F99 /* CheckListTableViewCell.swift */,
+				D887AEBE1D62363A002B1F99 /* ListItem.swift */,
 				09F0B5D41D635FA7001AA084 /* LocationViewController.swift */,
 				D887AEC01D62363A002B1F99 /* AffirmationsViewController.swift */,
 				D887AEEB1D623810002B1F99 /* AppDelegate.swift */,
@@ -371,6 +401,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D887B4481D625BD3002FF270 /* PBXTargetDependency */,
 			);
 			name = Repose;
 			productName = Repose;
@@ -619,13 +650,19 @@
 				09F0B5D51D635FA7001AA084 /* LocationViewController.swift in Sources */,
 				D887AEDD1D62363A002B1F99 /* MenuController.swift in Sources */,
 				D8436C251D623A4E00B92064 /* SWRevealViewController.m in Sources */,
+				D8A6430C1D63A23100023EE8 /* Event.swift in Sources */,
 				D887AEDE1D62363A002B1F99 /* circleViewController.swift in Sources */,
 				D887AEDF1D62363A002B1F99 /* ConsentViewController.swift in Sources */,
 				D887AEE01D62363A002B1F99 /* BreathViewController.swift in Sources */,
+				D8A6430A1D63A23100023EE8 /* EventMapViewController.swift in Sources */,
 				D887AEE11D62363A002B1F99 /* circleView.swift in Sources */,
 				D8C4A3C21D6445EC00A7D2B6 /* Event.swift in Sources */,
 				D887AEE21D62363A002B1F99 /* ConsentTask.swift in Sources */,
 				D887AEE31D62363A002B1F99 /* LandingViewController.swift in Sources */,
+
+				D887AEE41D62363A002B1F99 /* LifelinesViewController.swift in Sources */,
+				D8A6430E1D63A26600023EE8 /* EventDetailViewController.swift in Sources */,
+				D8A6430B1D63A23100023EE8 /* VCMApView.swift in Sources */,
 				D887AEE51D62363A002B1F99 /* MenuTableViewController.swift in Sources */,
 				D8C4A3C51D6445EC00A7D2B6 /* LineGraphDataSource.swift in Sources */,
 				D887AEE61D62363A002B1F99 /* MicrophoneTask.swift in Sources */,
@@ -667,6 +704,11 @@
 			isa = PBXTargetDependency;
 			target = D84DC0111D5D1509000FF1FA /* Repose */;
 			targetProxy = D84DC0321D5D1509000FF1FA /* PBXContainerItemProxy */;
+		};
+		D887B4481D625BD3002FF270 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = D887B4471D625BD3002FF270 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

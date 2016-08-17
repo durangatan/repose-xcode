@@ -10,7 +10,8 @@ import Foundation
 import ResearchKit
 import Alamofire
 
-class LineGraphDataSource: NSObject{
+
+class LineGraphDataSource: NSObject, ORKGraphChartViewDataSource {
         
     var plotPoints:[[ORKRangedPoint]] = []
 

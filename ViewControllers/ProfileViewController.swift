@@ -93,6 +93,7 @@ class ProfileViewController: UIViewController, ORKGraphChartViewDataSource, ORKG
                     }
 //                    self.plotPoints=[self.sleepPoints, self.severityPoints]
 //                    self.lineChart.reloadInputViews()
+
                 case .Failure:
                     let alertView = UIAlertController(title: "Registration Problem",
                         message: "invalid email or password." as String, preferredStyle:.Alert)

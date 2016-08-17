@@ -42,20 +42,27 @@ public var SurveyTask: ORKOrderedTask {
     let sleepQuestionStep = ORKQuestionStep(identifier: "sleep_quality", title: sleepQuestionStepTitle, answer: sleepAnswerFormat)
     steps += [sleepQuestionStep]
     
- 
-    //MARK: Causation
-    let causeAnswerFormat = ORKTextAnswerFormat()
-    causeAnswerFormat.multipleLines = true
-    let causeQuestionStepTitle = "What were you doing in the moments leading up to the episode? Did you feel like this episode was linked to anything specific?"
-    let causeQuestionStep = ORKQuestionStep(identifier: "causation", title: causeQuestionStepTitle, answer: causeAnswerFormat)
-    steps += [causeQuestionStep]
-    
     //MARK: Symptoms
-    let symptomAnswerFormat = ORKTextAnswerFormat()
-    symptomAnswerFormat.multipleLines = true
-    let symptomQuestionStepTitle = "Feel free to jot down other notes here."
-    let symptomQuestionStep = ORKQuestionStep(identifier: "comments", title: symptomQuestionStepTitle, text: "Did you notice any tingling sensations in your body, tightness in your chest, or ringing in your ears? Have you made any changes to your diet or exercise routine lately?", answer: symptomAnswerFormat )
+    let symptomQuestionStepTitle = "Did you notice any of the following physical symptoms?"
+    let symptomTextChoices = [
+        ORKTextChoice(text: "ringing in the ears", value: 0),
+        ORKTextChoice(text: "lightheadedness", value: 1),
+        ORKTextChoice(text: "difficulty breathing", value: 2),
+        ORKTextChoice(text: "tingling in the extremities", value: 3),
+
+    ]
+    let symptomAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormatWithStyle(.MultipleChoice, textChoices: symptomTextChoices)
+    let symptomQuestionStep = ORKQuestionStep(identifier: "symptoms", title: symptomQuestionStepTitle, answer: symptomAnswerFormat)
     steps += [symptomQuestionStep]
+    
+    
+    //MARK: Notes
+    let notesAnswerFormat = ORKTextAnswerFormat()
+    notesAnswerFormat.multipleLines = true
+    let notesQuestionStepTitle = "Feel free to jot down other notes here."
+    let notesQuestionStep = ORKQuestionStep(identifier: "comments", title: notesQuestionStepTitle, text:"What were you doing in the moments leading up to the episode? Did you feel like this episode was linked to anything specific?" , answer: notesAnswerFormat )
+    steps += [notesQuestionStep]
+    
     
     let summaryStep = ORKCompletionStep(identifier: "SummaryStep")
     summaryStep.title = "Right. Off you go!"
