@@ -10,9 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
-    @IBOutlet weak var mapView: MKMapView!
+class Locator: CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
@@ -28,8 +26,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         self.locationManager.startUpdatingLocation()
         
-        self.mapView.showsUserLocation = true
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,24 +34,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     
     
-    // MARK: - Location Delegate Methods
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let location = locations.last
-        
-        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-        
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
-        
-        self.mapView.setRegion(region, animated: true)
-        
-        self.locationManager.stopUpdatingLocation()
-        
-        print(location!.coordinate.latitude)
-        print(location!.coordinate.longitude)
-        
-    }
+
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
     {

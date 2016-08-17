@@ -9,14 +9,24 @@
 import UIKit
 import ResearchKit
 import Alamofire
-class SurveyViewController: UIViewController {
+import CoreLocation
+
+class SurveyViewController: UIViewController,CLLocationManagerDelegate {
     
     var resultArray = Array([])
-    
+    let locationManager = CLLocationManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let taskViewController = ORKTaskViewController(task: SurveyTask, taskRunUUID: nil)
         taskViewController.delegate = self
+        self.locationManager.delegate = self
+        
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        self.locationManager.startUpdatingLocation()
         presentViewController(taskViewController, animated: true, completion: nil)
     }
     
@@ -54,7 +64,12 @@ extension SurveyViewController : ORKTaskViewControllerDelegate {
             let startTime = defaults.doubleForKey("eventStart")
             let endTime = defaults.doubleForKey("eventEnd")
             let event = [startTime, endTime]
-            Alamofire.request(.POST, "https://repose.herokuapp.com/api/v1/events", parameters:["survey":resultArray, "bearer_token":token, "event":event,])
+            self.locationManager.requestLocation()
+            let latitude = NSUserDefaults.standardUserDefaults().doubleForKey("eventLatitude")
+            let longitude = NSUserDefaults.standardUserDefaults().doubleForKey("eventLongitude")
+            let coordinate = [latitude, longitude]
+            
+            Alamofire.request(.POST, "https://repose.herokuapp.com/api/v1/events", parameters:["survey":resultArray, "bearer_token":token, "event":event, "coordinate":coordinate])
                 .responseJSON { response in
                     switch response.result{
                     case .Success:
@@ -74,4 +89,20 @@ extension SurveyViewController : ORKTaskViewControllerDelegate {
             defaults.setValue(nil, forKey:"eventStart")
             }
         }
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last
+        let latitude = location!.coordinate.latitude
+        let longitude = location!.coordinate.longitude
+        NSUserDefaults.standardUserDefaults().setValue(latitude, forKey: "eventLatitude")
+        NSUserDefaults.standardUserDefaults().setValue(longitude, forKey: "eventLongitude")
+        self.locationManager.stopUpdatingLocation()
+
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
+    {
+        print("Errors: " + error.localizedDescription)
+    }
+
 }
