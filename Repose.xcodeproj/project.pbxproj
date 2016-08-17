@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0931D5681D64F16600576225 /* LayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931D5671D64F16600576225 /* LayerView.swift */; };
-		09F0B5D51D635FA7001AA084 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0B5D41D635FA7001AA084 /* LocationViewController.swift */; };
 		B5EE628724921C176E2E30CA /* Pods_Repose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979C8D81AF1E3ABD71261933 /* Pods_Repose.framework */; };
 		D81DBE481D64425B000894E6 /* LifelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBE441D64425B000894E6 /* LifelineViewController.swift */; };
 		D81DBE491D64425B000894E6 /* LifelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBE451D64425B000894E6 /* LifelineTableViewCell.swift */; };
@@ -48,6 +46,22 @@
 		D8C4A3C51D6445EC00A7D2B6 /* LineGraphDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3C11D6445EC00A7D2B6 /* LineGraphDataSource.swift */; };
 		D8C4A3CA1D6447C000A7D2B6 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3C91D6447C000A7D2B6 /* ProfilePageViewController.swift */; };
 		D8C4A3D21D644EBF00A7D2B6 /* Eventable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3D11D644EBF00A7D2B6 /* Eventable.swift */; };
+		D8CAA4E61D64EB6400C4DF24 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA4E31D64EB6400C4DF24 /* Event.swift */; };
+		D8CAA4E71D64EB6400C4DF24 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA4E41D64EB6400C4DF24 /* EventDetailViewController.swift */; };
+		D8CAA4E81D64EB6400C4DF24 /* EventMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA4E51D64EB6400C4DF24 /* EventMapViewController.swift */; };
+		D8CAA4EC1D64EC0200C4DF24 /* VCMApView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA4EB1D64EC0200C4DF24 /* VCMApView.swift */; };
+		D8CAA4F01D64F8DB00C4DF24 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CAA4EF1D64F8DB00C4DF24 /* Launch Screen.storyboard */; };
+		D8CAA4F41D64F94C00C4DF24 /* RootContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA4F31D64F94C00C4DF24 /* RootContainerViewController.swift */; };
+		D8CAA4FF1D64F96B00C4DF24 /* AnimatedULogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA4F61D64F96B00C4DF24 /* AnimatedULogoView.swift */; };
+		D8CAA5001D64F96B00C4DF24 /* Chimes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8CAA4F71D64F96B00C4DF24 /* Chimes.xcassets */; };
+		D8CAA5011D64F96B00C4DF24 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA4F81D64F96B00C4DF24 /* Constants.swift */; };
+		D8CAA5021D64F96B00C4DF24 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8CAA4F91D64F96B00C4DF24 /* Info.plist */; };
+		D8CAA5031D64F96B00C4DF24 /* Logo1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D8CAA4FA1D64F96B00C4DF24 /* Logo1.pdf */; };
+		D8CAA5041D64F96B00C4DF24 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA4FC1D64F96B00C4DF24 /* SplashViewController.swift */; };
+		D8CAA5051D64F96B00C4DF24 /* TileGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA4FD1D64F96B00C4DF24 /* TileGridView.swift */; };
+		D8CAA5061D64F96B00C4DF24 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA4FE1D64F96B00C4DF24 /* TileView.swift */; };
+		D8CAA50A1D64F97F00C4DF24 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = D8CAA5081D64F97F00C4DF24 /* Contents.json */; };
+		D8CAA50B1D64F97F00C4DF24 /* water2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8CAA5091D64F97F00C4DF24 /* water2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,8 +117,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0931D5671D64F16600576225 /* LayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerView.swift; sourceTree = "<group>"; };
-		09F0B5D41D635FA7001AA084 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+
 		979C8D81AF1E3ABD71261933 /* Pods_Repose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54B87118091B52614760F96 /* Pods-Repose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repose.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Repose/Pods-Repose.debug.xcconfig"; sourceTree = "<group>"; };
 		D81DBE441D64425B000894E6 /* LifelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LifelineViewController.swift; path = ViewControllers/LifelineViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -163,6 +176,23 @@
 		D8C4A3C11D6445EC00A7D2B6 /* LineGraphDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineGraphDataSource.swift; path = ViewControllers/LineGraphDataSource.swift; sourceTree = SOURCE_ROOT; };
 		D8C4A3C91D6447C000A7D2B6 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePageViewController.swift; path = ViewControllers/ProfilePageViewController.swift; sourceTree = SOURCE_ROOT; };
 		D8C4A3D11D644EBF00A7D2B6 /* Eventable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Eventable.swift; path = ViewControllers/Eventable.swift; sourceTree = SOURCE_ROOT; };
+		D8CAA4E31D64EB6400C4DF24 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ViewControllers/Event.swift; sourceTree = "<group>"; };
+		D8CAA4E41D64EB6400C4DF24 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailViewController.swift; path = ViewControllers/EventDetailViewController.swift; sourceTree = "<group>"; };
+		D8CAA4E51D64EB6400C4DF24 /* EventMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventMapViewController.swift; path = ViewControllers/EventMapViewController.swift; sourceTree = "<group>"; };
+		D8CAA4EB1D64EC0200C4DF24 /* VCMApView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VCMApView.swift; path = ViewControllers/VCMApView.swift; sourceTree = "<group>"; };
+		D8CAA4EF1D64F8DB00C4DF24 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D8CAA4F31D64F94C00C4DF24 /* RootContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContainerViewController.swift; sourceTree = "<group>"; };
+		D8CAA4F61D64F96B00C4DF24 /* AnimatedULogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedULogoView.swift; sourceTree = "<group>"; };
+		D8CAA4F71D64F96B00C4DF24 /* Chimes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Chimes.xcassets; sourceTree = "<group>"; };
+		D8CAA4F81D64F96B00C4DF24 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D8CAA4F91D64F96B00C4DF24 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8CAA4FA1D64F96B00C4DF24 /* Logo1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Logo1.pdf; sourceTree = "<group>"; };
+		D8CAA4FB1D64F96B00C4DF24 /* SplashScreenUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenUI.h; sourceTree = "<group>"; };
+		D8CAA4FC1D64F96B00C4DF24 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		D8CAA4FD1D64F96B00C4DF24 /* TileGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileGridView.swift; sourceTree = "<group>"; };
+		D8CAA4FE1D64F96B00C4DF24 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		D8CAA5081D64F97F00C4DF24 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		D8CAA5091D64F97F00C4DF24 /* water2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = water2.jpg; sourceTree = "<group>"; };
 		D8CD251F1D60555D0058AFC7 /* AffirmationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffirmationsViewController.swift; sourceTree = "<group>"; };
 		D8CD25201D60555D0058AFC7 /* BreathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathViewController.swift; sourceTree = "<group>"; };
 		D8CD25211D60555D0058AFC7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -233,8 +263,15 @@
 		D84DC0091D5D1509000FF1FA = {
 			isa = PBXGroup;
 			children = (
+				D8CAA4EF1D64F8DB00C4DF24 /* Launch Screen.storyboard */,
+				D8CAA5071D64F97F00C4DF24 /* water2.imageset */,
+				D8CAA4F51D64F96B00C4DF24 /* SplashScreenUI */,
+				D8CAA4F31D64F94C00C4DF24 /* RootContainerViewController.swift */,
+				D8CAA4EB1D64EC0200C4DF24 /* VCMApView.swift */,
+				D8CAA4E31D64EB6400C4DF24 /* Event.swift */,
+				D8CAA4E41D64EB6400C4DF24 /* EventDetailViewController.swift */,
+				D8CAA4E51D64EB6400C4DF24 /* EventMapViewController.swift */,
 				D8436C261D623ACE00B92064 /* Podfile */,
-				09F0B5D41D635FA7001AA084 /* LocationViewController.swift */,
 				D887AEC01D62363A002B1F99 /* AffirmationsViewController.swift */,
 				D887AEEB1D623810002B1F99 /* AppDelegate.swift */,
 				D887AEC91D62363A002B1F99 /* BreathViewController.swift */,
@@ -327,6 +364,31 @@
 				D84DC0371D5D1509000FF1FA /* Info.plist */,
 			);
 			path = ReposeUITests;
+			sourceTree = "<group>";
+		};
+		D8CAA4F51D64F96B00C4DF24 /* SplashScreenUI */ = {
+			isa = PBXGroup;
+			children = (
+				D8CAA4F61D64F96B00C4DF24 /* AnimatedULogoView.swift */,
+				D8CAA4F71D64F96B00C4DF24 /* Chimes.xcassets */,
+				D8CAA4F81D64F96B00C4DF24 /* Constants.swift */,
+				D8CAA4F91D64F96B00C4DF24 /* Info.plist */,
+				D8CAA4FA1D64F96B00C4DF24 /* Logo1.pdf */,
+				D8CAA4FB1D64F96B00C4DF24 /* SplashScreenUI.h */,
+				D8CAA4FC1D64F96B00C4DF24 /* SplashViewController.swift */,
+				D8CAA4FD1D64F96B00C4DF24 /* TileGridView.swift */,
+				D8CAA4FE1D64F96B00C4DF24 /* TileView.swift */,
+			);
+			path = SplashScreenUI;
+			sourceTree = "<group>";
+		};
+		D8CAA5071D64F97F00C4DF24 /* water2.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				D8CAA5081D64F97F00C4DF24 /* Contents.json */,
+				D8CAA5091D64F97F00C4DF24 /* water2.jpg */,
+			);
+			path = water2.imageset;
 			sourceTree = "<group>";
 		};
 		D8CD251E1D60555D0058AFC7 /* ViewControllers */ = {
@@ -528,10 +590,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CAA5001D64F96B00C4DF24 /* Chimes.xcassets in Resources */,
 				D8436C2B1D623E2700B92064 /* Assets.xcassets in Resources */,
+				D8CAA50A1D64F97F00C4DF24 /* Contents.json in Resources */,
 				D8436C271D623D9000B92064 /* Podfile in Resources */,
+				D8CAA5031D64F96B00C4DF24 /* Logo1.pdf in Resources */,
 				D887AEB81D6235A7002B1F99 /* Default-568h@2x.png in Resources */,
+				D8CAA4F01D64F8DB00C4DF24 /* Launch Screen.storyboard in Resources */,
 				D8436C2F1D623FD500B92064 /* Main.storyboard in Resources */,
+				D8CAA50B1D64F97F00C4DF24 /* water2.jpg in Resources */,
+				D8CAA5021D64F96B00C4DF24 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,14 +683,18 @@
 				D887AED71D62363A002B1F99 /* AffirmationsViewController.swift in Sources */,
 				D887AED81D62363A002B1F99 /* SurveyTask.swift in Sources */,
 				D887AED91D62363A002B1F99 /* SurveyViewController.swift in Sources */,
+				D8CAA4FF1D64F96B00C4DF24 /* AnimatedULogoView.swift in Sources */,
 				D887AEDB1D62363A002B1F99 /* ConsentDocument.swift in Sources */,
 				D81DBE491D64425B000894E6 /* LifelineTableViewCell.swift in Sources */,
 				D81DBE481D64425B000894E6 /* LifelineViewController.swift in Sources */,
-				09F0B5D51D635FA7001AA084 /* LocationViewController.swift in Sources */,
+				D8CAA4E61D64EB6400C4DF24 /* Event.swift in Sources */,
+				D8CAA4E71D64EB6400C4DF24 /* EventDetailViewController.swift in Sources */,
 				D887AEDD1D62363A002B1F99 /* MenuController.swift in Sources */,
 				D8436C251D623A4E00B92064 /* SWRevealViewController.m in Sources */,
+				D8CAA5061D64F96B00C4DF24 /* TileView.swift in Sources */,
 				D887AEDE1D62363A002B1F99 /* circleViewController.swift in Sources */,
 				D887AEDF1D62363A002B1F99 /* ConsentViewController.swift in Sources */,
+				D8CAA4E81D64EB6400C4DF24 /* EventMapViewController.swift in Sources */,
 				D887AEE01D62363A002B1F99 /* BreathViewController.swift in Sources */,
 				D887AEE11D62363A002B1F99 /* circleView.swift in Sources */,
 				D887AEE21D62363A002B1F99 /* ConsentTask.swift in Sources */,
@@ -633,8 +705,13 @@
 				D8C4A3D21D644EBF00A7D2B6 /* Eventable.swift in Sources */,
 				D887AEE71D62363A002B1F99 /* NewLifelineViewController.swift in Sources */,
 				D81DBE4B1D64425B000894E6 /* Lifeline.swift in Sources */,
+				D8CAA4F41D64F94C00C4DF24 /* RootContainerViewController.swift in Sources */,
+				D8CAA4EC1D64EC0200C4DF24 /* VCMApView.swift in Sources */,
+				D8CAA5041D64F96B00C4DF24 /* SplashViewController.swift in Sources */,
 				D887AEDC1D62363A002B1F99 /* ProfileViewController.swift in Sources */,
 				D887AEDA1D62363A002B1F99 /* HomeViewController.swift in Sources */,
+				D8CAA5011D64F96B00C4DF24 /* Constants.swift in Sources */,
+				D8CAA5051D64F96B00C4DF24 /* TileGridView.swift in Sources */,
 				D81DBE4A1D64425B000894E6 /* LifelinesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
