@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09F0B5D51D635FA7001AA084 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0B5D41D635FA7001AA084 /* LocationViewController.swift */; };
 		B5EE628724921C176E2E30CA /* Pods_Repose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979C8D81AF1E3ABD71261933 /* Pods_Repose.framework */; };
 		D8436C251D623A4E00B92064 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8436C241D623A4E00B92064 /* SWRevealViewController.m */; };
 		D8436C271D623D9000B92064 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D8436C261D623ACE00B92064 /* Podfile */; };
@@ -85,6 +86,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09F0B5D41D635FA7001AA084 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		979C8D81AF1E3ABD71261933 /* Pods_Repose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54B87118091B52614760F96 /* Pods-Repose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repose.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Repose/Pods-Repose.debug.xcconfig"; sourceTree = "<group>"; };
 		D841BAA81D601D170002727E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -207,6 +209,16 @@
 			isa = PBXGroup;
 			children = (
 				D8436C261D623ACE00B92064 /* Podfile */,
+<<<<<<< HEAD
+				D887AEED1D623873002B1F99 /* StrikeThroughText.swift */,
+				D887AEEB1D623810002B1F99 /* AppDelegate.swift */,
+				D887AEBC1D62363A002B1F99 /* LoginViewController.swift */,
+				D887AEBD1D62363A002B1F99 /* CheckListTableViewCell.swift */,
+				D887AEBE1D62363A002B1F99 /* ListItem.swift */,
+				09F0B5D41D635FA7001AA084 /* LocationViewController.swift */,
+				D887AEBF1D62363A002B1F99 /* SafetyChecklistViewController.swift */,
+=======
+>>>>>>> master
 				D887AEC01D62363A002B1F99 /* AffirmationsViewController.swift */,
 				D887AEEB1D623810002B1F99 /* AppDelegate.swift */,
 				D887AEC91D62363A002B1F99 /* BreathViewController.swift */,
@@ -578,6 +590,7 @@
 				D887AED81D62363A002B1F99 /* SurveyTask.swift in Sources */,
 				D887AED91D62363A002B1F99 /* SurveyViewController.swift in Sources */,
 				D887AEDB1D62363A002B1F99 /* ConsentDocument.swift in Sources */,
+				09F0B5D51D635FA7001AA084 /* LocationViewController.swift in Sources */,
 				D887AEDD1D62363A002B1F99 /* MenuController.swift in Sources */,
 				D8436C251D623A4E00B92064 /* SWRevealViewController.m in Sources */,
 				D887AEDE1D62363A002B1F99 /* circleViewController.swift in Sources */,
