@@ -169,7 +169,7 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
     
     func colorForIndex(index: Int) -> UIColor {
         let itemCount = listItems.count - 1
-        let val = (CGFloat(index) / CGFloat(itemCount)) * 0.6
+        let val = (CGFloat(index) / CGFloat(itemCount)) * 0.8
         return UIColor(red: (20 + 62 * val)/255, green: (54 + 94 * val)/255, blue: (125 + 107 * val)/255, alpha: 1.0)
     }
     
