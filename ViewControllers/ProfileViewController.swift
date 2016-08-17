@@ -48,6 +48,16 @@ class ProfileViewController: UIViewController, ORKGraphChartViewDataSource, ORKG
         return plotPoints[plotIndex].count
     }
     
+//    func storeEventData(response: Response<AnyObject, NSError>)-> Void{
+//        do {
+//            let responseObject = try NSJSONSerialization.JSONObjectWithData(response.data!, options: []) as! [String:AnyObject]
+//            let eventArray = responseObject["events_data"]
+//            let eventPoints = eventArray.map
+//        } catch let error as NSError {
+//            print("error")
+//        }
+//    }
+    
     func convertStringToDictionary(text: String) -> [String:AnyObject]? {
         if let data = text.dataUsingEncoding(NSUTF8StringEncoding) {
             do {
@@ -75,31 +85,10 @@ class ProfileViewController: UIViewController, ORKGraphChartViewDataSource, ORKG
         Alamofire.request(.GET, "https://repose.herokuapp.com/api/v1/users/36/events", parameters: ["bearerToken":bearerToken])
             .responseJSON { response in
                 switch response.result{
-                case .Success(let JSON):
-                    let events = JSON as! NSArray
-                    for event in events {
-//                        let eventJSON = self.convertStringToDictionary(event as! String)
-//                        let survey = eventJSON!["survey"]
-//                        let severity = survey!["severity"]! ?? 0
-//                        let sleepQuality = survey!["sleepQuality"]! ?? 0
-//                        let severityVal = severity as! CGFloat
-//                        let sleepQualityVal = sleepQuality as! CGFloat
-//                        let sleepQualityPoint = ORKRangedPoint(value: sleepQualityVal)
-//                        let severityPoint = ORKRangedPoint(value: severityVal)
-//                        
-//                        self.sleepPoints.append(sleepQualityPoint)
-//                        self.severityPoints.append(severityPoint)
-                        
-                    }
-//                    self.plotPoints=[self.sleepPoints, self.severityPoints]
-//                    self.lineChart.reloadInputViews()
-
+                case .Success:
+                    print(response)
                 case .Failure:
-                    let alertView = UIAlertController(title: "Registration Problem",
-                        message: "invalid email or password." as String, preferredStyle:.Alert)
-                    let okAction = UIAlertAction(title: "Sorry!", style: .Default, handler: nil)
-                    alertView.addAction(okAction)
-                    self.presentViewController(alertView, animated: true, completion: nil)
+                    print("failed to download events")
                 }
         }
         
