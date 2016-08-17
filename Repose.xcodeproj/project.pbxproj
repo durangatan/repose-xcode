@@ -209,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				D8436C261D623ACE00B92064 /* Podfile */,
-<<<<<<< HEAD
 				D887AEED1D623873002B1F99 /* StrikeThroughText.swift */,
 				D887AEEB1D623810002B1F99 /* AppDelegate.swift */,
 				D887AEBC1D62363A002B1F99 /* LoginViewController.swift */,
@@ -217,8 +216,6 @@
 				D887AEBE1D62363A002B1F99 /* ListItem.swift */,
 				09F0B5D41D635FA7001AA084 /* LocationViewController.swift */,
 				D887AEBF1D62363A002B1F99 /* SafetyChecklistViewController.swift */,
-=======
->>>>>>> master
 				D887AEC01D62363A002B1F99 /* AffirmationsViewController.swift */,
 				D887AEEB1D623810002B1F99 /* AppDelegate.swift */,
 				D887AEC91D62363A002B1F99 /* BreathViewController.swift */,
