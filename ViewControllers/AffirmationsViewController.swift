@@ -33,7 +33,7 @@ class AffirmationsViewController: UIViewController {
     
     var index : Int = 1     // Indexed at one, because the zeroth-indexed affirmation will be populated on viewDidLoad
     
-    var myArray:[String] = ["Anxiety Quote 1", "Quote number 2", "Quote 3, quote3, apple, banana, orange", "Green, blue, red, yellow, brown, pink, white, grey. Green, blue, red, yellow, brown, pink, white, grey. Green, blue, red, yellow, brown, pink, white, grey.", "One two three four five six seven eight nine ten."]
+    var myArray:[String] = ["0", "1", "2", "3", "4"]
     //var myArray:[String] = ["1", "2", "3", "4", "5"]
     
     
@@ -53,10 +53,35 @@ class AffirmationsViewController: UIViewController {
     
     
     func textTransition() {
+    print(index)
+    
         let pictureString:String = self.myArray[index]
         self.affirmationContainer.fadeTransition(1.0)
         self.affirmationContainer.text = pictureString
         index = (index < myArray.count-1) ? index+1 : 0
+    }
+    
+    func textTransitionLeft() {
+        print(index)
+            switch index {
+    case 0:
+        let pictureString:String = self.myArray[myArray.count-1]
+        self.affirmationContainer.fadeTransition(1.0)
+        self.affirmationContainer.text = pictureString
+        print("before change")
+        print(index)
+        index = myArray.count-1
+        print(index)
+    default:
+        let pictureString:String = self.myArray[index-1]
+        self.affirmationContainer.fadeTransition(1.0)
+        self.affirmationContainer.text = pictureString
+        index -= 1
+}
+//        let pictureString:String = self.myArray[index - 2]
+//        self.affirmationContainer.fadeTransition(1.0)
+//        self.affirmationContainer.text = pictureString
+//        index = (index < 1) ? 0 : index - 1
     }
     
     override func viewDidLoad() {
@@ -64,6 +89,30 @@ class AffirmationsViewController: UIViewController {
         self.scrambleArray()
         self.affirmationContainer.text = self.myArray[0]
         // Do any additional setup after loading the view.
+        
+        //MARK: Swipe Logic
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("respond:"))
+        swipeRight.direction = .Right
+        view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("respond:"))
+        swipeLeft.direction = .Left
+        view.addGestureRecognizer(swipeLeft)
+    }
+    
+    func respond(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Right:
+                print("RIGHT")
+                textTransition()
+            case UISwipeGestureRecognizerDirection.Left:
+                print("LEFT")
+                textTransitionLeft()
+            default:
+                break
+            }
+        }
     }
     
     
@@ -75,9 +124,9 @@ class AffirmationsViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        NSTimer.scheduledTimerWithTimeInterval(affirmationDisplayInterval, target: self, selector: #selector(AffirmationsViewController.textTransition), userInfo: nil, repeats: true)
+//        NSTimer.scheduledTimerWithTimeInterval(affirmationDisplayInterval, target: self, selector: #selector(AffirmationsViewController.textTransition), userInfo: nil, repeats: true)
         
-        print("end viewDidAppear")
+//        print("end viewDidAppear")
     }
     
     

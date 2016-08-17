@@ -1,14 +1,16 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "670CF1EFF02B305B253754FF81F0A96A52222F02",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2257080697EE7977871C2412331AEEEC5DF1AF7F",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2257080697EE7977871C2412331AEEEC5DF1AF7F" : 0,
     "670CF1EFF02B305B253754FF81F0A96A52222F02" : 0,
     "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D412C270-46E6-45F7-A1C6-84D6CA10524F",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2257080697EE7977871C2412331AEEEC5DF1AF7F" : "repose-xcode\/",
     "670CF1EFF02B305B253754FF81F0A96A52222F02" : "Repose\/",
     "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : "Repose\/resources\/ResearchKit\/"
   },
@@ -16,6 +18,11 @@
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Repose.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:duranje\/repose-xcode.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2257080697EE7977871C2412331AEEEC5DF1AF7F"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/duranje\/repose-ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
