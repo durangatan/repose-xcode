@@ -310,7 +310,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCz-FM-0CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="3667" y="-928"/>
         </scene>
         <!--modules-->
@@ -350,9 +349,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vqK-So-odL" firstAttribute="width" secondItem="MFt-vN-4Gh" secondAttribute="width" id="B9Q-fM-Lxy"/>
-                            <constraint firstItem="vqK-So-odL" firstAttribute="centerY" secondItem="MFt-vN-4Gh" secondAttribute="centerY" id="mRB-ty-gEc"/>
-                            <constraint firstItem="vqK-So-odL" firstAttribute="centerX" secondItem="MFt-vN-4Gh" secondAttribute="centerX" id="tBP-VS-jR2"/>
+                            <constraint firstItem="vqK-So-odL" firstAttribute="width" secondAttribute="width" id="B9Q-fM-Lxy"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -362,7 +359,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="vqK-So-odL" id="snB-E6-sxc"/>
-
                         <outlet property="menuButton" destination="SvV-Wa-jPR" id="Mbl-95-v4T"/>
                     </connections>
                 </viewController>
@@ -608,7 +604,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="GHm-47-gRv">
-                                            <rect key="frame" x="-75" y="50" width="600" height="91"/>
+                                            <rect key="frame" x="-75" y="50" width="600" height="90"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6y-KZ-4gL">
                                                     <rect key="frame" x="0.0" y="0.0" width="432" height="21"/>
@@ -811,6 +807,5 @@
         <segue reference="6aC-DU-X4r"/>
         <segue reference="axk-Vt-bFk"/>
         <segue reference="g7W-pX-GsN"/>
-
     </inferredMetricsTieBreakers>
 </document>
