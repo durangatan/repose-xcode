@@ -310,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCz-FM-0CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3667" y="-928"/>
+            <point key="canvasLocation" x="5279" y="-156"/>
         </scene>
         <!--modules-->
         <scene sceneID="Lt7-AB-UNH">
@@ -411,39 +411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epV-tM-4kk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3630" y="2825"/>
-        </scene>
-        <!--Event Map View Controller-->
-        <scene sceneID="bEB-cQ-LlQ">
-            <objects>
-                <viewController id="2nX-3R-3wS" customClass="EventMapViewController" customModule="Repose" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JKS-YY-vgy"/>
-                        <viewControllerLayoutGuide type="bottom" id="6Jx-x1-dvy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="twd-dK-luI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-ja-XJS">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Zw1-ja-XJS" secondAttribute="trailing" id="0Mh-DJ-XeD"/>
-                            <constraint firstItem="Zw1-ja-XJS" firstAttribute="bottom" secondItem="6Jx-x1-dvy" secondAttribute="top" id="5ax-q0-fzu"/>
-                            <constraint firstItem="Zw1-ja-XJS" firstAttribute="top" secondItem="twd-dK-luI" secondAttribute="top" id="Byd-Py-nVi"/>
-                            <constraint firstItem="Zw1-ja-XJS" firstAttribute="leading" secondItem="twd-dK-luI" secondAttribute="leading" id="Q2I-p7-T09"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="Zw1-ja-XJS" id="GIk-P4-JPQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Di2-8c-KPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4135" y="3015"/>
+            <point key="canvasLocation" x="3306" y="2913"/>
         </scene>
         <!--Item-->
         <scene sceneID="VGY-Ak-0yf">
@@ -604,7 +572,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="GHm-47-gRv">
-                                            <rect key="frame" x="-75" y="50" width="600" height="90"/>
+                                            <rect key="frame" x="-75" y="50" width="600" height="91"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6y-KZ-4gL">
                                                     <rect key="frame" x="0.0" y="0.0" width="432" height="21"/>
