@@ -83,20 +83,33 @@ class LoginViewController: UIViewController{
     }
     
     
-    
+    private func generateLogoLabel()->UILabel {
+        let label = UILabel()
+        label.text = "   R E P  O  S E        "
+        label.font = UIFont(name: "Helvetica Neue", size: 50)
+        label.textColor = UIColor.whiteColor()
+        label.sizeToFit()
+        let bounds = self.view!.bounds
+        label.center = CGPoint(x: CGRectGetMidX(bounds), y: CGRectGetMidY(bounds))
+        return label
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        generateLogoLabel()
         // check to see if the user has a login
         let hasLogin = NSUserDefaults.standardUserDefaults().valueForKey("hasReposeAccount") as? Bool
         // if they do, the button is a log in button
         if hasLogin == true {
             loginButton.setTitle("Login", forState: UIControlState.Normal)
+            loginButton.titleLabel!.font =  UIFont(name: "Helvetica Neue", size: 22)
+            
             loginButton.tag = loginButtonTag
             createInfoLabel.hidden = true
         } else {
             // if they don't, their button is a create button
 
             loginButton.setTitle("Create", forState: UIControlState.Normal)
+            loginButton.titleLabel!.font =  UIFont(name: "Helvetica Neue", size: 22)
             loginButton.tag = createLoginButtonTag
             createInfoLabel.hidden = false
         }

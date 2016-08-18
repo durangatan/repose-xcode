@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0956A11B1D65109C00123E85 /* LayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0956A11A1D65109C00123E85 /* LayerView.swift */; };
 		B5EE628724921C176E2E30CA /* Pods_Repose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979C8D81AF1E3ABD71261933 /* Pods_Repose.framework */; };
 		D81DBE481D64425B000894E6 /* LifelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBE441D64425B000894E6 /* LifelineViewController.swift */; };
 		D81DBE491D64425B000894E6 /* LifelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBE451D64425B000894E6 /* LifelineTableViewCell.swift */; };
@@ -117,7 +118,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-
+		0956A11A1D65109C00123E85 /* LayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerView.swift; sourceTree = "<group>"; };
 		979C8D81AF1E3ABD71261933 /* Pods_Repose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54B87118091B52614760F96 /* Pods-Repose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repose.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Repose/Pods-Repose.debug.xcconfig"; sourceTree = "<group>"; };
 		D81DBE441D64425B000894E6 /* LifelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LifelineViewController.swift; path = ViewControllers/LifelineViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -263,6 +264,7 @@
 		D84DC0091D5D1509000FF1FA = {
 			isa = PBXGroup;
 			children = (
+				0956A11A1D65109C00123E85 /* LayerView.swift */,
 				D8CAA4EF1D64F8DB00C4DF24 /* Launch Screen.storyboard */,
 				D8CAA5071D64F97F00C4DF24 /* water2.imageset */,
 				D8CAA4F51D64F96B00C4DF24 /* SplashScreenUI */,
@@ -277,7 +279,6 @@
 				D887AEC91D62363A002B1F99 /* BreathViewController.swift */,
 				D887AECA1D62363A002B1F99 /* circleView.swift */,
 				D887AEC71D62363A002B1F99 /* circleViewController.swift */,
-				0931D5671D64F16600576225 /* LayerView.swift */,
 				D887AEBD1D62363A002B1F99 /* CheckListTableViewCell.swift */,
 				D887AEC41D62363A002B1F99 /* ConsentDocument.swift */,
 				D887AECB1D62363A002B1F99 /* ConsentTask.swift */,
@@ -674,7 +675,6 @@
 			files = (
 				D887AEEC1D623810002B1F99 /* AppDelegate.swift in Sources */,
 				D887AEEE1D623873002B1F99 /* StrikeThroughText.swift in Sources */,
-				0931D5681D64F16600576225 /* LayerView.swift in Sources */,
 				D887AED31D62363A002B1F99 /* LoginViewController.swift in Sources */,
 				D887AED41D62363A002B1F99 /* CheckListTableViewCell.swift in Sources */,
 				D8C4A3CA1D6447C000A7D2B6 /* ProfilePageViewController.swift in Sources */,
@@ -697,6 +697,7 @@
 				D8CAA4E81D64EB6400C4DF24 /* EventMapViewController.swift in Sources */,
 				D887AEE01D62363A002B1F99 /* BreathViewController.swift in Sources */,
 				D887AEE11D62363A002B1F99 /* circleView.swift in Sources */,
+				0956A11B1D65109C00123E85 /* LayerView.swift in Sources */,
 				D887AEE21D62363A002B1F99 /* ConsentTask.swift in Sources */,
 				D887AEE31D62363A002B1F99 /* LandingViewController.swift in Sources */,
 				D887AEE51D62363A002B1F99 /* MenuTableViewController.swift in Sources */,
