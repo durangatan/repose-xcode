@@ -318,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3X-VI-5wc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4673" y="-801"/>
+            <point key="canvasLocation" x="5485" y="-801"/>
         </scene>
         <!--relief modules-->
         <scene sceneID="umK-Oy-H6O">
@@ -336,7 +336,11 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="472"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0c-a0-G35">
+<<<<<<< HEAD
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+=======
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
+>>>>>>> master
                                         <color key="backgroundColor" red="0.086274509803921567" green="0.19607843137254902" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="Breathing Exercises">
@@ -358,7 +362,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWt-OO-yz3">
-                                        <rect key="frame" x="0.0" y="189" width="600" height="94"/>
+                                        <rect key="frame" x="0.0" y="158" width="600" height="79"/>
                                         <color key="backgroundColor" red="0.23137254901960785" green="0.36078431372549019" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="Safety Checklist">
@@ -368,8 +372,15 @@
                                             <segue destination="jbF-Wk-3Q5" kind="show" id="JkL-mo-ySC"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGi-2n-dIU">
+                                        <rect key="frame" x="0.0" y="236" width="600" height="79"/>
+                                        <state key="normal" title="Soothing Sound"/>
+                                        <connections>
+                                            <segue destination="jwz-YK-5p5" kind="show" id="xpF-Kj-mAM"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbq-JN-0IK">
-                                        <rect key="frame" x="0.0" y="283" width="600" height="95"/>
+                                        <rect key="frame" x="0.0" y="315" width="600" height="79"/>
                                         <color key="backgroundColor" red="0.24313725490196078" green="0.42745098039215684" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="Configure Your Lifelines">
@@ -380,7 +391,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhX-wZ-6zH">
-                                        <rect key="frame" x="0.0" y="378" width="600" height="95"/>
+                                        <rect key="frame" x="0.0" y="394" width="600" height="79"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eb6-W0-E0W" customClass="circleView" customModule="Repose">
                                                 <rect key="frame" x="275" y="22" width="50" height="50"/>
@@ -431,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPn-2Q-Ff5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3924" y="196"/>
+            <point key="canvasLocation" x="4736" y="196"/>
         </scene>
         <!--Survey View Controller-->
         <scene sceneID="ZyC-wj-JTB">
@@ -490,7 +501,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCz-FM-0CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5279" y="-156"/>
+            <point key="canvasLocation" x="6091" y="-156"/>
         </scene>
         <!--modules-->
         <scene sceneID="Lt7-AB-UNH">
@@ -868,7 +879,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Pz-g3-oY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="-743"/>
+            <point key="canvasLocation" x="2850" y="-743"/>
         </scene>
         <!--edit lifeline-->
         <scene sceneID="4pP-FA-fkQ">
@@ -961,7 +972,7 @@
                 <exit id="LZg-8k-zQ2" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="dKN-K5-mAp"/>
             </objects>
-            <point key="canvasLocation" x="2889" y="173"/>
+            <point key="canvasLocation" x="3701" y="173"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="drO-vV-gpW">
@@ -1005,7 +1016,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zzi-AP-qZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3515" y="-719"/>
+            <point key="canvasLocation" x="4327" y="-719"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dNP-tk-beh">
@@ -1043,9 +1054,106 @@
             </objects>
             <point key="canvasLocation" x="1788" y="2794"/>
         </scene>
+        <!--Soothing Sound-->
+        <scene sceneID="6cy-05-gKY">
+            <objects>
+                <viewController id="KeK-lo-3n7" customClass="RecorderViewController" customModule="Repose" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tIE-HN-oU2"/>
+                        <viewControllerLayoutGuide type="bottom" id="ewt-JO-flK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gHy-Yh-mLh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E52-5r-QTw" customClass="SCWaveformView">
+                                <rect key="frame" x="20" y="72" width="560" height="361"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrU-2k-T2d">
+                                <rect key="frame" x="332" y="451" width="128" height="128"/>
+                                <state key="normal" backgroundImage="icon-play-128">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="KeK-lo-3n7" eventType="touchUpInside" id="Ltr-eo-P05"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2P-rT-NQd">
+                                <rect key="frame" x="151" y="451" width="173" height="128"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="63"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-pK-aHz">
+                                <rect key="frame" x="468" y="450" width="118" height="129"/>
+                                <state key="normal" backgroundImage="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="KeK-lo-3n7" eventType="touchUpInside" id="1qj-6v-EJ3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5T-0Y-EKd">
+                                <rect key="frame" x="20" y="451" width="123" height="129"/>
+                                <state key="normal" backgroundImage="circle-xxl"/>
+                                <connections>
+                                    <action selector="record:" destination="KeK-lo-3n7" eventType="touchUpInside" id="sPJ-La-BjA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f5T-0Y-EKd" firstAttribute="leading" secondItem="gHy-Yh-mLh" secondAttribute="leadingMargin" constant="-6" id="A7V-pM-FbH"/>
+                            <constraint firstItem="h2P-rT-NQd" firstAttribute="top" secondItem="E52-5r-QTw" secondAttribute="bottom" constant="26" id="Ezk-oP-EP4"/>
+                            <constraint firstItem="gpd-pK-aHz" firstAttribute="top" secondItem="E52-5r-QTw" secondAttribute="bottom" constant="24" id="H2N-GA-6eM"/>
+                            <constraint firstItem="ewt-JO-flK" firstAttribute="top" secondItem="h2P-rT-NQd" secondAttribute="bottom" constant="10" id="IYM-CL-aQ7"/>
+                            <constraint firstItem="ewt-JO-flK" firstAttribute="top" secondItem="gpd-pK-aHz" secondAttribute="bottom" constant="10" id="JFz-Np-7Ef"/>
+                            <constraint firstItem="ewt-JO-flK" firstAttribute="top" secondItem="f5T-0Y-EKd" secondAttribute="bottom" constant="10" id="Knx-dL-Tgu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gpd-pK-aHz" secondAttribute="trailing" id="VG6-dh-eVD"/>
+                            <constraint firstItem="f5T-0Y-EKd" firstAttribute="top" secondItem="E52-5r-QTw" secondAttribute="bottom" constant="25" id="cbT-Gc-Cew"/>
+                            <constraint firstItem="zrU-2k-T2d" firstAttribute="top" secondItem="E52-5r-QTw" secondAttribute="bottom" constant="25" id="nk5-Cx-Lwc"/>
+                            <constraint firstItem="ewt-JO-flK" firstAttribute="top" secondItem="zrU-2k-T2d" secondAttribute="bottom" constant="10" id="rAG-pD-aiC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Soothing Sound" id="R87-8J-33f"/>
+                    <connections>
+                        <outlet property="playButton" destination="zrU-2k-T2d" id="TEk-sM-xs0"/>
+                        <outlet property="recordButton" destination="f5T-0Y-EKd" id="IQ7-nW-OOv"/>
+                        <outlet property="statusLabel" destination="h2P-rT-NQd" id="hOJ-md-2mT"/>
+                        <outlet property="stopButton" destination="gpd-pK-aHz" id="3m7-9J-NRu"/>
+                        <outlet property="waveForm" destination="E52-5r-QTw" id="YwT-yf-id6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMB-gA-DmS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6315" y="1328"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w13-7R-GNu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jwz-YK-5p5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z32-IB-bKG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KeK-lo-3n7" kind="relationship" relationship="rootViewController" id="QUh-Yo-egS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Kt-XH-ynM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5563" y="968"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="circle-xxl" width="256" height="256"/>
         <image name="hamburger" width="22" height="22"/>
+        <image name="icon-play-128" width="128" height="128"/>
+        <image name="stop" width="512" height="512"/>
         <image name="water2.jpg" width="900" height="708"/>
     </resources>
     <inferredMetricsTieBreakers>
