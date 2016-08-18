@@ -49,12 +49,12 @@ class HomeViewController: UIViewController {
         self.helpButton.backgroundColor = UIColor.clearColor()
 
         if Helper.isInEventState(){
-            lifelineButton.setTitle("Call a Lifeline", forState: .Normal)
+            lifelineButton.setTitle("CALL A LIFELINE", forState: .Normal)
             let helpTapped = UITapGestureRecognizer(target: self, action: Selector("helpButtonTapped:"))
             helpButton.addGestureRecognizer(helpTapped)
         }
         else{
-            lifelineButton.setTitle("Configure Your Lifelines", forState: .Normal)
+            lifelineButton.setTitle("CONFIGURE YOUR LIFELINES", forState: .Normal)
             let helpTapped = UITapGestureRecognizer(target: self, action: Selector("helpButtonTapped:"))
             helpButton.addGestureRecognizer(helpTapped)
         let longPress = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))

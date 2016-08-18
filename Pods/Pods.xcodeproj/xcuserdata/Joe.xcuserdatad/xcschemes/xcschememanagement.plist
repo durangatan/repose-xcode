@@ -14,15 +14,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SCWaveformView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>06D7AF9EA33C75B8D5C206F4CACD703E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5698845F11720FF8F4F2902D4D1C1B8F</key>
+		<key>B4B35D3B1895BD9123BFECD015D902B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
