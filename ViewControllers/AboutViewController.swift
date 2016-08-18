@@ -13,6 +13,7 @@ class AboutViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var web: UIWebView!
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     var indicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
 
     
@@ -20,6 +21,11 @@ class AboutViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         indicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
         indicator.center = view.center
         view.addSubview(indicator)
