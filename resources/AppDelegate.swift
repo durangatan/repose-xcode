@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let bearerToken = NSUserDefaults.standardUserDefaults().stringForKey("bearerToken")
-        UIView.appearanceWhenContainedInInstancesOfClasses([ORKTaskViewController.self]).backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
+        
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "startTime")
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "endTime")
         UILabel.appearance().font = UIFont(name: "HelveticaNeue", size: 22.0)
