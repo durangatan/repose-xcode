@@ -450,30 +450,6 @@
             </objects>
             <point key="canvasLocation" x="954" y="553"/>
         </scene>
-        <!--About View Controller-->
-        <scene sceneID="f1V-Et-P35">
-            <objects>
-                <viewController id="l2y-1d-LcR" customClass="AboutViewController" customModule="Repose" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xzs-yb-akc"/>
-                        <viewControllerLayoutGuide type="bottom" id="lF5-Ja-inN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="U3F-WG-Fq5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWB-AL-yGw">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FRv-kV-a4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1498" y="2698"/>
-        </scene>
         <!--Menu Controller-->
         <scene sceneID="NJe-G8-IG5">
             <objects>
@@ -562,6 +538,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="wuR-1r-SaZ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="LQB-QW-HPB"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NuN-2h-etW">
                                         <rect key="frame" x="0.0" y="176" width="600" height="44"/>
@@ -593,6 +572,39 @@
             </objects>
             <point key="canvasLocation" x="1006" y="1927"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="S6h-ZQ-1uK">
+            <objects>
+                <viewController id="wuR-1r-SaZ" customClass="AboutViewController" customModule="Repose" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WGQ-gl-Plq"/>
+                        <viewControllerLayoutGuide type="bottom" id="6jd-Ed-WWj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cjv-Bu-2Oq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf3-Gk-C4m">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hf3-Gk-C4m" firstAttribute="bottom" secondItem="6jd-Ed-WWj" secondAttribute="top" id="5W8-YV-zyp"/>
+                            <constraint firstAttribute="trailing" secondItem="Hf3-Gk-C4m" secondAttribute="trailing" id="hwy-9n-2PU"/>
+                            <constraint firstItem="Hf3-Gk-C4m" firstAttribute="leading" secondItem="cjv-Bu-2Oq" secondAttribute="leading" id="rDw-4p-xOx"/>
+                            <constraint firstItem="Hf3-Gk-C4m" firstAttribute="top" secondItem="cjv-Bu-2Oq" secondAttribute="top" id="zrB-ib-KzN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="web" destination="Hf3-Gk-C4m" id="cn3-Ro-8d4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezT-iC-gL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="2810"/>
+        </scene>
         <!--lifelines-->
         <scene sceneID="4kN-YB-Kis">
             <objects>
@@ -610,7 +622,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="GHm-47-gRv">
-                                            <rect key="frame" x="-75" y="50" width="600" height="91"/>
+                                            <rect key="frame" x="-75" y="50" width="600" height="90"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6y-KZ-4gL">
                                                     <rect key="frame" x="0.0" y="0.0" width="432" height="21"/>
@@ -810,7 +822,7 @@
         <image name="hamburger" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6aC-DU-X4r"/>
+        <segue reference="psa-3v-jto"/>
         <segue reference="axk-Vt-bFk"/>
         <segue reference="g7W-pX-GsN"/>
     </inferredMetricsTieBreakers>
