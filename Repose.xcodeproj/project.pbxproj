@@ -14,7 +14,6 @@
 		D81DBE4B1D64425B000894E6 /* Lifeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81DBE471D64425B000894E6 /* Lifeline.swift */; };
 		D8436C251D623A4E00B92064 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8436C241D623A4E00B92064 /* SWRevealViewController.m */; };
 		D8436C271D623D9000B92064 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D8436C261D623ACE00B92064 /* Podfile */; };
-		D8436C2B1D623E2700B92064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84DC01C1D5D1509000FF1FA /* Assets.xcassets */; };
 		D8436C2F1D623FD500B92064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8436C2D1D623FD500B92064 /* Main.storyboard */; };
 		D84DC02B1D5D1509000FF1FA /* ReposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC02A1D5D1509000FF1FA /* ReposeTests.swift */; };
 		D84DC0361D5D1509000FF1FA /* ReposeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC0351D5D1509000FF1FA /* ReposeUITests.swift */; };
@@ -43,6 +42,12 @@
 		D887AEEE1D623873002B1F99 /* StrikeThroughText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AEED1D623873002B1F99 /* StrikeThroughText.swift */; };
 		D887B4451D625BD3002FF270 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D848717E1D62323A0086B4DC /* ResearchKit.framework */; };
 		D887B4461D625BD3002FF270 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D848717E1D62323A0086B4DC /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8916B701D660CEC0059005E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84DC01C1D5D1509000FF1FA /* Assets.xcassets */; };
+		D8ADA4AF1D65FA2B0019EF6F /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AC1D65FA2B0019EF6F /* RecorderViewController.swift */; };
+		D8ADA4B01D65FA2B0019EF6F /* RecordingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AD1D65FA2B0019EF6F /* RecordingCollectionViewCell.swift */; };
+		D8ADA4B11D65FA2B0019EF6F /* RecordingsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AE1D65FA2B0019EF6F /* RecordingsCollectionViewController.swift */; };
+		D88D32C31D6613810007F28B /* LifelinesInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D32C21D6613810007F28B /* LifelinesInstructions.swift */; };
+		D88D32C71D6615F60007F28B /* LifelineInstructionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D32C61D6615F60007F28B /* LifelineInstructionTask.swift */; };
 		D8C4A3C51D6445EC00A7D2B6 /* LineGraphDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3C11D6445EC00A7D2B6 /* LineGraphDataSource.swift */; };
 		D8C4A3CA1D6447C000A7D2B6 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3C91D6447C000A7D2B6 /* ProfilePageViewController.swift */; };
 		D8C4A3D21D644EBF00A7D2B6 /* Eventable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3D11D644EBF00A7D2B6 /* Eventable.swift */; };
@@ -168,6 +173,13 @@
 		D887AED01D62363A002B1F99 /* NewLifelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewLifelineViewController.swift; path = ViewControllers/NewLifelineViewController.swift; sourceTree = "<group>"; };
 		D887AEEB1D623810002B1F99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = resources/AppDelegate.swift; sourceTree = "<group>"; };
 		D887AEED1D623873002B1F99 /* StrikeThroughText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StrikeThroughText.swift; path = ViewControllers/StrikeThroughText.swift; sourceTree = "<group>"; };
+		D8916B6D1D660CAD0059005E /* circle-xxl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-xxl.png"; sourceTree = "<group>"; };
+		D8ADA4AC1D65FA2B0019EF6F /* RecorderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecorderViewController.swift; path = ViewControllers/RecorderViewController.swift; sourceTree = SOURCE_ROOT; };
+		D8ADA4AD1D65FA2B0019EF6F /* RecordingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingCollectionViewCell.swift; path = ViewControllers/RecordingCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D8ADA4AE1D65FA2B0019EF6F /* RecordingsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingsCollectionViewController.swift; path = ViewControllers/RecordingsCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
+
+		D88D32C21D6613810007F28B /* LifelinesInstructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LifelinesInstructions.swift; path = ViewControllers/LifelinesInstructions.swift; sourceTree = "<group>"; };
+		D88D32C61D6615F60007F28B /* LifelineInstructionTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifelineInstructionTask.swift; sourceTree = "<group>"; };
 		D8AFA5341D60A2F50095BBC5 /* circleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circleViewController.swift; sourceTree = "<group>"; };
 		D8AFA5361D60A2FA0095BBC5 /* circleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circleView.swift; sourceTree = "<group>"; };
 		D8AFA53B1D60B9100095BBC5 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConsentDocument.swift; path = ViewControllers/ConsentDocument.swift; sourceTree = "<group>"; };
@@ -267,6 +279,7 @@
 		D84DC0091D5D1509000FF1FA = {
 			isa = PBXGroup;
 			children = (
+				D8916B6D1D660CAD0059005E /* circle-xxl.png */,
 				0956A11A1D65109C00123E85 /* LayerView.swift */,
 				D8CAA4EF1D64F8DB00C4DF24 /* Launch Screen.storyboard */,
 				D8CAA5071D64F97F00C4DF24 /* water2.imageset */,
@@ -284,7 +297,9 @@
 				D887AEC71D62363A002B1F99 /* circleViewController.swift */,
 				D887AEBD1D62363A002B1F99 /* CheckListTableViewCell.swift */,
 				D887AEC41D62363A002B1F99 /* ConsentDocument.swift */,
+				D88D32C21D6613810007F28B /* LifelinesInstructions.swift */,
 				D887AECB1D62363A002B1F99 /* ConsentTask.swift */,
+				D88D32C61D6615F60007F28B /* LifelineInstructionTask.swift */,
 				D887AEC81D62363A002B1F99 /* ConsentViewController.swift */,
 				D887AEB71D6235A7002B1F99 /* Default-568h@2x.png */,
 				D887AEC31D62363A002B1F99 /* HomeViewController.swift */,
@@ -332,6 +347,9 @@
 			isa = PBXGroup;
 			children = (
 				D8436C2D1D623FD500B92064 /* Main.storyboard */,
+				D8ADA4AC1D65FA2B0019EF6F /* RecorderViewController.swift */,
+				D8ADA4AD1D65FA2B0019EF6F /* RecordingCollectionViewCell.swift */,
+				D8ADA4AE1D65FA2B0019EF6F /* RecordingsCollectionViewController.swift */,
 				D882025D1D6548340096763D /* AboutViewController.swift */,
 				D8C4A3D11D644EBF00A7D2B6 /* Eventable.swift */,
 				D8C4A3C91D6447C000A7D2B6 /* ProfilePageViewController.swift */,
@@ -432,8 +450,8 @@
 				9F4D11BFDADDAB42574E99E5 /* [CP] Check Pods Manifest.lock */,
 				D84DC00E1D5D1509000FF1FA /* Sources */,
 				D84DC00F1D5D1509000FF1FA /* Frameworks */,
-				D84DC0101D5D1509000FF1FA /* Resources */,
 				A12127DC0B8B6D21AB91BAA7 /* [CP] Embed Pods Frameworks */,
+				D84DC0101D5D1509000FF1FA /* Resources */,
 				AF3E835968E25A47EE4C8782 /* [CP] Copy Pods Resources */,
 				D8AFA8631D60B9DE0095BBC5 /* Embed Frameworks */,
 			);
@@ -596,10 +614,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8CAA5001D64F96B00C4DF24 /* Chimes.xcassets in Resources */,
-				D8436C2B1D623E2700B92064 /* Assets.xcassets in Resources */,
 				D8CAA50A1D64F97F00C4DF24 /* Contents.json in Resources */,
 				D8436C271D623D9000B92064 /* Podfile in Resources */,
 				D8CAA5031D64F96B00C4DF24 /* Logo1.pdf in Resources */,
+				D8916B701D660CEC0059005E /* Assets.xcassets in Resources */,
 				D887AEB81D6235A7002B1F99 /* Default-568h@2x.png in Resources */,
 				D8CAA4F01D64F8DB00C4DF24 /* Launch Screen.storyboard in Resources */,
 				D8436C2F1D623FD500B92064 /* Main.storyboard in Resources */,
@@ -678,6 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D887AEEC1D623810002B1F99 /* AppDelegate.swift in Sources */,
+				D8ADA4AF1D65FA2B0019EF6F /* RecorderViewController.swift in Sources */,
 				D887AEEE1D623873002B1F99 /* StrikeThroughText.swift in Sources */,
 				D887AED31D62363A002B1F99 /* LoginViewController.swift in Sources */,
 				D887AED41D62363A002B1F99 /* CheckListTableViewCell.swift in Sources */,
@@ -692,8 +711,10 @@
 				D81DBE491D64425B000894E6 /* LifelineTableViewCell.swift in Sources */,
 				D81DBE481D64425B000894E6 /* LifelineViewController.swift in Sources */,
 				D8CAA4E61D64EB6400C4DF24 /* Event.swift in Sources */,
+				D8ADA4B01D65FA2B0019EF6F /* RecordingCollectionViewCell.swift in Sources */,
 				D8CAA4E71D64EB6400C4DF24 /* EventDetailViewController.swift in Sources */,
 				D887AEDD1D62363A002B1F99 /* MenuController.swift in Sources */,
+				D88D32C71D6615F60007F28B /* LifelineInstructionTask.swift in Sources */,
 				D8436C251D623A4E00B92064 /* SWRevealViewController.m in Sources */,
 				D8CAA5061D64F96B00C4DF24 /* TileView.swift in Sources */,
 				D887AEDE1D62363A002B1F99 /* circleViewController.swift in Sources */,
@@ -701,6 +722,7 @@
 				D8CAA4E81D64EB6400C4DF24 /* EventMapViewController.swift in Sources */,
 				D887AEE01D62363A002B1F99 /* BreathViewController.swift in Sources */,
 				D887AEE11D62363A002B1F99 /* circleView.swift in Sources */,
+				D88D32C31D6613810007F28B /* LifelinesInstructions.swift in Sources */,
 				D8D3C5AC1D655C4400A487C6 /* AboutViewController.swift in Sources */,
 				D8CAA5201D65326800C4DF24 /* LayerView.swift in Sources */,
 				D887AEE21D62363A002B1F99 /* ConsentTask.swift in Sources */,
@@ -718,6 +740,7 @@
 				D887AEDA1D62363A002B1F99 /* HomeViewController.swift in Sources */,
 				D8CAA5011D64F96B00C4DF24 /* Constants.swift in Sources */,
 				D8CAA5051D64F96B00C4DF24 /* TileGridView.swift in Sources */,
+				D8ADA4B11D65FA2B0019EF6F /* RecordingsCollectionViewController.swift in Sources */,
 				D81DBE4A1D64425B000894E6 /* LifelinesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
