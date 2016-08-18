@@ -279,11 +279,8 @@
 		D84DC0091D5D1509000FF1FA = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-=======
 				D8916B6D1D660CAD0059005E /* circle-xxl.png */,
 				0956A11A1D65109C00123E85 /* LayerView.swift */,
->>>>>>> master
 				D8CAA4EF1D64F8DB00C4DF24 /* Launch Screen.storyboard */,
 				D8CAA5071D64F97F00C4DF24 /* water2.imageset */,
 				D8CAA4F51D64F96B00C4DF24 /* SplashScreenUI */,
