@@ -50,7 +50,7 @@ class TableViewCell: UITableViewCell, UITextFieldDelegate {
         // create a label that renders the to-do item text
         label = StrikeThroughText(frame: CGRect.null)
         label.textColor = UIColor.whiteColor()
-        label.font = UIFont.boldSystemFontOfSize(16)
+        label.font = UIFont(name: "HelveticaNeueUltralight", size: 22)
         label.backgroundColor = UIColor.clearColor()
         
         // utility method for creating the contextual cues
