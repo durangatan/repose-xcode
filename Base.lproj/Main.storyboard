@@ -234,7 +234,6 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BREATHE IN..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19M-jc-rWS">
                                 <rect key="frame" x="200" y="99" width="200" height="21"/>
-
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="8Eb-46-o9A"/>
@@ -271,7 +270,6 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="...AND FOLLOW THE ORB AS YOU BREATHE." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48n-aA-1Ao">
                                 <rect key="frame" x="150" y="128" width="300" height="21"/>
-
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="sLg-KG-Kks"/>
                                 </constraints>
@@ -352,7 +350,6 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0c-a0-G35">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
-
                                         <color key="backgroundColor" red="0.086274509803921567" green="0.19607843137254902" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="BREATHING EXERCISES">
@@ -363,7 +360,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdA-1Q-OFC">
-                                        <rect key="frame" x="0.0" y="95" width="600" height="95"/>
+                                        <rect key="frame" x="0.0" y="79" width="600" height="79"/>
                                         <color key="backgroundColor" red="0.14509803921568626" green="0.28627450980392155" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="AFFIRMATIONS">
@@ -386,9 +383,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGi-2n-dIU">
                                         <rect key="frame" x="0.0" y="236" width="600" height="79"/>
-                                        <state key="normal" title="Soothing Sound"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="SOOTHING SOUNDS">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
-                                            <segue destination="jwz-YK-5p5" kind="show" id="xpF-Kj-mAM"/>
+                                            <segue destination="KeK-lo-3n7" kind="show" id="tYu-Yu-db2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbq-JN-0IK">
@@ -1072,7 +1072,7 @@
             </objects>
             <point key="canvasLocation" x="1788" y="2794"/>
         </scene>
-        <!--Soothing Sound-->
+        <!--Soothing Sounds-->
         <scene sceneID="6cy-05-gKY">
             <objects>
                 <viewController id="KeK-lo-3n7" customClass="RecorderViewController" customModule="Repose" customModuleProvider="target" sceneMemberID="viewController">
@@ -1135,7 +1135,7 @@
                             <constraint firstItem="ewt-JO-flK" firstAttribute="top" secondItem="zrU-2k-T2d" secondAttribute="bottom" constant="10" id="rAG-pD-aiC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Soothing Sound" id="R87-8J-33f"/>
+                    <navigationItem key="navigationItem" title="Soothing Sounds" id="R87-8J-33f"/>
                     <connections>
                         <outlet property="playButton" destination="zrU-2k-T2d" id="TEk-sM-xs0"/>
                         <outlet property="recordButton" destination="f5T-0Y-EKd" id="IQ7-nW-OOv"/>
@@ -1148,24 +1148,6 @@
             </objects>
             <point key="canvasLocation" x="6315" y="1328"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="w13-7R-GNu">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jwz-YK-5p5" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z32-IB-bKG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="KeK-lo-3n7" kind="relationship" relationship="rootViewController" id="QUh-Yo-egS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Kt-XH-ynM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5563" y="968"/>
-        </scene>
     </scenes>
     <resources>
         <image name="circle-xxl" width="256" height="256"/>
@@ -1175,7 +1157,6 @@
         <image name="water2.jpg" width="900" height="708"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6aC-DU-X4r"/>
         <segue reference="psa-3v-jto"/>
         <segue reference="rxx-E2-hFq"/>
         <segue reference="g7W-pX-GsN"/>
