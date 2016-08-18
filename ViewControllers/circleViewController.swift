@@ -132,6 +132,8 @@ class circleViewController: UIViewController{
     
     override func viewDidAppear(animated: Bool) {
 
+        
+        
         UIView.animateWithDuration(5.0, delay: 1.0, options: [], animations: {
             self.instructions.alpha = 1.0
             self.instructions2.alpha = 0.0

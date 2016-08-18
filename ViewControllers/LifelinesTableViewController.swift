@@ -29,7 +29,11 @@ class LifelinesTableViewController: UITableViewController {
                 let taskViewController = ORKTaskViewController(task: LifelineInstructionTask, taskRunUUID: nil)
                     taskViewController.delegate = self
                     presentViewController(taskViewController, animated: true, completion: nil)
+<<<<<<< HEAD
                 defaults.setBool(true, forKey: "instructionsShown")
+=======
+                defaults.setBool(true, forKey:"instructionsShown")
+>>>>>>> master
                 }
             }
 
@@ -48,11 +52,11 @@ class LifelinesTableViewController: UITableViewController {
     func loadSampleLifelines() {
         
         
-        let lifeline1 = Lifeline(first: "Joe", last: "Duran", phone: "5133776353", startTime:0, endTime: 12)!
+        let lifeline1 = Lifeline(first: "Joe", last: "Duran", phone: "513-377-6353", startTime:0, endTime: 12)!
         
-        let lifeline2 = Lifeline(first: "Ed", last: "Duran", phone: "5139849753", startTime:4, endTime: 16)!
+        let lifeline2 = Lifeline(first: "Ed", last: "Duran", phone: "513-984-9753", startTime:4, endTime: 16)!
         
-        let lifeline3 = Lifeline(first: "Elena", last:"Duran", phone: "5137080291", startTime:4, endTime: 12)!
+        let lifeline3 = Lifeline(first: "Elena", last:"Duran", phone: "513-708-0291", startTime:4, endTime: 12)!
         
         lifelines = [lifeline1, lifeline2, lifeline3]
     }

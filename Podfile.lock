@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (3.1.5)
+  - SCWaveformView (2.0.6)
 
 DEPENDENCIES:
   - Alamofire (~> 3.1.2)
+  - SCWaveformView
 
 SPEC CHECKSUMS:
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
+  SCWaveformView: 78b3503675aafcdaf9c283d68cb45c9fc735af87
 
-PODFILE CHECKSUM: 24927b60388670ecc4651802a21f11692857aa3e
+PODFILE CHECKSUM: 0776e59146dbc838014b2cc8a6c772814aeff081
 
 COCOAPODS: 1.0.1
