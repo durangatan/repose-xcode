@@ -29,7 +29,11 @@ class LifelinesTableViewController: UITableViewController {
                 let taskViewController = ORKTaskViewController(task: LifelineInstructionTask, taskRunUUID: nil)
                     taskViewController.delegate = self
                     presentViewController(taskViewController, animated: true, completion: nil)
+<<<<<<< HEAD
+                defaults.setBool(true, forKey: "instructionsShown")
+=======
                 defaults.setBool(true, forKey:"instructionsShown")
+>>>>>>> master
                 }
             }
 
