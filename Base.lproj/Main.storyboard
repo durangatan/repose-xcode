@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sn5-Cs-QoN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sn5-Cs-QoN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -63,7 +63,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="765"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="start by creating an account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wda-9P-MxV">
-
                                 <rect key="frame" x="0.0" y="524" width="600" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -92,7 +91,6 @@
                                         <state key="normal" title="Create an Account">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-
                                         <connections>
                                             <action selector="loginAction:" destination="Ntc-US-aL1" eventType="touchUpInside" id="RD6-xy-XDt"/>
                                         </connections>
@@ -103,7 +101,6 @@
                                         <state key="normal" title="Ok Log me in already">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-
                                         <connections>
                                             <segue destination="CU9-e9-11P" kind="show" id="rxx-E2-hFq"/>
                                         </connections>
@@ -251,7 +248,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdA-1Q-OFC">
-                                        <rect key="frame" x="0.0" y="78" width="600" height="71"/>
+                                        <rect key="frame" x="0.0" y="78" width="600" height="72"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="Affirmations"/>
                                         <connections>
@@ -259,8 +256,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWt-OO-yz3">
-                                        <rect key="frame" x="0.0" y="156" width="600" height="72"/>
-
+                                        <rect key="frame" x="0.0" y="157" width="600" height="71"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="Safety Checklist"/>
                                         <connections>
@@ -268,8 +264,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbq-JN-0IK">
-                                        <rect key="frame" x="0.0" y="235" width="600" height="71"/>
-
+                                        <rect key="frame" x="0.0" y="235" width="600" height="72"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="Configure Your Lifelines"/>
                                         <connections>
@@ -798,6 +793,20 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygB-au-UQz">
+                                <rect key="frame" x="278" y="469" width="45" height="30"/>
+                                <state key="normal" title="cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="16I-Vs-mQT" eventType="touchUpInside" id="1db-6E-qf9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqt-eE-p4E">
+                                <rect key="frame" x="283" y="402" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="LZg-8k-zQ2" kind="unwind" unwindAction="unwindToLifelineList:" id="5jT-w8-6br"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -806,24 +815,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="bVb-50-DOE" secondAttribute="trailing" id="n4G-kE-nOj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="edit lifeline" id="KCQ-Uy-Iyk">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="yB3-V4-V0j">
-                            <connections>
-                                <action selector="cancel:" destination="16I-Vs-mQT" id="V1x-mf-pDs"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Fjs-bh-RRJ">
-                            <connections>
-                                <segue destination="LZg-8k-zQ2" kind="unwind" unwindAction="unwindToLifelineList:" id="fIO-T8-dQr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="edit lifeline" id="KCQ-Uy-Iyk"/>
                     <connections>
                         <outlet property="ends" destination="luI-91-PU4" id="Le4-K5-2Vm"/>
                         <outlet property="firstName" destination="Ncs-OS-Ygc" id="OaJ-js-14Q"/>
                         <outlet property="lastName" destination="QE1-UT-EtR" id="S8O-Az-8rd"/>
                         <outlet property="phoneNumber" destination="dis-dw-dGi" id="3c5-ln-s97"/>
-                        <outlet property="saveButton" destination="Fjs-bh-RRJ" id="G9f-rd-nKr"/>
+                        <outlet property="saveButton" destination="qqt-eE-p4E" id="kIb-SY-OPV"/>
                         <outlet property="start" destination="oHx-1j-n3v" id="nW4-dq-Kxp"/>
                     </connections>
                 </viewController>
@@ -883,10 +882,8 @@
         <image name="water2.jpg" width="900" height="708"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="psa-3v-jto"/>
-        <segue reference="axk-Vt-bFk"/>
-        <segue reference="g7W-pX-GsN"/>
         <segue reference="6aC-DU-X4r"/>
         <segue reference="rxx-E2-hFq"/>
+        <segue reference="g7W-pX-GsN"/>
     </inferredMetricsTieBreakers>
 </document>

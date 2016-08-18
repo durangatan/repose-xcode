@@ -20,19 +20,30 @@ class LifelineViewController: UIViewController, CNContactPickerDelegate, CNConta
         addExistingContact()
     }
     @IBOutlet weak var firstName: UIButton!
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+
+    @IBOutlet weak var saveButton: UIButton!
 
     @IBOutlet weak var lastName: UIButton!
     @IBOutlet weak var phoneNumber: UIButton!
 
     @IBOutlet weak var ends: UITextField!
-     @IBAction func addFromContacts(sender: UIButton) {
+    @IBAction func cancel(sender: UIButton) {
+    
+    // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
+    let isPresentingInAddLifelineMode = presentingViewController is UINavigationController
+    
+    if isPresentingInAddLifelineMode {
+    dismissViewControllerAnimated(true, completion: nil)
+    } else {
+    navigationController!.popViewControllerAnimated(true)
+    }
+    }
+    
+    
+    @IBAction func addFromContacts(sender: UIButton) {
         addExistingContact()
      }
-    /*
-    This value is either passed by `LifelinesTableViewController` in `prepareForSegue(_:sender:)`
-        or constructed as part of adding a new lifeline.
-    */
+
     var selected: String? = ""
     var lifeline: Lifeline?
     var contacts: [CNContact]?
@@ -88,20 +99,6 @@ class LifelineViewController: UIViewController, CNContactPickerDelegate, CNConta
         let text = firstName.currentTitle ?? ""
         saveButton.enabled = !text.isEmpty
     }
-        // MARK: Navigation
-    
-    @IBAction func cancel(sender: UIBarButtonItem) {
-        // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
-        let isPresentingInAddLifelineMode = presentingViewController is UINavigationController
-        
-        if isPresentingInAddLifelineMode {
-            dismissViewControllerAnimated(true, completion: nil)
-        } else {
-            navigationController!.popViewControllerAnimated(true)
-        }
-    }
-    
-    
     
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
