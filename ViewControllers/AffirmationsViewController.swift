@@ -37,6 +37,7 @@ class AffirmationsViewController: UIViewController {
     var myArray:[String] = ["All is safe in my world right now.", "Breathing deeply reminds me that all is well.", "I will be alright.", "Even though anxiety is uncomfortable, I am safe.", "I have had this experience before and I know that I am safe.", "I don't need to fight my feelings.  They will pass.", "I accept myself with contentment and gentleness.", "I'm going to treat myself gently and continue on with my work.", "As I exhale, I think to myself \"Relax...\"", "I can feel the sensation of my breath and remember that I am alive.", "I am strong.  These feelings are just an illusion.", "The feelings will ease bit by bit.  I'm getting a break soon.", "I can take deep, calming breaths until this passes.", "Anxiety means I'm alive.", "I know this will pass.", "I breath deeply.", "I remind myself that it's okay to feel this.  I don't have to like these sensations.  It's natural to not want them around.", "In spite of my anxiety, I can still live my life.", "I'm still alive.  The world is still turning.  Zaki still doesn't know how to put photos on Trello."]
     //var myArray:[String] = ["1", "2", "3", "4", "5"]
     
+    var affTimer = NSTimer()
     
     func scrambleArray() {
         var source = self.myArray
@@ -128,6 +129,12 @@ class AffirmationsViewController: UIViewController {
 //        NSTimer.scheduledTimerWithTimeInterval(affirmationDisplayInterval, target: self, selector: #selector(AffirmationsViewController.textTransition), userInfo: nil, repeats: true)
         
 //        print("end viewDidAppear")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+//        timer.invalidate()
+        
     }
     
     

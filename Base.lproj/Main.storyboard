@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ntc-US-aL1">
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ntc-US-aL1">
-
->>>>>>> master
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -157,29 +152,141 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zdc-v3-CJN" customClass="Layer1View" customModule="Repose" customModuleProvider="target">
-                                <rect key="frame" x="250" y="350" width="100" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="250" y="348" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="5sk-wp-c1o"/>
                                     <constraint firstAttribute="height" constant="100" id="Qzb-u0-31d"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take a moment to get comfortable..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKn-Wc-oL4">
-                                <rect key="frame" x="161" y="72" width="278" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MbA-W7-YcW" customClass="Layer2View" customModule="Repose" customModuleProvider="target">
+                                <rect key="frame" x="255" y="255" width="90" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="4gZ-Wi-IIq"/>
+                                    <constraint firstAttribute="width" constant="90" id="P9M-I6-Yub"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Kd-rr-2p9" customClass="Layer3View" customModule="Repose" customModuleProvider="target">
+                                <rect key="frame" x="260" y="260" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="6QI-2m-eaP"/>
+                                    <constraint firstAttribute="height" constant="80" id="Orz-Yn-DpY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pdp-9C-X3l" customClass="Layer4View" customModule="Repose" customModuleProvider="target">
+                                <rect key="frame" x="250" y="350" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="4yx-Je-ecT"/>
+                                    <constraint firstAttribute="width" constant="70" id="Wt2-Jz-UBy"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Take a moment to become aware of your breath..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKn-Wc-oL4">
+                                <rect key="frame" x="161" y="99" width="278" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="U08-Z4-Lpr"/>
+                                    <constraint firstAttribute="width" constant="278" id="cMP-1R-v3H"/>
+                                    <constraint firstAttribute="width" constant="278" id="cbv-DD-HYn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cbv-DD-HYn"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Breathe in..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19M-jc-rWS">
+                                <rect key="frame" x="200" y="99" width="200" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8Eb-46-o9A"/>
+                                    <constraint firstAttribute="width" constant="42" id="8bg-Wj-R9C"/>
+                                    <constraint firstAttribute="height" constant="21" id="d2M-sU-9Km"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8bg-Wj-R9C"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Breathe out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4g4-j7-I5R">
+                                <rect key="frame" x="200" y="99" width="300" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2lj-hs-vix"/>
+                                    <constraint firstAttribute="width" constant="200" id="kQV-42-qY3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJN-9f-MuI" customClass="OrbIntroView" customModule="Repose" customModuleProvider="target">
+                                <rect key="frame" x="250" y="350" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2fV-Jr-rD7"/>
+                                    <constraint firstAttribute="width" constant="100" id="VOB-l7-gfi"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="...and follow the orb as you breathe." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48n-aA-1Ao">
+                                <rect key="frame" x="150" y="128" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="4WE-ul-ph6"/>
+                                    <constraint firstAttribute="height" constant="21" id="LCg-4I-HwT"/>
+                                    <constraint firstAttribute="width" constant="200" id="kjd-Dx-fFJ"/>
+                                    <constraint firstAttribute="width" constant="300" id="sLg-KG-Kks"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4WE-ul-ph6"/>
+                                        <exclude reference="kjd-Dx-fFJ"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="4g4-j7-I5R" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="2xR-Ze-bZ8"/>
+                            <constraint firstItem="rKn-Wc-oL4" firstAttribute="top" secondItem="9d2-zg-kBc" secondAttribute="bottom" constant="98" id="860-VP-mVU"/>
+                            <constraint firstItem="4g4-j7-I5R" firstAttribute="top" secondItem="9d2-zg-kBc" secondAttribute="bottom" constant="98" id="A4F-M1-XHA"/>
+                            <constraint firstItem="0Kd-rr-2p9" firstAttribute="centerY" secondItem="3dy-h6-0g8" secondAttribute="centerY" id="Ch6-OD-Sbv"/>
+                            <constraint firstItem="fJN-9f-MuI" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="F68-wP-twq"/>
+                            <constraint firstItem="MbA-W7-YcW" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="Fwe-DL-Qsa"/>
+                            <constraint firstItem="48n-aA-1Ao" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="JFP-bt-gRk"/>
+                            <constraint firstItem="0Kd-rr-2p9" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="K3W-Nm-Htu"/>
+                            <constraint firstItem="rKn-Wc-oL4" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="LlE-Ro-rVl"/>
+                            <constraint firstItem="MbA-W7-YcW" firstAttribute="centerY" secondItem="3dy-h6-0g8" secondAttribute="centerY" id="Mf7-R1-cOk"/>
                             <constraint firstItem="zdc-v3-CJN" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="PXa-GT-1XH"/>
+                            <constraint firstItem="Pdp-9C-X3l" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="bDW-pc-sDc"/>
+                            <constraint firstItem="48n-aA-1Ao" firstAttribute="top" secondItem="4g4-j7-I5R" secondAttribute="bottom" constant="8" id="bM2-ph-0c3"/>
+                            <constraint firstItem="19M-jc-rWS" firstAttribute="top" secondItem="9d2-zg-kBc" secondAttribute="bottom" constant="98" id="dJF-Gn-N7a"/>
+                            <constraint firstItem="Pdp-9C-X3l" firstAttribute="centerY" secondItem="3dy-h6-0g8" secondAttribute="centerY" id="iDL-lP-rkT"/>
+                            <constraint firstItem="19M-jc-rWS" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="w5f-XW-XyG"/>
                             <constraint firstItem="zdc-v3-CJN" firstAttribute="centerY" secondItem="3dy-h6-0g8" secondAttribute="centerY" id="ygz-A8-Q4D"/>
+                            <constraint firstItem="fJN-9f-MuI" firstAttribute="centerY" secondItem="3dy-h6-0g8" secondAttribute="centerY" id="zik-lX-fu1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Intro" destination="fJN-9f-MuI" id="ZOy-tj-Jbp"/>
                         <outlet property="Layer1" destination="zdc-v3-CJN" id="mZE-C5-7NT"/>
+                        <outlet property="Layer2" destination="MbA-W7-YcW" id="SvN-67-W8A"/>
+                        <outlet property="Layer3" destination="0Kd-rr-2p9" id="j8S-hb-gYv"/>
+                        <outlet property="Layer4" destination="Pdp-9C-X3l" id="prv-0a-BCh"/>
+                        <outlet property="breatheIn" destination="19M-jc-rWS" id="i6L-aI-ssg"/>
+                        <outlet property="breatheOut" destination="4g4-j7-I5R" id="H6g-Jo-vCC"/>
                         <outlet property="instructions" destination="rKn-Wc-oL4" id="p5V-eq-aL9"/>
+                        <outlet property="instructions2" destination="48n-aA-1Ao" id="NmD-yA-gKm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3X-VI-5wc" userLabel="First Responder" sceneMemberID="firstResponder"/>

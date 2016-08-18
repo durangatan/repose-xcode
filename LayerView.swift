@@ -39,3 +39,11 @@ class Layer4View: UIView {
         path.fill()
     }
 }
+
+class OrbIntroView: UIView {
+    override func drawRect(rect: CGRect) {
+        var path = UIBezierPath(ovalInRect: rect)
+        UIColor(red: 13/255, green: 151/255, blue: 255/255, alpha: 1.0).setFill()
+        path.fill()
+    }
+}
