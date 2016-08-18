@@ -31,12 +31,12 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
         if let savedListItems = loadListItems(){
             self.listItems += savedListItems
         }else{
-        listItems.append(ListItem(text: "Relax"))
-        listItems.append(ListItem(text: "Stop negative thinking"))
-        listItems.append(ListItem(text: "Use coping statements"))
-        listItems.append(ListItem(text: "Accept your feelings"))
-        listItems.append(ListItem(text: "Call a loved one"))
-        listItems.append(ListItem(text: "You are loved"))
+        listItems.append(ListItem(text: "RELAX"))
+        listItems.append(ListItem(text: "STOP NEGATIVE THINKING"))
+        listItems.append(ListItem(text: "USE COPING STATEMENTS"))
+        listItems.append(ListItem(text: "ACCEPT YOUR FEELINGS"))
+        listItems.append(ListItem(text: "CALL A LOVED ONE"))
+        listItems.append(ListItem(text: "YOU ARE LOVED"))
         if Helper.isInEventState(){
             toolbar.hidden = true
         }
