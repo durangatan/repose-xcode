@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let bearerToken = NSUserDefaults.standardUserDefaults().stringForKey("bearerToken")
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "startTime")
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "endTime")
+        
+        UILabel.appearance().font = UIFont(name: "HelveticaNeue", size: 22.0)
+        
         return true
     }
     

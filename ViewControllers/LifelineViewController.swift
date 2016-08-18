@@ -12,6 +12,8 @@ import Contacts
 import ContactsUI
 
 class LifelineViewController: UIViewController, CNContactPickerDelegate, CNContactViewControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    
     // MARK: Properties
     var datePicker = UIPickerView()
     var pickerData:[String] = [String]()
@@ -37,6 +39,7 @@ class LifelineViewController: UIViewController, CNContactPickerDelegate, CNConta
     var lifeline: Lifeline?
     var contacts: [CNContact]?
     override func viewDidLoad() {
+        self.view.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
         super.viewDidLoad()
         start.inputView = datePicker
         start.delegate = self

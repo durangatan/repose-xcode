@@ -37,12 +37,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         if Helper.isInEventState(){
-            lifelineButton.setTitle("call a lifeline", forState: .Normal)
+            lifelineButton.setTitle("Call a Lifeline", forState: .Normal)
             let helpTapped = UITapGestureRecognizer(target: self, action: Selector("helpButtonTapped:"))
             helpButton.addGestureRecognizer(helpTapped)
         }
         else{
-            lifelineButton.setTitle("configure your lifelines", forState: .Normal)
+            lifelineButton.setTitle("Configure Your Lifelines", forState: .Normal)
             let helpTapped = UITapGestureRecognizer(target: self, action: Selector("helpButtonTapped:"))
             helpButton.addGestureRecognizer(helpTapped)
         let longPress = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
