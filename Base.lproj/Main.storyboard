@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sn5-Cs-QoN">
-
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sn5-Cs-QoN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -227,25 +226,18 @@
                                     <constraint firstAttribute="width" constant="70" id="Wt2-Jz-UBy"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Take a moment to become aware of your breath..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKn-Wc-oL4">
-                                <rect key="frame" x="161" y="99" width="278" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Take a moment to become aware of your breath..." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKn-Wc-oL4">
+                                <rect key="frame" x="20" y="99" width="560" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="U08-Z4-Lpr"/>
                                     <constraint firstAttribute="width" constant="278" id="cMP-1R-v3H"/>
-                                    <constraint firstAttribute="width" constant="278" id="cbv-DD-HYn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="cbv-DD-HYn"/>
-                                    </mask>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Breathe in..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19M-jc-rWS">
-                                <rect key="frame" x="200" y="99" width="200" height="21"/>
+                                <rect key="frame" x="20" y="99" width="560" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="8Eb-46-o9A"/>
@@ -262,7 +254,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Breathe out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4g4-j7-I5R">
-                                <rect key="frame" x="200" y="99" width="300" height="21"/>
+                                <rect key="frame" x="20" y="99" width="560" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2lj-hs-vix"/>
@@ -281,29 +273,20 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="...and follow the orb as you breathe." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48n-aA-1Ao">
-                                <rect key="frame" x="150" y="128" width="300" height="21"/>
+                                <rect key="frame" x="20" y="99" width="560" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="4WE-ul-ph6"/>
-                                    <constraint firstAttribute="height" constant="21" id="LCg-4I-HwT"/>
-                                    <constraint firstAttribute="width" constant="200" id="kjd-Dx-fFJ"/>
                                     <constraint firstAttribute="width" constant="300" id="sLg-KG-Kks"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="4WE-ul-ph6"/>
-                                        <exclude reference="kjd-Dx-fFJ"/>
-                                    </mask>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4g4-j7-I5R" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="2xR-Ze-bZ8"/>
-                            <constraint firstItem="rKn-Wc-oL4" firstAttribute="top" secondItem="9d2-zg-kBc" secondAttribute="bottom" constant="98" id="860-VP-mVU"/>
-                            <constraint firstItem="4g4-j7-I5R" firstAttribute="top" secondItem="9d2-zg-kBc" secondAttribute="bottom" constant="98" id="A4F-M1-XHA"/>
+                            <constraint firstItem="rKn-Wc-oL4" firstAttribute="top" secondItem="9d2-zg-kBc" secondAttribute="bottom" constant="40" id="860-VP-mVU"/>
+                            <constraint firstItem="4g4-j7-I5R" firstAttribute="top" secondItem="9d2-zg-kBc" secondAttribute="bottom" constant="40" id="A4F-M1-XHA"/>
                             <constraint firstItem="0Kd-rr-2p9" firstAttribute="centerY" secondItem="3dy-h6-0g8" secondAttribute="centerY" id="Ch6-OD-Sbv"/>
                             <constraint firstItem="fJN-9f-MuI" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="F68-wP-twq"/>
                             <constraint firstItem="MbA-W7-YcW" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="Fwe-DL-Qsa"/>
@@ -312,9 +295,9 @@
                             <constraint firstItem="rKn-Wc-oL4" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="LlE-Ro-rVl"/>
                             <constraint firstItem="MbA-W7-YcW" firstAttribute="centerY" secondItem="3dy-h6-0g8" secondAttribute="centerY" id="Mf7-R1-cOk"/>
                             <constraint firstItem="zdc-v3-CJN" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="PXa-GT-1XH"/>
+                            <constraint firstItem="48n-aA-1Ao" firstAttribute="top" secondItem="9d2-zg-kBc" secondAttribute="bottom" constant="40" id="a4x-GB-N2M"/>
                             <constraint firstItem="Pdp-9C-X3l" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="bDW-pc-sDc"/>
-                            <constraint firstItem="48n-aA-1Ao" firstAttribute="top" secondItem="4g4-j7-I5R" secondAttribute="bottom" constant="8" id="bM2-ph-0c3"/>
-                            <constraint firstItem="19M-jc-rWS" firstAttribute="top" secondItem="9d2-zg-kBc" secondAttribute="bottom" constant="98" id="dJF-Gn-N7a"/>
+                            <constraint firstItem="19M-jc-rWS" firstAttribute="top" secondItem="9d2-zg-kBc" secondAttribute="bottom" constant="40" id="dJF-Gn-N7a"/>
                             <constraint firstItem="Pdp-9C-X3l" firstAttribute="centerY" secondItem="3dy-h6-0g8" secondAttribute="centerY" id="iDL-lP-rkT"/>
                             <constraint firstItem="19M-jc-rWS" firstAttribute="centerX" secondItem="3dy-h6-0g8" secondAttribute="centerX" id="w5f-XW-XyG"/>
                             <constraint firstItem="zdc-v3-CJN" firstAttribute="centerY" secondItem="3dy-h6-0g8" secondAttribute="centerY" id="ygz-A8-Q4D"/>
@@ -377,7 +360,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWt-OO-yz3">
                                         <rect key="frame" x="0.0" y="189" width="600" height="94"/>
                                         <color key="backgroundColor" red="0.23137254901960785" green="0.36078431372549019" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
-
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="Safety Checklist">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -402,7 +384,6 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eb6-W0-E0W" customClass="circleView" customModule="Repose">
                                                 <rect key="frame" x="275" y="22" width="50" height="50"/>
-
                                                 <color key="backgroundColor" red="0.0" green="0.33657381510000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="pkH-Y5-TDA"/>
