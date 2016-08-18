@@ -18,7 +18,6 @@
 		D8436C2F1D623FD500B92064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8436C2D1D623FD500B92064 /* Main.storyboard */; };
 		D84DC02B1D5D1509000FF1FA /* ReposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC02A1D5D1509000FF1FA /* ReposeTests.swift */; };
 		D84DC0361D5D1509000FF1FA /* ReposeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DC0351D5D1509000FF1FA /* ReposeUITests.swift */; };
-		D88202611D654AB20096763D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D882025D1D6548340096763D /* AboutViewController.swift */; };
 		D887AEB81D6235A7002B1F99 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D887AEB71D6235A7002B1F99 /* Default-568h@2x.png */; };
 		D887AED31D62363A002B1F99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AEBC1D62363A002B1F99 /* LoginViewController.swift */; };
 		D887AED41D62363A002B1F99 /* CheckListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AEBD1D62363A002B1F99 /* CheckListTableViewCell.swift */; };
@@ -64,6 +63,7 @@
 		D8CAA50A1D64F97F00C4DF24 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = D8CAA5081D64F97F00C4DF24 /* Contents.json */; };
 		D8CAA50B1D64F97F00C4DF24 /* water2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8CAA5091D64F97F00C4DF24 /* water2.jpg */; };
 		D8CAA5201D65326800C4DF24 /* LayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA51F1D65326800C4DF24 /* LayerView.swift */; };
+		D8D3C5AC1D655C4400A487C6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D882025D1D6548340096763D /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -701,7 +701,7 @@
 				D8CAA4E81D64EB6400C4DF24 /* EventMapViewController.swift in Sources */,
 				D887AEE01D62363A002B1F99 /* BreathViewController.swift in Sources */,
 				D887AEE11D62363A002B1F99 /* circleView.swift in Sources */,
-				D88202611D654AB20096763D /* AboutViewController.swift in Sources */,
+				D8D3C5AC1D655C4400A487C6 /* AboutViewController.swift in Sources */,
 				D8CAA5201D65326800C4DF24 /* LayerView.swift in Sources */,
 				D887AEE21D62363A002B1F99 /* ConsentTask.swift in Sources */,
 				D887AEE31D62363A002B1F99 /* LandingViewController.swift in Sources */,
