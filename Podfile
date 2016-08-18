@@ -7,4 +7,5 @@ project 'Repose'
 
 target 'Repose' do
 pod 'Alamofire', '~>3.1.2'
+pod 'SCWaveformView'
 end
