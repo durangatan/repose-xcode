@@ -8,12 +8,11 @@
 
 import CoreLocation
 import UIKit
+import ResearchKit
 
 class HomeViewController: UIViewController {
     
     var beginPressTime = CACurrentMediaTime()
-    
-
     
     var oldbounds:CGRect!
     
@@ -33,6 +32,12 @@ class HomeViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let hasSeenConsent = defaults.boolForKey("hasSeenConsent")
+        if !hasSeenConsent{
+            showConsentForm()
+            defaults.setBool(true, forKey:"hasSeenConsent")
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -109,20 +114,26 @@ override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
 }
-
+    func showConsentForm(){
+        let taskViewController = ORKTaskViewController(task: ConsentTask, taskRunUUID: nil)
+        taskViewController.delegate = self
+        presentViewController(taskViewController, animated: true, completion: nil)
+    }
+    
+    
 
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
     {
         print("Errors: " + error.localizedDescription)
     }
 
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
- // Get the new view controller using segue.destinationViewController.
- // Pass the selected object to the new view controller.
- }
- */
+
+}
+
+extension HomeViewController : ORKTaskViewControllerDelegate {
+    
+    func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
+        taskViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
