@@ -49,6 +49,8 @@ class SurveyViewController: UIViewController,CLLocationManagerDelegate {
 extension SurveyViewController : ORKTaskViewControllerDelegate {
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
         taskViewController.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController!.popViewControllerAnimated(true)
+
         if let results = taskViewController.result.results {
             for result in results {
                 let stepId = result.identifier
