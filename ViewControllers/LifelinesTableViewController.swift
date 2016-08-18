@@ -2,6 +2,7 @@
 //  LifelinesTableViewController.swift
 
 import UIKit
+import ResearchKit
 
 class LifelinesTableViewController: UITableViewController {
     
@@ -9,8 +10,8 @@ class LifelinesTableViewController: UITableViewController {
     // MARK: Properties
     
     var lifelines = [Lifeline]()
+    
     func backAction() -> Void {
-        print("hey")
         self.navigationController!.dismissViewControllerAnimated(true, completion: nil)
     }
     override func viewDidLoad() {
@@ -22,7 +23,15 @@ class LifelinesTableViewController: UITableViewController {
         }
         else{
         navigationItem.rightBarButtonItem = editButtonItem()
-        }
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let hasSeenInstructions = defaults.boolForKey("instructionsShown")
+            if !hasSeenInstructions{
+                let taskViewController = ORKTaskViewController(task: LifelineInstructionTask, taskRunUUID: nil)
+                    taskViewController.delegate = self
+                    presentViewController(taskViewController, animated: true, completion: nil)
+                defaults.setBool(true, "instructionsShown")
+                }
+            }
 
         var backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backAction")
 
@@ -173,4 +182,14 @@ class LifelinesTableViewController: UITableViewController {
     func loadLifelines() -> [Lifeline]? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Lifeline.ArchiveURL.path!) as? [Lifeline]
     }
+}
+
+
+extension LifelinesTableViewController : ORKTaskViewControllerDelegate {
+    
+    func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
+        //Handle results with taskViewController.result
+        taskViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
