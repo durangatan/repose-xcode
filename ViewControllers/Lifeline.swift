@@ -52,6 +52,31 @@ class Lifeline: NSObject, NSCoding {
         }
     }
     
+    // MARK: Methods
+    func isAvailableNow()-> Bool{
+        let now = NSDate()
+        let cal = NSCalendar.currentCalendar()
+        let components = cal.components([.Hour], fromDate:now)
+        
+        return isPastStartHour() && isBeforeEndHour()
+    }
+    
+    func isPastStartHour()->Bool{
+        let now = NSDate()
+        let cal = NSCalendar.currentCalendar()
+        let components = cal.components([.Hour], fromDate:now)
+        
+        return self.startTime <= components.hour
+    }
+    
+    func isBeforeEndHour()->Bool{
+        let now = NSDate()
+        let cal = NSCalendar.currentCalendar()
+        let components = cal.components([.Hour], fromDate:now)
+        return self.endTime >= components.hour
+    }
+    
+    
     // MARK: NSCoding
     
     func encodeWithCoder(aCoder: NSCoder) {
