@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
     
     var oldbounds:CGRect!
     
+    var helpButtonHeld : Bool = false
+    
     @IBOutlet weak var lifelineButton: UIButton!
     @IBOutlet weak var navBa: UINavigationItem!
     var drawAnimation = CABasicAnimation()
@@ -23,8 +25,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var helpButton: circleView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+//    let gradientLayer = CAGradientLayer()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.helpButton.backgroundColor = UIColor.clearColor()
+        helpButtonHeld = false
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -41,6 +46,8 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        self.helpButton.backgroundColor = UIColor.clearColor()
+
         if Helper.isInEventState(){
             lifelineButton.setTitle("Call a Lifeline", forState: .Normal)
             let helpTapped = UITapGestureRecognizer(target: self, action: Selector("helpButtonTapped:"))
@@ -54,26 +61,36 @@ class HomeViewController: UIViewController {
         longPress.minimumPressDuration = 0.5
         helpButton.addGestureRecognizer(longPress)
         helpButton.userInteractionEnabled = true
-
+        
         }
     }
     
     func longPress(gesture:UILongPressGestureRecognizer){
+//        self.helpButton.backgroundColor = UIColor.clearColor()
+
         if gesture.state == UIGestureRecognizerState.Began
         {
             self.beginPressTime = CACurrentMediaTime()
-            self.helpButton.backgroundColor = UIColor.redColor()
+//            UIColor(red: 13/255, green: 151/255, blue: 255/255, alpha: 1.0).setFill()
+//                    path.fill()
+//            self.helpButton.backgroundColor = UIColor.redColor()
+//            self.helpButton.blackColor().setStroke()
+//            UIColor.stroke()
+
             self.oldbounds = self.helpButton.bounds
+
+
         }
         else if gesture.state == UIGestureRecognizerState.Changed
         {
             let bounds = self.helpButton.bounds
             let deltaTime = CACurrentMediaTime() - beginPressTime
             if deltaTime > 1.5{
-                self.helpButton.backgroundColor = UIColor.greenColor()
+//                self.helpButton.backgroundColor = UIColor.greenColor()
             }
             UIView.animateWithDuration(0.5, animations: {
                 self.helpButton.bounds = CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.size.width + 22, height: bounds.size.height + 22)
+                
             })
         }
         else
@@ -81,7 +98,7 @@ class HomeViewController: UIViewController {
             let deltaTime = CACurrentMediaTime() - beginPressTime
             if deltaTime > 1.5{
                 self.helpButton.bounds = self.oldbounds
-                self.helpButton.backgroundColor = UIColor.greenColor()
+//                self.helpButton.backgroundColor = UIColor.redColor()
                 let defaults = NSUserDefaults.standardUserDefaults()
                 let currentTime = CACurrentMediaTime()
                 defaults.setObject(currentTime, forKey:"eventStart")
@@ -89,7 +106,8 @@ class HomeViewController: UIViewController {
             else{
             UIView.animateWithDuration(0.5, animations: {
                 self.helpButton.bounds = self.oldbounds
-                self.helpButton.backgroundColor = UIColor.blueColor()
+//                self.helpButton.
+//                self.helpButton.backgroundColor = UIColor.blueColor()
             })
                 
             }
@@ -98,22 +116,24 @@ class HomeViewController: UIViewController {
     
     func helpButtonTapped(sender: UITapGestureRecognizer){
         
-        if self.helpButton.backgroundColor == UIColor.blueColor(){
-            
+//        if self.helpButton.backgroundColor == UIColor.blueColor(){
+        if helpButtonHeld == true {
+        
         }else{
             let defaults = NSUserDefaults.standardUserDefaults()
             let eventEnd = CACurrentMediaTime()
             defaults.setDouble(eventEnd, forKey:"eventEnd")
             self.performSegueWithIdentifier("showSurvey", sender: self)
-            self.helpButton.backgroundColor = UIColor.blueColor()
+//            self.helpButton.backgroundColor = UIColor.blueColor()
         }
     }
 
 
-override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-}
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+ 
     func showConsentForm(){
         let taskViewController = ORKTaskViewController(task: ConsentTask, taskRunUUID: nil)
         taskViewController.delegate = self
@@ -126,6 +146,12 @@ override func didReceiveMemoryWarning() {
     {
         print("Errors: " + error.localizedDescription)
     }
+    
+//    func btnPushButton(supportButton: circleView)
+//    {
+//        supportButton.fillColor = UIColor.redColor()
+//        
+//    }
 
 
 }

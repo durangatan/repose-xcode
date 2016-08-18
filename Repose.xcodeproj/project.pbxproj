@@ -267,7 +267,6 @@
 		D84DC0091D5D1509000FF1FA = {
 			isa = PBXGroup;
 			children = (
-				0956A11A1D65109C00123E85 /* LayerView.swift */,
 				D8CAA4EF1D64F8DB00C4DF24 /* Launch Screen.storyboard */,
 				D8CAA5071D64F97F00C4DF24 /* water2.imageset */,
 				D8CAA4F51D64F96B00C4DF24 /* SplashScreenUI */,
@@ -289,6 +288,7 @@
 				D887AEB71D6235A7002B1F99 /* Default-568h@2x.png */,
 				D887AEC31D62363A002B1F99 /* HomeViewController.swift */,
 				D887AECC1D62363A002B1F99 /* LandingViewController.swift */,
+				0956A11A1D65109C00123E85 /* LayerView.swift */,
 				D887AEBC1D62363A002B1F99 /* LoginViewController.swift */,
 				D887AEBE1D62363A002B1F99 /* ListItem.swift */,
 				D887AEC61D62363A002B1F99 /* MenuController.swift */,

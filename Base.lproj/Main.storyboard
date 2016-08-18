@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sn5-Cs-QoN">
-
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sn5-Cs-QoN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -194,6 +193,9 @@
                     <view key="view" contentMode="scaleToFill" id="3dy-h6-0g8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="300" affinity="minY"/>
+                        </userGuides>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zdc-v3-CJN" customClass="Layer1View" customModule="Repose" customModuleProvider="target">
                                 <rect key="frame" x="250" y="348" width="100" height="100"/>
@@ -377,7 +379,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWt-OO-yz3">
                                         <rect key="frame" x="0.0" y="189" width="600" height="94"/>
                                         <color key="backgroundColor" red="0.23137254901960785" green="0.36078431372549019" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
-
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <state key="normal" title="Safety Checklist">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -401,12 +402,15 @@
                                         <rect key="frame" x="0.0" y="378" width="600" height="94"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eb6-W0-E0W" customClass="circleView" customModule="Repose">
-                                                <rect key="frame" x="275" y="22" width="50" height="50"/>
-
-                                                <color key="backgroundColor" red="0.0" green="0.33657381510000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="263" y="8" width="75" height="75"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="supportButton" translatesAutoresizingMaskIntoConstraints="NO" id="mZa-NJ-Lg2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="pkH-Y5-TDA"/>
-                                                    <constraint firstAttribute="width" constant="50" id="zna-yZ-qHc"/>
+                                                    <constraint firstAttribute="height" constant="75" id="pkH-Y5-TDA"/>
+                                                    <constraint firstAttribute="width" constant="75" id="zna-yZ-qHc"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1065,11 +1069,12 @@
     </scenes>
     <resources>
         <image name="hamburger" width="22" height="22"/>
+        <image name="supportButton" width="402" height="402"/>
         <image name="water2.jpg" width="900" height="708"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g7W-pX-GsN"/>
-        <segue reference="6aC-DU-X4r"/>
+        <segue reference="psa-3v-jto"/>
         <segue reference="rxx-E2-hFq"/>
+        <segue reference="g7W-pX-GsN"/>
     </inferredMetricsTieBreakers>
 </document>
