@@ -16,6 +16,8 @@ extension UIView {
         animation.type = kCATransitionFade
         animation.duration = duration
         self.layer.addAnimation(animation, forKey: kCATransitionFade)
+        
+        
     }
 }
 
@@ -26,6 +28,7 @@ class AffirmationsViewController: UIViewController {
     
     //MARK: Properties
     
+   
     
     @IBOutlet weak var affirmationContainer: UILabel!
     
@@ -90,6 +93,8 @@ class AffirmationsViewController: UIViewController {
         super.viewDidLoad()
         self.scrambleArray()
         self.affirmationContainer.text = self.myArray[0]
+        
+        self.view.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
         // Do any additional setup after loading the view.
         
         //MARK: Swipe Logic

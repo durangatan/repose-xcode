@@ -4,6 +4,8 @@
 import UIKit
 
 class LifelinesTableViewController: UITableViewController {
+    
+    
     // MARK: Properties
     
     var lifelines = [Lifeline]()
@@ -13,6 +15,9 @@ class LifelinesTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
+        
         if Helper.isInEventState(){
         }
         else{
@@ -32,6 +37,8 @@ class LifelinesTableViewController: UITableViewController {
     }
     
     func loadSampleLifelines() {
+        
+        
         let lifeline1 = Lifeline(first: "Joe", last: "Duran", phone: "5133776353", startTime:0, endTime: 12)!
         
         let lifeline2 = Lifeline(first: "Ed", last: "Duran", phone: "5139849753", startTime:4, endTime: 16)!
@@ -63,12 +70,19 @@ class LifelinesTableViewController: UITableViewController {
         
         let lifeline = lifelines[indexPath.row]
         
+        cell.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
+
+        
         cell.firstName.text = lifeline.first
         cell.lastName.text = lifeline.last
         cell.phoneNumber.text = lifeline.phone
         cell.startTime.text = String(lifeline.startTime!) ?? ""
         cell.endTime.text = String(lifeline.endTime!) ?? ""
-
+        if !lifeline.isAvailableNow() {
+            cell.contentView.backgroundColor = UIColor(red: 0.0, green: 0.4, blue: 1.0, alpha: 1.0)
+        } else {
+            cell.contentView.backgroundColor = UIColor.purpleColor()
+        }
         
         return cell
     }
@@ -79,7 +93,14 @@ class LifelinesTableViewController: UITableViewController {
         return true
     }
     
-
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        let url = NSURL(string: "tel://\(lifelines[indexPath.row].phone)")
+        cell!.contentView.backgroundColor = UIColor.greenColor()
+        UIApplication.sharedApplication().openURL(url!)
+    }
+    
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -93,22 +114,6 @@ class LifelinesTableViewController: UITableViewController {
     }
 
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

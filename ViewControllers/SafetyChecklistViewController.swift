@@ -26,12 +26,11 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
         checklistTableView.delegate = self
         checklistTableView.registerClass(TableViewCell.self, forCellReuseIdentifier: "cell")
         checklistTableView.separatorStyle = .None
-        checklistTableView.backgroundColor = UIColor(red: 179/255, green: 207/255, blue: 245/255, alpha:1.0)
+        checklistTableView.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
         checklistTableView.rowHeight = 50.0
-
-        if listItems.count > 0 {
-            return
-        }
+        if let savedListItems = loadListItems(){
+            self.listItems += savedListItems
+        }else{
         listItems.append(ListItem(text: "Relax"))
         listItems.append(ListItem(text: "Stop negative thinking"))
         listItems.append(ListItem(text: "Use coping statements"))
@@ -42,7 +41,8 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
             toolbar.hidden = true
         }
     }
-
+    }
+    
     // MARK: - Table view data source
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -61,6 +61,8 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
         //        cell.textLabel?.backgroundColor = UIColor.clearColor()
         //        cell.textLabel?.text = item.text
         cell.delegate = self
+        cell.backgroundColor = colorForIndex(indexPath.row)
+
         cell.listItem = item
         return cell
     }
@@ -79,6 +81,7 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
         checklistTableView.deleteRowsAtIndexPaths([indexPathForRow], withRowAnimation: .Fade)
         checklistTableView.endUpdates()
         checklistTableView.reloadData()
+        saveListItems()
 
     }
 
@@ -107,6 +110,7 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
             })
         }
         checklistTableView.reloadData()
+        saveListItems()
     }
 
     func listItemAdded() {
@@ -125,57 +129,21 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
         }
     }
 
-    // MARK: - UIScrollViewDelegate methods
-    // contains scrollViewDidScroll, and other methods, to keep track of dragging the scrollView
-
-    // a cell that is rendered as a placeholder to indicate where a new item is added
-//    let placeHolderCell = TableViewCell(style: .Default, reuseIdentifier: "cell")
-//    // indicates the state of this behavior
-//    var pullDownInProgress = false
-//
-//    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-//        // this behavior starts when a user pulls down while at the top of the table
-//        pullDownInProgress = scrollView.contentOffset.y <= 0.0
-//        placeHolderCell.backgroundColor = UIColor(red:0.36, green:0.77, blue:0.31, alpha:1.0)
-//        if pullDownInProgress {
-//            // add the placeholder
-//            checklistTableView.insertSubview(placeHolderCell, atIndex: 0)
-//        }
-//    }
-//
-//    func scrollViewDidScroll(scrollView: UIScrollView) {
-//        let scrollViewContentOffsetY = scrollView.contentOffset.y
-//
-//        if pullDownInProgress && scrollView.contentOffset.y <= 0.0 {
-//            // maintain the location of the placeholder
-//            placeHolderCell.frame = CGRect(x: 0, y: -checklistTableView.rowHeight, width: checklistTableView.frame.size.width, height: checklistTableView.rowHeight)
-//            placeHolderCell.label.text = -scrollViewContentOffsetY > checklistTableView.rowHeight ?"Release to add item" : "Pull to add item"
-//            placeHolderCell.alpha = min(1.0, -scrollViewContentOffsetY / checklistTableView.rowHeight)
-//        } else {
-//            pullDownInProgress = false
-//        }
-//    }
-//
-//    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        // check whether the user pulled down far enough
-//        if pullDownInProgress && -scrollView.contentOffset.y > checklistTableView.rowHeight {
-//            listItemAdded()
-//        }
-//        pullDownInProgress = false
-//        placeHolderCell.removeFromSuperview()
-//    }
-
-    // MARK: - Table view delegate
-
     func colorForIndex(index: Int) -> UIColor {
         let itemCount = listItems.count - 1
-        let val = (CGFloat(index) / CGFloat(itemCount)) * 0.6
+        let val = (CGFloat(index) / CGFloat(itemCount)) * 0.8
         return UIColor(red: (20 + 62 * val)/255, green: (54 + 94 * val)/255, blue: (125 + 107 * val)/255, alpha: 1.0)
     }
 
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell,
-                   forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = colorForIndex(indexPath.row)
+    func saveListItems() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(listItems, toFile: ListItem.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            print("Failed to save items...")
+        }
+    }
+
+    func loadListItems() -> [ListItem]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(ListItem.ArchiveURL.path!) as? [ListItem]
     }
 
 }

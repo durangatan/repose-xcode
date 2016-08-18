@@ -49,6 +49,8 @@ class SurveyViewController: UIViewController,CLLocationManagerDelegate {
 extension SurveyViewController : ORKTaskViewControllerDelegate {
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
         taskViewController.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController!.popViewControllerAnimated(true)
+
         if let results = taskViewController.result.results {
             for result in results {
                 let stepId = result.identifier
@@ -73,17 +75,9 @@ extension SurveyViewController : ORKTaskViewControllerDelegate {
                 .responseJSON { response in
                     switch response.result{
                     case .Success:
-                        let alertView = UIAlertController(title: "Success!",
-                            message: "Thanks", preferredStyle:.Alert)
-                        let okAction = UIAlertAction(title: "dismiss!", style: .Default, handler: nil)
-                        alertView.addAction(okAction)
-                        self.presentViewController(alertView, animated: true, completion: nil)
+                        print("saved")
                     case .Failure:
-                        let alertView = UIAlertController(title: "Sorry",
-                            message: "invalid email or password." as String, preferredStyle:.Alert)
-                        let okAction = UIAlertAction(title: "dismiss", style: .Default, handler: nil)
-                        alertView.addAction(okAction)
-                        self.presentViewController(alertView, animated: true, completion: nil)
+                        print("failed to save")
                     }
                 }
             defaults.setValue(nil, forKey:"eventStart")
