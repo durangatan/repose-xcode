@@ -45,7 +45,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1124" y="338"/>
+            <point key="canvasLocation" x="-616" y="307"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="kL0-X1-Ucw">
@@ -928,8 +928,8 @@
         <image name="water2.jpg" width="900" height="708"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="psa-3v-jto"/>
-        <segue reference="rxx-E2-hFq"/>
         <segue reference="g7W-pX-GsN"/>
+        <segue reference="6aC-DU-X4r"/>
+        <segue reference="rxx-E2-hFq"/>
     </inferredMetricsTieBreakers>
 </document>
