@@ -49,7 +49,7 @@ class LoginViewController: UIViewController{
     
     // ask the Repose server if the given credentials are valid.
     func checkLogin(email: String, password :String) -> Void{
-        Alamofire.request(.POST, "https://repose.herokuapp.com/api/v1/sessions", parameters: ["session":["email": email,"password": password]])
+        Alamofire.request(.POST, "https://repose.herokuapp.com/api/v1/sessions", parameters: ["session":["EMAIL": email,"PASSWORD": password]])
             .responseJSON { response in
                 switch response.result{
                 case .Success:
@@ -140,7 +140,7 @@ class LoginViewController: UIViewController{
         let hasLogin = NSUserDefaults.standardUserDefaults().valueForKey("hasReposeAccount") as? Bool
         // if they do, the button is a log in button
         if hasLogin == true {
-            loginButton.setTitle("Login", forState: UIControlState.Normal)
+            loginButton.setTitle("LOGIN", forState: UIControlState.Normal)
             loginButton.titleLabel!.font =  UIFont(name: "Helvetica Neue", size: 22)
             
             loginButton.tag = loginButtonTag
@@ -148,7 +148,7 @@ class LoginViewController: UIViewController{
         } else {
             // if they don't, their button is a create button
             
-            loginButton.setTitle("Create", forState: UIControlState.Normal)
+            loginButton.setTitle("CREATE", forState: UIControlState.Normal)
             loginButton.titleLabel!.font =  UIFont(name: "Helvetica Neue", size: 22)
             loginButton.tag = createLoginButtonTag
             createInfoLabel.hidden = false
