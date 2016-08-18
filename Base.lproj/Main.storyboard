@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ntc-US-aL1">
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sn5-Cs-QoN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -63,7 +64,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="765"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="start by creating an account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wda-9P-MxV">
-
                                 <rect key="frame" x="0.0" y="524" width="600" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -92,7 +92,6 @@
                                         <state key="normal" title="Create an Account">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-
                                         <connections>
                                             <action selector="loginAction:" destination="Ntc-US-aL1" eventType="touchUpInside" id="RD6-xy-XDt"/>
                                         </connections>
@@ -103,7 +102,6 @@
                                         <state key="normal" title="Ok Log me in already">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-
                                         <connections>
                                             <segue destination="CU9-e9-11P" kind="show" id="rxx-E2-hFq"/>
                                         </connections>
@@ -239,48 +237,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="384" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Fwf-Oh-aAX">
-                                <rect key="frame" x="0.0" y="64" width="600" height="384"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="384" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Fwf-Oh-aAX">
+                                <rect key="frame" x="0.0" y="64" width="600" height="472"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0c-a0-G35">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="71"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
+                                        <color key="backgroundColor" red="0.086274509803921567" green="0.19607843137254902" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                        <state key="normal" title="Breathing Exercises"/>
+                                        <state key="normal" title="Breathing Exercises">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="wHr-vP-iL6" kind="show" id="bxU-wf-2Df"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdA-1Q-OFC">
-                                        <rect key="frame" x="0.0" y="78" width="600" height="71"/>
+                                        <rect key="frame" x="0.0" y="94" width="600" height="95"/>
+                                        <color key="backgroundColor" red="0.14509803921568626" green="0.28627450980392155" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                        <state key="normal" title="Affirmations"/>
+                                        <state key="normal" title="Affirmations">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="EtC-j8-Swe" kind="show" id="dfy-ph-Abr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWt-OO-yz3">
-                                        <rect key="frame" x="0.0" y="156" width="600" height="72"/>
+                                        <rect key="frame" x="0.0" y="189" width="600" height="94"/>
+                                        <color key="backgroundColor" red="0.23137254901960785" green="0.36078431372549019" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
 
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                        <state key="normal" title="Safety Checklist"/>
+                                        <state key="normal" title="Safety Checklist">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <segue destination="jbF-Wk-3Q5" kind="show" id="JkL-mo-ySC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbq-JN-0IK">
-                                        <rect key="frame" x="0.0" y="235" width="600" height="71"/>
-
+                                        <rect key="frame" x="0.0" y="283" width="600" height="95"/>
+                                        <color key="backgroundColor" red="0.24313725490196078" green="0.42745098039215684" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                        <state key="normal" title="Configure Your Lifelines"/>
+                                        <state key="normal" title="Configure Your Lifelines">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <segue destination="dOI-Mo-u79" kind="show" id="FE3-PP-g6I"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYK-kA-tTW">
-                                        <rect key="frame" x="0.0" y="313" width="600" height="71"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhX-wZ-6zH">
+                                        <rect key="frame" x="0.0" y="378" width="600" height="94"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="Eb6-W0-E0W" customClass="circleView" customModule="Repose">
-                                                <rect key="frame" x="275" y="9" width="50" height="50"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eb6-W0-E0W" customClass="circleView" customModule="Repose">
+                                                <rect key="frame" x="275" y="22" width="50" height="50"/>
+
                                                 <color key="backgroundColor" red="0.0" green="0.33657381510000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="pkH-Y5-TDA"/>
@@ -291,24 +301,25 @@
                                                         <real key="value" value="25"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.32156862749999998" green="0.58039215690000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" red="0.37254901959999998" green="0.6588235294" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="3"/>
+                                                        <real key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.70980392160000005" green="0.80784313730000001" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="Eb6-W0-E0W" firstAttribute="centerX" secondItem="zYK-kA-tTW" secondAttribute="centerX" id="Hnh-nR-TRp"/>
+                                            <constraint firstItem="Eb6-W0-E0W" firstAttribute="centerX" secondItem="jhX-wZ-6zH" secondAttribute="centerX" id="6Zx-Pc-Mr5"/>
+                                            <constraint firstAttribute="bottom" secondItem="Eb6-W0-E0W" secondAttribute="bottom" constant="20" id="lyE-Yv-MEg"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.70980392156862748" green="0.80784313725490198" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.27450980392156865" green="0.55686274509803924" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Fwf-Oh-aAX" firstAttribute="top" secondItem="Cv9-fj-pYw" secondAttribute="bottom" id="YcK-DE-gzV"/>
                             <constraint firstItem="Fwf-Oh-aAX" firstAttribute="width" secondItem="M3f-sb-pgK" secondAttribute="width" id="kCw-bA-Gbw"/>
                             <constraint firstItem="Fwf-Oh-aAX" firstAttribute="centerY" secondItem="M3f-sb-pgK" secondAttribute="centerY" id="n1Y-8c-wiQ"/>
                         </constraints>
@@ -810,6 +821,20 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygB-au-UQz">
+                                <rect key="frame" x="278" y="469" width="45" height="30"/>
+                                <state key="normal" title="cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="16I-Vs-mQT" eventType="touchUpInside" id="1db-6E-qf9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqt-eE-p4E">
+                                <rect key="frame" x="283" y="402" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="LZg-8k-zQ2" kind="unwind" unwindAction="unwindToLifelineList:" id="5jT-w8-6br"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -818,24 +843,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="bVb-50-DOE" secondAttribute="trailing" id="n4G-kE-nOj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="edit lifeline" id="KCQ-Uy-Iyk">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="yB3-V4-V0j">
-                            <connections>
-                                <action selector="cancel:" destination="16I-Vs-mQT" id="V1x-mf-pDs"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Fjs-bh-RRJ">
-                            <connections>
-                                <segue destination="LZg-8k-zQ2" kind="unwind" unwindAction="unwindToLifelineList:" id="fIO-T8-dQr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="edit lifeline" id="KCQ-Uy-Iyk"/>
                     <connections>
                         <outlet property="ends" destination="luI-91-PU4" id="Le4-K5-2Vm"/>
                         <outlet property="firstName" destination="Ncs-OS-Ygc" id="OaJ-js-14Q"/>
                         <outlet property="lastName" destination="QE1-UT-EtR" id="S8O-Az-8rd"/>
                         <outlet property="phoneNumber" destination="dis-dw-dGi" id="3c5-ln-s97"/>
-                        <outlet property="saveButton" destination="Fjs-bh-RRJ" id="G9f-rd-nKr"/>
+                        <outlet property="saveButton" destination="qqt-eE-p4E" id="kIb-SY-OPV"/>
                         <outlet property="start" destination="oHx-1j-n3v" id="nW4-dq-Kxp"/>
                     </connections>
                 </viewController>
@@ -895,10 +910,8 @@
         <image name="water2.jpg" width="900" height="708"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="psa-3v-jto"/>
-        <segue reference="axk-Vt-bFk"/>
-        <segue reference="g7W-pX-GsN"/>
         <segue reference="6aC-DU-X4r"/>
         <segue reference="rxx-E2-hFq"/>
+        <segue reference="g7W-pX-GsN"/>
     </inferredMetricsTieBreakers>
 </document>

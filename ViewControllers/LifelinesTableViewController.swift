@@ -78,7 +78,11 @@ class LifelinesTableViewController: UITableViewController {
         cell.phoneNumber.text = lifeline.phone
         cell.startTime.text = String(lifeline.startTime!) ?? ""
         cell.endTime.text = String(lifeline.endTime!) ?? ""
-
+        if !lifeline.isAvailableNow() {
+            cell.contentView.backgroundColor = UIColor(red: 0.0, green: 0.4, blue: 1.0, alpha: 1.0)
+        } else {
+            cell.contentView.backgroundColor = UIColor.purpleColor()
+        }
         
         return cell
     }
@@ -89,7 +93,14 @@ class LifelinesTableViewController: UITableViewController {
         return true
     }
     
-
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        let url = NSURL(string: "tel://\(lifelines[indexPath.row].phone)")
+        cell!.contentView.backgroundColor = UIColor.greenColor()
+        UIApplication.sharedApplication().openURL(url!)
+    }
+    
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -103,22 +114,6 @@ class LifelinesTableViewController: UITableViewController {
     }
 
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
