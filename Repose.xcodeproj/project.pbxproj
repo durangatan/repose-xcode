@@ -46,6 +46,8 @@
 		D8ADA4AF1D65FA2B0019EF6F /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AC1D65FA2B0019EF6F /* RecorderViewController.swift */; };
 		D8ADA4B01D65FA2B0019EF6F /* RecordingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AD1D65FA2B0019EF6F /* RecordingCollectionViewCell.swift */; };
 		D8ADA4B11D65FA2B0019EF6F /* RecordingsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AE1D65FA2B0019EF6F /* RecordingsCollectionViewController.swift */; };
+		D88D32C31D6613810007F28B /* LifelinesInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D32C21D6613810007F28B /* LifelinesInstructions.swift */; };
+		D88D32C71D6615F60007F28B /* LifelineInstructionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D32C61D6615F60007F28B /* LifelineInstructionTask.swift */; };
 		D8C4A3C51D6445EC00A7D2B6 /* LineGraphDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3C11D6445EC00A7D2B6 /* LineGraphDataSource.swift */; };
 		D8C4A3CA1D6447C000A7D2B6 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3C91D6447C000A7D2B6 /* ProfilePageViewController.swift */; };
 		D8C4A3D21D644EBF00A7D2B6 /* Eventable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4A3D11D644EBF00A7D2B6 /* Eventable.swift */; };
@@ -175,6 +177,9 @@
 		D8ADA4AC1D65FA2B0019EF6F /* RecorderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecorderViewController.swift; path = ViewControllers/RecorderViewController.swift; sourceTree = SOURCE_ROOT; };
 		D8ADA4AD1D65FA2B0019EF6F /* RecordingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingCollectionViewCell.swift; path = ViewControllers/RecordingCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D8ADA4AE1D65FA2B0019EF6F /* RecordingsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingsCollectionViewController.swift; path = ViewControllers/RecordingsCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
+
+		D88D32C21D6613810007F28B /* LifelinesInstructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LifelinesInstructions.swift; path = ViewControllers/LifelinesInstructions.swift; sourceTree = "<group>"; };
+		D88D32C61D6615F60007F28B /* LifelineInstructionTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifelineInstructionTask.swift; sourceTree = "<group>"; };
 		D8AFA5341D60A2F50095BBC5 /* circleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circleViewController.swift; sourceTree = "<group>"; };
 		D8AFA5361D60A2FA0095BBC5 /* circleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circleView.swift; sourceTree = "<group>"; };
 		D8AFA53B1D60B9100095BBC5 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConsentDocument.swift; path = ViewControllers/ConsentDocument.swift; sourceTree = "<group>"; };
@@ -292,7 +297,9 @@
 				D887AEC71D62363A002B1F99 /* circleViewController.swift */,
 				D887AEBD1D62363A002B1F99 /* CheckListTableViewCell.swift */,
 				D887AEC41D62363A002B1F99 /* ConsentDocument.swift */,
+				D88D32C21D6613810007F28B /* LifelinesInstructions.swift */,
 				D887AECB1D62363A002B1F99 /* ConsentTask.swift */,
+				D88D32C61D6615F60007F28B /* LifelineInstructionTask.swift */,
 				D887AEC81D62363A002B1F99 /* ConsentViewController.swift */,
 				D887AEB71D6235A7002B1F99 /* Default-568h@2x.png */,
 				D887AEC31D62363A002B1F99 /* HomeViewController.swift */,
@@ -707,6 +714,7 @@
 				D8ADA4B01D65FA2B0019EF6F /* RecordingCollectionViewCell.swift in Sources */,
 				D8CAA4E71D64EB6400C4DF24 /* EventDetailViewController.swift in Sources */,
 				D887AEDD1D62363A002B1F99 /* MenuController.swift in Sources */,
+				D88D32C71D6615F60007F28B /* LifelineInstructionTask.swift in Sources */,
 				D8436C251D623A4E00B92064 /* SWRevealViewController.m in Sources */,
 				D8CAA5061D64F96B00C4DF24 /* TileView.swift in Sources */,
 				D887AEDE1D62363A002B1F99 /* circleViewController.swift in Sources */,
@@ -714,6 +722,7 @@
 				D8CAA4E81D64EB6400C4DF24 /* EventMapViewController.swift in Sources */,
 				D887AEE01D62363A002B1F99 /* BreathViewController.swift in Sources */,
 				D887AEE11D62363A002B1F99 /* circleView.swift in Sources */,
+				D88D32C31D6613810007F28B /* LifelinesInstructions.swift in Sources */,
 				D8D3C5AC1D655C4400A487C6 /* AboutViewController.swift in Sources */,
 				D8CAA5201D65326800C4DF24 /* LayerView.swift in Sources */,
 				D887AEE21D62363A002B1F99 /* ConsentTask.swift in Sources */,

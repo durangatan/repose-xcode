@@ -2,6 +2,7 @@
 //  LifelinesTableViewController.swift
 
 import UIKit
+import ResearchKit
 
 class LifelinesTableViewController: UITableViewController {
     
@@ -9,8 +10,8 @@ class LifelinesTableViewController: UITableViewController {
     // MARK: Properties
     
     var lifelines = [Lifeline]()
+    
     func backAction() -> Void {
-        print("hey")
         self.navigationController!.dismissViewControllerAnimated(true, completion: nil)
     }
     override func viewDidLoad() {
@@ -22,7 +23,15 @@ class LifelinesTableViewController: UITableViewController {
         }
         else{
         navigationItem.rightBarButtonItem = editButtonItem()
-        }
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let hasSeenInstructions = defaults.boolForKey("instructionsShown")
+            if !hasSeenInstructions{
+                let taskViewController = ORKTaskViewController(task: LifelineInstructionTask, taskRunUUID: nil)
+                    taskViewController.delegate = self
+                    presentViewController(taskViewController, animated: true, completion: nil)
+                defaults.setBool(true, "instructionsShown")
+                }
+            }
 
         var backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backAction")
 
@@ -81,7 +90,7 @@ class LifelinesTableViewController: UITableViewController {
         if !lifeline.isAvailableNow() {
             cell.contentView.backgroundColor = UIColor(red: 0.0, green: 0.4, blue: 1.0, alpha: 1.0)
         } else {
-            cell.contentView.backgroundColor = UIColor.purpleColor()
+            cell.contentView.backgroundColor = colorForIndex(indexPath.row)
         }
         
         return cell
@@ -164,7 +173,23 @@ class LifelinesTableViewController: UITableViewController {
         }
     }
     
+    func colorForIndex(index: Int) -> UIColor {
+        let itemCount = lifelines.count - 1
+        let val = (CGFloat(index) / CGFloat(itemCount)) * 0.8
+        return UIColor(red: (20 + 62 * val)/255, green: (54 + 94 * val)/255, blue: (125 + 107 * val)/255, alpha: 1.0)
+    }
+    
     func loadLifelines() -> [Lifeline]? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Lifeline.ArchiveURL.path!) as? [Lifeline]
     }
+}
+
+
+extension LifelinesTableViewController : ORKTaskViewControllerDelegate {
+    
+    func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
+        //Handle results with taskViewController.result
+        taskViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
