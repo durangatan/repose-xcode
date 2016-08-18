@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ntc-US-aL1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sn5-Cs-QoN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Root Container View Controller-->
+        <scene sceneID="uex-cb-wFR">
+            <objects>
+                <viewController id="sn5-Cs-QoN" customClass="RootContainerViewController" customModule="Repose" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1dc-9F-DhS"/>
+                        <viewControllerLayoutGuide type="bottom" id="2rU-FO-rt6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GSU-Oo-UvN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="water2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Mlf-Rv-1iP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="752"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8Uz-qi-fy8" appends="YES" id="HF6-0J-wfI"/>
+                                    <outletCollection property="gestureRecognizers" destination="8Uz-qi-fy8" appends="YES" id="Dyq-IK-1rx"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8Uz-qi-fy8" appends="YES" id="L3A-gf-R6Z"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="Mlf-Rv-1iP" id="Ch6-Dj-b1y"/>
+                        <segue destination="Ntc-US-aL1" kind="show" identifier="showLogin" id="lKp-k6-ila"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XMA-T3-JHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8Uz-qi-fy8">
+                    <connections>
+                        <action selector="dismissScreen:" destination="sn5-Cs-QoN" id="0C4-eq-hAO"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1124" y="338"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="kL0-X1-Ucw">
             <objects>
@@ -19,44 +59,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="repose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrx-jB-T0w">
-                                <rect key="frame" x="0.0" y="28" width="600" height="107"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start by creating an account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wda-9P-MxV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="water2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3jo-4J-85G">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="765"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="start by creating an account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wda-9P-MxV">
+
                                 <rect key="frame" x="0.0" y="524" width="600" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KYj-tV-lJ5">
-                                <rect key="frame" x="20" y="330" width="560" height="175"/>
+                                <rect key="frame" x="20" y="330" width="560" height="160"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbe-vm-3RF">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="61"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbe-vm-3RF">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.56435883620689653" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWN-wn-bOP">
-                                        <rect key="frame" x="0.0" y="69" width="560" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWN-wn-bOP">
+                                        <rect key="frame" x="0.0" y="38" width="560" height="30"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.55967133620689657" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajy-00-gMo">
-                                        <rect key="frame" x="0.0" y="107" width="560" height="30"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Create an Account"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajy-00-gMo">
+                                        <rect key="frame" x="0.0" y="76" width="560" height="38"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="Create an Account">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+
                                         <connections>
                                             <action selector="loginAction:" destination="Ntc-US-aL1" eventType="touchUpInside" id="RD6-xy-XDt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmw-Y9-W96">
-                                        <rect key="frame" x="0.0" y="145" width="560" height="30"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Ok log me in already"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmw-Y9-W96">
+                                        <rect key="frame" x="0.0" y="122" width="560" height="38"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="Ok Log me in already">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+
                                         <connections>
                                             <segue destination="CU9-e9-11P" kind="show" id="rxx-E2-hFq"/>
                                         </connections>
@@ -68,12 +115,8 @@
                         <constraints>
                             <constraint firstItem="wda-9P-MxV" firstAttribute="top" secondItem="KYj-tV-lJ5" secondAttribute="bottom" constant="20" id="3wH-3Z-jPz"/>
                             <constraint firstItem="KYj-tV-lJ5" firstAttribute="leading" secondItem="kao-kD-nEo" secondAttribute="leadingMargin" id="7aW-H5-g9b"/>
-                            <constraint firstItem="Yrx-jB-T0w" firstAttribute="centerX" secondItem="kao-kD-nEo" secondAttribute="centerX" id="FBJ-pq-0MT"/>
-                            <constraint firstItem="Yrx-jB-T0w" firstAttribute="top" secondItem="XEP-NT-ate" secondAttribute="bottom" constant="10" id="IJf-Bc-dwp"/>
                             <constraint firstItem="wda-9P-MxV" firstAttribute="width" secondItem="kao-kD-nEo" secondAttribute="width" id="Im7-Qk-iaG"/>
-                            <constraint firstItem="KYj-tV-lJ5" firstAttribute="top" secondItem="kao-kD-nEo" secondAttribute="top" constant="330" id="Nac-BF-rR8"/>
                             <constraint firstItem="oB9-ra-V40" firstAttribute="top" secondItem="wda-9P-MxV" secondAttribute="bottom" constant="55" id="Ucu-iq-3hw"/>
-                            <constraint firstItem="Yrx-jB-T0w" firstAttribute="centerY" secondItem="kao-kD-nEo" secondAttribute="centerY" id="VLG-DL-4dM"/>
                             <constraint firstItem="KYj-tV-lJ5" firstAttribute="centerY" secondItem="kao-kD-nEo" secondAttribute="centerY" id="WXZ-IT-7WW"/>
                             <constraint firstItem="KYj-tV-lJ5" firstAttribute="centerX" secondItem="kao-kD-nEo" secondAttribute="centerX" id="kLO-bx-YU9"/>
                             <constraint firstItem="wda-9P-MxV" firstAttribute="centerX" secondItem="kao-kD-nEo" secondAttribute="centerX" id="svs-PI-Wh9"/>
@@ -81,7 +124,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="VLG-DL-4dM"/>
                                 <exclude reference="WXZ-IT-7WW"/>
                                 <exclude reference="kLO-bx-YU9"/>
                             </mask>
@@ -838,10 +880,13 @@
     </scenes>
     <resources>
         <image name="hamburger" width="22" height="22"/>
+        <image name="water2.jpg" width="900" height="708"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="psa-3v-jto"/>
         <segue reference="axk-Vt-bFk"/>
         <segue reference="g7W-pX-GsN"/>
+        <segue reference="6aC-DU-X4r"/>
+        <segue reference="rxx-E2-hFq"/>
     </inferredMetricsTieBreakers>
 </document>
