@@ -25,10 +25,25 @@ import UIKit
 class RootContainerViewController: UIViewController {
     
     private var rootViewController: UIViewController? = nil
+    var timer = NSTimer()
+    @IBAction func dismissScreen(sender: UITapGestureRecognizer) {
+            timer.invalidate()
+
+        dismissSplashScreen()
+        
+    }
+    @IBOutlet weak var photoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showSplashViewControllerNoPing()
+        let timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(4), target: self, selector: "dismissSplashScreen", userInfo: nil, repeats: false)
+
+//        print("ping")
+    }
+    
+    func dismissSplashScreen(){
+        performSegueWithIdentifier("showLogin", sender: self)
     }
     
     /// Does not transition to any other UIViewControllers, SplashViewController only
@@ -53,5 +68,6 @@ class RootContainerViewController: UIViewController {
     func showSplashViewController() {
         showSplashViewControllerNoPing()
     }
+    
     
 }
