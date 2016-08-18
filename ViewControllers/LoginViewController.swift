@@ -25,11 +25,7 @@ class LoginViewController: UIViewController{
     @IBOutlet weak var passwordTextField: UITextField!
     
     
-    func showConsentForm(){
-        let taskViewController = ORKTaskViewController(task: ConsentTask, taskRunUUID: nil)
-        taskViewController.delegate = self
-        presentViewController(taskViewController, animated: true, completion: nil)
-    }
+
     
     func checkRegistrationStatus(email:String, password:String)->Bool{
         Alamofire.request(.POST, "https://repose.herokuapp.com/api/v1/users", parameters:["user":["email":email, "password": password]])
@@ -40,11 +36,11 @@ class LoginViewController: UIViewController{
                     defaults.setObject(response.data!, forKey: "bearerToken")
                     defaults.setBool(true, forKey:"hasReposeAccount")
                     self.performSegueWithIdentifier("dismissLogin", sender: self)
-
+                    
                 case .Failure:
                     let alertView = UIAlertController(title: "Registration Problem",
                         message: "invalid email or password." as String, preferredStyle:.Alert)
-                    let okAction = UIAlertAction(title: "Sorry!", style: .Default, handler: nil)
+                    let okAction = UIAlertAction(title: "retry!", style: .Default, handler: nil)
                     alertView.addAction(okAction)
                     self.presentViewController(alertView, animated: true, completion: nil)
                 }
@@ -74,12 +70,6 @@ class LoginViewController: UIViewController{
     }
     
     override func viewDidAppear(animated: Bool) {
-        let hasLogin = NSUserDefaults.standardUserDefaults().boolForKey("hasReposeAccount")
-        if hasLogin == false {
-        showConsentForm()
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setBool(true, forKey:"hasReposeAccount")
-        }
     }
     
     
@@ -95,7 +85,7 @@ class LoginViewController: UIViewController{
             createInfoLabel.hidden = true
         } else {
             // if they don't, their button is a create button
-
+            
             loginButton.setTitle("Create", forState: UIControlState.Normal)
             loginButton.tag = createLoginButtonTag
             createInfoLabel.hidden = false
@@ -112,17 +102,6 @@ class LoginViewController: UIViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     // MARK: Actions
     
