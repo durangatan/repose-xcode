@@ -30,21 +30,21 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KYj-tV-lJ5">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KYj-tV-lJ5">
                                 <rect key="frame" x="20" y="330" width="560" height="175"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbe-vm-3RF">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbe-vm-3RF">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWN-wn-bOP">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWN-wn-bOP">
                                         <rect key="frame" x="0.0" y="69" width="560" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajy-00-gMo">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajy-00-gMo">
                                         <rect key="frame" x="0.0" y="107" width="560" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="Create an Account"/>
@@ -52,7 +52,7 @@
                                             <action selector="loginAction:" destination="Ntc-US-aL1" eventType="touchUpInside" id="RD6-xy-XDt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmw-Y9-W96">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmw-Y9-W96">
                                         <rect key="frame" x="0.0" y="145" width="560" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="Ok log me in already"/>
@@ -538,6 +538,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="wuR-1r-SaZ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="LQB-QW-HPB"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NuN-2h-etW">
                                         <rect key="frame" x="0.0" y="176" width="600" height="44"/>
@@ -569,6 +572,39 @@
             </objects>
             <point key="canvasLocation" x="1006" y="1927"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="S6h-ZQ-1uK">
+            <objects>
+                <viewController id="wuR-1r-SaZ" customClass="AboutViewController" customModule="Repose" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WGQ-gl-Plq"/>
+                        <viewControllerLayoutGuide type="bottom" id="6jd-Ed-WWj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cjv-Bu-2Oq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf3-Gk-C4m">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hf3-Gk-C4m" firstAttribute="bottom" secondItem="6jd-Ed-WWj" secondAttribute="top" id="5W8-YV-zyp"/>
+                            <constraint firstAttribute="trailing" secondItem="Hf3-Gk-C4m" secondAttribute="trailing" id="hwy-9n-2PU"/>
+                            <constraint firstItem="Hf3-Gk-C4m" firstAttribute="leading" secondItem="cjv-Bu-2Oq" secondAttribute="leading" id="rDw-4p-xOx"/>
+                            <constraint firstItem="Hf3-Gk-C4m" firstAttribute="top" secondItem="cjv-Bu-2Oq" secondAttribute="top" id="zrB-ib-KzN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="web" destination="Hf3-Gk-C4m" id="cn3-Ro-8d4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezT-iC-gL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="2810"/>
+        </scene>
         <!--lifelines-->
         <scene sceneID="4kN-YB-Kis">
             <objects>
@@ -586,7 +622,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="GHm-47-gRv">
-                                            <rect key="frame" x="-75" y="50" width="600" height="91"/>
+                                            <rect key="frame" x="-75" y="50" width="600" height="90"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6y-KZ-4gL">
                                                     <rect key="frame" x="0.0" y="0.0" width="432" height="21"/>
@@ -786,7 +822,7 @@
         <image name="hamburger" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6aC-DU-X4r"/>
+        <segue reference="psa-3v-jto"/>
         <segue reference="axk-Vt-bFk"/>
         <segue reference="g7W-pX-GsN"/>
     </inferredMetricsTieBreakers>
