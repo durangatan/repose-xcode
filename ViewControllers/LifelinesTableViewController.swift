@@ -4,6 +4,8 @@
 import UIKit
 
 class LifelinesTableViewController: UITableViewController {
+    
+    
     // MARK: Properties
     
     var lifelines = [Lifeline]()
@@ -13,6 +15,9 @@ class LifelinesTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
+        
         if Helper.isInEventState(){
         }
         else{
@@ -32,6 +37,8 @@ class LifelinesTableViewController: UITableViewController {
     }
     
     func loadSampleLifelines() {
+        
+        
         let lifeline1 = Lifeline(first: "Joe", last: "Duran", phone: "5133776353", startTime:0, endTime: 12)!
         
         let lifeline2 = Lifeline(first: "Ed", last: "Duran", phone: "5139849753", startTime:4, endTime: 16)!
@@ -62,6 +69,9 @@ class LifelinesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! LifelineTableViewCell
         
         let lifeline = lifelines[indexPath.row]
+        
+        cell.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
+
         
         cell.firstName.text = lifeline.first
         cell.lastName.text = lifeline.last

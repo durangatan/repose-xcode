@@ -26,9 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "endTime")
         
         UILabel.appearance().font = UIFont(name: "HelveticaNeue", size: 22.0)
-  
-//                UIView.appearance().backgroundColor = UIColor.orangeColor()
-
         
         return true
     }

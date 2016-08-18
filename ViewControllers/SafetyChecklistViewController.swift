@@ -26,7 +26,7 @@ class SafetyChecklistViewController: UIViewController, UITableViewDataSource, UI
         checklistTableView.delegate = self
         checklistTableView.registerClass(TableViewCell.self, forCellReuseIdentifier: "cell")
         checklistTableView.separatorStyle = .None
-        checklistTableView.backgroundColor = UIColor(red: 179/255, green: 207/255, blue: 245/255, alpha:1.0)
+        checklistTableView.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
         checklistTableView.rowHeight = 50.0
         if let savedListItems = loadListItems(){
             self.listItems += savedListItems
