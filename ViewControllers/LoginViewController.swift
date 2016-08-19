@@ -92,24 +92,6 @@ class LoginViewController: UIViewController{
             })
         }
     }
-
-//    func keyboardWillShow(sender: NSNotification) {
-//    print("will show")
-//    let userInfo: [NSObject : AnyObject] = sender.userInfo!
-//    let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
-//    let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
-//
-//    if keyboardSize.height == offset.height {
-//        UIView.animateWithDuration(0.1, animations: { () -> Void in
-//            self.view.frame.origin.y -= keyboardSize.height
-//        })
-//    } else {
-//        UIView.animateWithDuration(0.1, animations: { () -> Void in
-//            self.view.frame.origin.y += keyboardSize.height - offset.height
-//        })
-//    }
-//}
-
     
     override func viewWillDisappear(animated: Bool) {
     NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: self.view.window)
@@ -118,22 +100,28 @@ class LoginViewController: UIViewController{
     
     
     override func viewDidAppear(animated: Bool) {
+        var label = generateLogoLabel()
+        self.view.addSubview(label)
     }
     
     
     private func generateLogoLabel()->UILabel {
         let label = UILabel()
-        label.text = "   R E P  O  S E        "
-        label.font = UIFont(name: "Helvetica Neue", size: 50)
+        label.text = "   R E P     S E        "
+        label.font = UIFont.systemFontOfSize(50)
         label.textColor = UIColor.whiteColor()
-        label.sizeToFit()
         let bounds = self.view!.bounds
         label.center = CGPoint(x: CGRectGetMidX(bounds), y: CGRectGetMidY(bounds))
+        label.sizeToFit()
+        label.layer.zPosition = 5
         return label
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        generateLogoLabel()
+        let blurEffect = UIBlurEffect(style: .Light)
+        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+        blurredEffectView.frame = self.view.bounds
+        view.insertSubview(blurredEffectView, atIndex: 1)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: self.view.window)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: self.view.window)
         // check to see if the user has a login

@@ -10,10 +10,10 @@ import UIKit
 import MapKit
 import Alamofire
 class EventMapViewController: UIViewController{
-
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
-
-
+    
+    
     let event = Event(title: "King David Kalakaua",
                       locationName: "Waikiki Gateway Park",
                       comments: "Sculpture",
@@ -30,11 +30,11 @@ class EventMapViewController: UIViewController{
     let user = NSDictionary()
     
     let regionRadius: CLLocationDistance = 1000
-
+    
     let initialLocation = CLLocation(latitude: 41.878114, longitude: -87.629798)
     
     @IBOutlet weak var mapView: MKMapView!
-
+    
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
@@ -45,12 +45,12 @@ class EventMapViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // set initial location in Honolulu
-
-
+        
+        
         centerMapOnLocation(initialLocation)
-    let bearerToken = "K0NNh8mVDKooi6XWziiPmPpQ1ezNlfO5OxXRdzF9cKZEgYj2iI/DjMMKQHWR75hSqtKGD5rPZGhbbiu0apxi8Q=="
+        let bearerToken = "K0NNh8mVDKooi6XWziiPmPpQ1ezNlfO5OxXRdzF9cKZEgYj2iI/DjMMKQHWR75hSqtKGD5rPZGhbbiu0apxi8Q=="
         mapView.delegate = self
-
+        
         // show event on map
         Alamofire.request(.GET, "https://repose.herokuapp.com/api/v1/users/36", parameters: ["bearerToken":bearerToken])
             .responseJSON { response in
@@ -63,28 +63,28 @@ class EventMapViewController: UIViewController{
                         if let eventHash = userEvent as? NSDictionary{
                             let long = eventHash.valueForKey("longitude") as! String
                             let longVal = Double(long)
-                        let lat = eventHash.valueForKey("latitude") as! String
+                            let lat = eventHash.valueForKey("latitude") as! String
                             let latVal = Double(lat)
-                        let mapEvent = Event( title:"Event",
-                            locationName: "location",
-                            comments: "what a great event",
-                            coordinate: CLLocationCoordinate2D(latitude: latVal!, longitude: longVal!),
-                            severity: 2,
-                            sleep_quality: 1)
+                            let mapEvent = Event( title:"Event",
+                                locationName: "location",
+                                comments: "what a great event",
+                                coordinate: CLLocationCoordinate2D(latitude: latVal!, longitude: longVal!),
+                                severity: 2,
+                                sleep_quality: 1)
                             self.mapView.addAnnotation(mapEvent)
                         }
                         
                     }
-                    case .Failure:
+                case .Failure:
                     print("no dice")
                 }
         }
         
         
     }
-
-
-
-
+    
+    
+    
+    
 }
 

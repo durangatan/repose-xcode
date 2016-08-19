@@ -52,6 +52,8 @@ class HomeViewController: UIViewController {
             lifelineButton.setTitle("CALL A LIFELINE", forState: .Normal)
             let helpTapped = UITapGestureRecognizer(target: self, action: Selector("helpButtonTapped:"))
             helpButton.addGestureRecognizer(helpTapped)
+            self.navigationController!.navigationBar.barTintColor = UIColor.init(red: 1, green: 0.5, blue: 0, alpha: 0.5)
+
         }
         else{
             lifelineButton.setTitle("CONFIGURE YOUR LIFELINES", forState: .Normal)
@@ -86,7 +88,8 @@ class HomeViewController: UIViewController {
             let bounds = self.helpButton.bounds
             let deltaTime = CACurrentMediaTime() - beginPressTime
             if deltaTime > 1.5{
-//                self.helpButton.backgroundColor = UIColor.greenColor()
+                self.navigationController!.navigationBar.barTintColor = UIColor.init(red: 1, green: 0.5, blue: 0, alpha: 0.5)
+                
             }
             UIView.animateWithDuration(0.5, animations: {
                 self.helpButton.bounds = CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.size.width + 22, height: bounds.size.height + 22)

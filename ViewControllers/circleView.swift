@@ -13,37 +13,9 @@ class circleView: UIView {
 
     
     override func drawRect(rect: CGRect) {
-        var path = UIBezierPath(ovalInRect: rect)
+        let path = UIBezierPath(ovalInRect: rect)
         fillColor.setFill()
         path.fill()
     }
-    
-    
-    
-//    @IBInspectable var cornerRadius: CGFloat = 0 {
-//        didSet {
-//            layer.cornerRadius = cornerRadius
-//            layer.masksToBounds = cornerRadius > 0
-//        }
-//    }
-//    @IBInspectable var borderWidth: CGFloat = 0 {
-//        didSet {
-//            layer.borderWidth = borderWidth
-//        }
-//    }
-//    @IBInspectable var borderColor: UIColor? {
-//        didSet {
-//            layer.borderColor = borderColor?.CGColor
-//        }
-//    }
 }
 
-
-
-//class Layer1View: UIView {
-//    override func drawRect(rect: CGRect) {
-//        var path = UIBezierPath(ovalInRect: rect)
-//        UIColor(red: 13/255, green: 151/255, blue: 255/255, alpha: 1.0).setFill()
-//        path.fill()
-//    }
-//}

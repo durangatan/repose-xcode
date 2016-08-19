@@ -31,7 +31,6 @@
 		D887AEDD1D62363A002B1F99 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AEC61D62363A002B1F99 /* MenuController.swift */; };
 		D887AEDE1D62363A002B1F99 /* circleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AEC71D62363A002B1F99 /* circleViewController.swift */; };
 		D887AEDF1D62363A002B1F99 /* ConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AEC81D62363A002B1F99 /* ConsentViewController.swift */; };
-		D887AEE01D62363A002B1F99 /* BreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AEC91D62363A002B1F99 /* BreathViewController.swift */; };
 		D887AEE11D62363A002B1F99 /* circleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECA1D62363A002B1F99 /* circleView.swift */; };
 		D887AEE21D62363A002B1F99 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECB1D62363A002B1F99 /* ConsentTask.swift */; };
 		D887AEE31D62363A002B1F99 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECC1D62363A002B1F99 /* LandingViewController.swift */; };
@@ -162,7 +161,6 @@
 		D887AEC61D62363A002B1F99 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = ViewControllers/MenuController.swift; sourceTree = "<group>"; };
 		D887AEC71D62363A002B1F99 /* circleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = circleViewController.swift; path = ViewControllers/circleViewController.swift; sourceTree = "<group>"; };
 		D887AEC81D62363A002B1F99 /* ConsentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConsentViewController.swift; path = ViewControllers/ConsentViewController.swift; sourceTree = "<group>"; };
-		D887AEC91D62363A002B1F99 /* BreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BreathViewController.swift; path = ViewControllers/BreathViewController.swift; sourceTree = "<group>"; };
 		D887AECA1D62363A002B1F99 /* circleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = circleView.swift; path = ViewControllers/circleView.swift; sourceTree = "<group>"; };
 		D887AECB1D62363A002B1F99 /* ConsentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConsentTask.swift; path = ViewControllers/ConsentTask.swift; sourceTree = "<group>"; };
 		D887AECC1D62363A002B1F99 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LandingViewController.swift; path = ViewControllers/LandingViewController.swift; sourceTree = "<group>"; };
@@ -300,7 +298,6 @@
 				D8436C261D623ACE00B92064 /* Podfile */,
 				D887AEC01D62363A002B1F99 /* AffirmationsViewController.swift */,
 				D887AEEB1D623810002B1F99 /* AppDelegate.swift */,
-				D887AEC91D62363A002B1F99 /* BreathViewController.swift */,
 				D887AECA1D62363A002B1F99 /* circleView.swift */,
 				D887AEC71D62363A002B1F99 /* circleViewController.swift */,
 				D887AEBD1D62363A002B1F99 /* CheckListTableViewCell.swift */,
@@ -727,7 +724,6 @@
 				D887AEDE1D62363A002B1F99 /* circleViewController.swift in Sources */,
 				D887AEDF1D62363A002B1F99 /* ConsentViewController.swift in Sources */,
 				D8CAA4E81D64EB6400C4DF24 /* EventMapViewController.swift in Sources */,
-				D887AEE01D62363A002B1F99 /* BreathViewController.swift in Sources */,
 				D887AEE11D62363A002B1F99 /* circleView.swift in Sources */,
 				D88D32C31D6613810007F28B /* LifelinesInstructions.swift in Sources */,
 				D8D3C5AC1D655C4400A487C6 /* AboutViewController.swift in Sources */,

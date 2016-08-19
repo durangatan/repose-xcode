@@ -45,7 +45,7 @@ class RootContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showSplashViewControllerNoPing()
-        let timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(4), target: self, selector: "dismissSplashScreen", userInfo: nil, repeats: false)
+        _ = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(4), target: self, selector: #selector(RootContainerViewController.dismissSplashScreen), userInfo: nil, repeats: false)
 
         
 //        print("ping")
