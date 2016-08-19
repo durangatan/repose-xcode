@@ -14,8 +14,17 @@ class LifelinesTableViewController: UITableViewController {
     func backAction() -> Void {
         self.navigationController!.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func viewWillAppear() {
+        print("Hello")
+//        colorForIndex(indexPath.row)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         self.view.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
         
@@ -46,6 +55,8 @@ class LifelinesTableViewController: UITableViewController {
         }
     }
     
+
+    
     func loadSampleLifelines() {
         
         
@@ -70,9 +81,17 @@ class LifelinesTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return lifelines.count
     }
 
+    
+//    func colorForIndex(index: Int) -> UIColor {
+//        let itemCount = lifelines.count - 1
+//        let val = (CGFloat(index) / CGFloat(itemCount)) * 0.8
+//        return UIColor(red: (20 + 62 * val)/255, green: (54 + 94 * val)/255, blue: (125 + 107 * val)/255, alpha: 1.0)
+//    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "LifelineTableViewCell"
@@ -80,7 +99,7 @@ class LifelinesTableViewController: UITableViewController {
         
         let lifeline = lifelines[indexPath.row]
         
-        cell.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
+//        cell.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
 
         
         cell.firstName.text = lifeline.first
@@ -89,7 +108,8 @@ class LifelinesTableViewController: UITableViewController {
         cell.startTime.text = String(lifeline.startTime!) ?? ""
         cell.endTime.text = String(lifeline.endTime!) ?? ""
         if !lifeline.isAvailableNow() {
-            cell.contentView.backgroundColor = UIColor(red: 0.0, green: 0.4, blue: 1.0, alpha: 1.0)
+                        cell.contentView.backgroundColor = colorForIndex(indexPath.row)
+//            cell.contentView.backgroundColor = UIColor(red: 0.0, green: 0.4, blue: 1.0, alpha: 1.0)
         } else {
             cell.contentView.backgroundColor = colorForIndex(indexPath.row)
         }
@@ -106,11 +126,11 @@ class LifelinesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         let url = NSURL(string: "tel://\(lifelines[indexPath.row].phone)")
-        cell!.contentView.backgroundColor = UIColor.greenColor()
+//        cell!.contentView.backgroundColor = UIColor.greenColor()
         UIApplication.sharedApplication().openURL(url!)
     }
     
-    
+
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -118,7 +138,9 @@ class LifelinesTableViewController: UITableViewController {
             lifelines.removeAtIndex(indexPath.row)
             saveLifelines()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            colorForIndex(indexPath.row)
         } else if editingStyle == .Insert {
+            colorForIndex(indexPath.row)
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }

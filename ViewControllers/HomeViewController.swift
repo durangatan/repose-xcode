@@ -25,7 +25,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var helpButton: circleView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-//    let gradientLayer = CAGradientLayer()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.helpButton.backgroundColor = UIColor.clearColor()
