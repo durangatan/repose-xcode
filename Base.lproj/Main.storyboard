@@ -199,6 +199,9 @@
                     <view key="view" contentMode="scaleToFill" id="3dy-h6-0g8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="300" affinity="minY"/>
+                        </userGuides>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zdc-v3-CJN" customClass="Layer1View" customModule="Repose" customModuleProvider="target">
                                 <rect key="frame" x="250" y="348" width="100" height="100"/>
@@ -410,11 +413,15 @@
                                         <rect key="frame" x="0.0" y="393" width="600" height="79"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eb6-W0-E0W" customClass="circleView" customModule="Repose">
-                                                <rect key="frame" x="275" y="22" width="50" height="50"/>
-                                                <color key="backgroundColor" red="0.0" green="0.33657381510000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="263" y="8" width="75" height="75"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="supportButton" translatesAutoresizingMaskIntoConstraints="NO" id="mZa-NJ-Lg2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="pkH-Y5-TDA"/>
-                                                    <constraint firstAttribute="width" constant="50" id="zna-yZ-qHc"/>
+                                                    <constraint firstAttribute="height" constant="75" id="pkH-Y5-TDA"/>
+                                                    <constraint firstAttribute="width" constant="75" id="zna-yZ-qHc"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1223,16 +1230,16 @@
     <resources>
         <image name="circle-xxl" width="256" height="256"/>
         <image name="hamburger" width="22" height="22"/>
-        <image name="icon-play-128" width="128" height="128"/>
-        <image name="stop" width="512" height="512"/>
+        <image name="supportButton" width="402" height="402"/>
         <image name="water2.jpg" width="900" height="708"/>
     </resources>
     <inferredMetricsTieBreakers>
 
         <segue reference="psa-3v-jto"/>
 
+        <segue reference="psa-3v-jto"/>
+
         <segue reference="rxx-E2-hFq"/>
-        <segue reference="OIE-8N-Nrx"/>
-        <segue reference="osb-Dy-nMA"/>
+        <segue reference="g7W-pX-GsN"/>
     </inferredMetricsTieBreakers>
 </document>
