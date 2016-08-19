@@ -43,6 +43,8 @@
 		D887B4461D625BD3002FF270 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D848717E1D62323A0086B4DC /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D88D32C31D6613810007F28B /* LifelinesInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D32C21D6613810007F28B /* LifelinesInstructions.swift */; };
 		D88D32C71D6615F60007F28B /* LifelineInstructionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D32C61D6615F60007F28B /* LifelineInstructionTask.swift */; };
+
+		D8916B701D660CEC0059005E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84DC01C1D5D1509000FF1FA /* Assets.xcassets */; };
 		D8ADA4AF1D65FA2B0019EF6F /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AC1D65FA2B0019EF6F /* RecorderViewController.swift */; };
 		D8ADA4B01D65FA2B0019EF6F /* RecordingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AD1D65FA2B0019EF6F /* RecordingCollectionViewCell.swift */; };
 		D8ADA4B11D65FA2B0019EF6F /* RecordingsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AE1D65FA2B0019EF6F /* RecordingsCollectionViewController.swift */; };
@@ -288,10 +290,11 @@
 				D8F24C411D66A99E001F924B /* Icon-Small@3x.png */,
 				D8F24C361D66A82C001F924B /* Assets.xcassets */,
 				D8916B6D1D660CAD0059005E /* circle-xxl.png */,
+
+				D8CAA4EF1D64F8DB00C4DF24 /* Launch Screen.storyboard */,
 				D8CAA5071D64F97F00C4DF24 /* water2.imageset */,
 				D8CAA4F51D64F96B00C4DF24 /* SplashScreenUI */,
 				D8CAA4F31D64F94C00C4DF24 /* RootContainerViewController.swift */,
-				D8CAA4EB1D64EC0200C4DF24 /* VCMApView.swift */,
 				D8CAA4E31D64EB6400C4DF24 /* Event.swift */,
 				D8CAA4E41D64EB6400C4DF24 /* EventDetailViewController.swift */,
 				D8CAA4E51D64EB6400C4DF24 /* EventMapViewController.swift */,
@@ -302,16 +305,16 @@
 				D887AEC71D62363A002B1F99 /* circleViewController.swift */,
 				D887AEBD1D62363A002B1F99 /* CheckListTableViewCell.swift */,
 				D887AEC41D62363A002B1F99 /* ConsentDocument.swift */,
-				D88D32C21D6613810007F28B /* LifelinesInstructions.swift */,
 				D887AECB1D62363A002B1F99 /* ConsentTask.swift */,
-				D88D32C61D6615F60007F28B /* LifelineInstructionTask.swift */,
 				D887AEC81D62363A002B1F99 /* ConsentViewController.swift */,
 				D887AEB71D6235A7002B1F99 /* Default-568h@2x.png */,
 				D887AEC31D62363A002B1F99 /* HomeViewController.swift */,
 				D887AECC1D62363A002B1F99 /* LandingViewController.swift */,
 				0956A11A1D65109C00123E85 /* LayerView.swift */,
-				D887AEBC1D62363A002B1F99 /* LoginViewController.swift */,
+				D88D32C21D6613810007F28B /* LifelinesInstructions.swift */,
+				D88D32C61D6615F60007F28B /* LifelineInstructionTask.swift */,
 				D887AEBE1D62363A002B1F99 /* ListItem.swift */,
+				D887AEBC1D62363A002B1F99 /* LoginViewController.swift */,
 				D887AEC61D62363A002B1F99 /* MenuController.swift */,
 				D887AECE1D62363A002B1F99 /* MenuTableViewController.swift */,
 				D887AECF1D62363A002B1F99 /* MicrophoneTask.swift */,
@@ -321,6 +324,7 @@
 				D887AEED1D623873002B1F99 /* StrikeThroughText.swift */,
 				D887AEC11D62363A002B1F99 /* SurveyTask.swift */,
 				D887AEC21D62363A002B1F99 /* SurveyViewController.swift */,
+				D8CAA4EB1D64EC0200C4DF24 /* VCMApView.swift */,
 				D8436C231D623A4E00B92064 /* SWRevealViewController.h */,
 				D8436C241D623A4E00B92064 /* SWRevealViewController.m */,
 				D8AFA8551D60B9D60095BBC5 /* ResearchKit.xcodeproj */,
