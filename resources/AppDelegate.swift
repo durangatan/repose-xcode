@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor =  UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
         UIView.appearanceWhenContainedInInstancesOfClasses([ORKTaskViewController.self])
         
+        print(UIImage.init(named: "AppIcon-1"))
         return true
     }
     

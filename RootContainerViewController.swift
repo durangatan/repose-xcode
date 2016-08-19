@@ -24,6 +24,8 @@ import UIKit
 
 class RootContainerViewController: UIViewController {
     
+    var blurEffectView = UIView()
+    
     private var rootViewController: UIViewController? = nil
     var timer = NSTimer()
     @IBAction func dismissScreen(sender: UITapGestureRecognizer) {
@@ -34,11 +36,18 @@ class RootContainerViewController: UIViewController {
     }
     @IBOutlet weak var photoImageView: UIImageView!
     
+    
+    func viewWillAppear() {
+
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showSplashViewControllerNoPing()
         let timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(4), target: self, selector: "dismissSplashScreen", userInfo: nil, repeats: false)
 
+        
 //        print("ping")
     }
     

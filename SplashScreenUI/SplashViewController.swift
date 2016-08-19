@@ -24,7 +24,8 @@ import UIKit
 
 public class SplashViewController: UIViewController {
   public var pulsing: Bool = false
-  
+  var blurEffectView = UIView()
+    
   let animatedULogoView: AnimatedULogoView = AnimatedULogoView(frame: CGRect(x: 0.0, y: 0.0, width: 90.0, height: 90.0))
   var tileGridView: TileGridView!
   
@@ -43,6 +44,10 @@ public class SplashViewController: UIViewController {
     
   }
   
+    func viewDidAppear() {
+
+    }
+    
   required public init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }

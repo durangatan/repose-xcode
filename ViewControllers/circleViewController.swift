@@ -22,6 +22,8 @@ class circleViewController: UIViewController{
     @IBOutlet weak var Layer4: Layer4View!
     @IBOutlet weak var Intro: OrbIntroView!
     
+    var blurEffectView = UIView()
+    
     var timer = NSTimer()
     
     
@@ -127,12 +129,26 @@ class circleViewController: UIViewController{
         self.instructions2.alpha = 0.0
         self.breatheIn.alpha = 0.0
         self.breatheOut.alpha = 0.0
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
+         self.blurEffectView = UIVisualEffectView(effect: blurEffect)
+        //always fill the view
+        blurEffectView.frame = self.view.bounds
+        blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        blurEffectView.layer.zPosition = 0
+        blurEffectView.opaque = false
+        blurEffectView.alpha = 1
+        self.view.addSubview(blurEffectView)
     }
     
     
     override func viewDidAppear(animated: Bool) {
 
-        
+
+        self.view.backgroundColor = UIColor(red: 22, green: 50, blue: 118, alpha: 1)//if you have more UIViews, use an insertSubview API to place it where needed
+        UIView.animateWithDuration(2.0, delay: 0, options:[], animations:{
+            self.blurEffectView.alpha = CGFloat(0)
+        }, completion: nil)
         
         UIView.animateWithDuration(5.0, delay: 1.0, options: [], animations: {
             self.instructions.alpha = 1.0

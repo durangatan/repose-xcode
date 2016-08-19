@@ -29,7 +29,7 @@ class TileGridView: UIView {
   private var centerTileView: TileView? = nil
   private var numberOfRows = 0
   private var numberOfColumns = 0
-  
+  var blurEffectView = UIView()
   private var logoLabel: UILabel!
   private var tileViewRows: [[TileView]] = []
   private var beginTime: CFTimeInterval = 0
@@ -47,6 +47,18 @@ class TileGridView: UIView {
       // Custom offset needed for UILabel font
       let center = CGPoint(x: CGRectGetMidX(centerTileView.bounds) + 31, y: CGRectGetMidY(centerTileView.bounds))
       logoLabel.center = center
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
+        self.blurEffectView = UIVisualEffectView(effect: blurEffect)
+        //always fill the view
+        blurEffectView.frame = self.bounds
+        blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        blurEffectView.layer.zPosition = 5
+        blurEffectView.opaque = false
+        blurEffectView.alpha = 0.5
+        self.addSubview(blurEffectView)
+        UIView.animateWithDuration(2.0, delay: 0, options:[], animations:{
+            self.blurEffectView.alpha = CGFloat(0)
+            }, completion: nil)
     }
   }
   
@@ -69,6 +81,10 @@ class TileGridView: UIView {
     layoutIfNeeded()
   }
   
+    func viewWillAppear(){
+        
+    }
+    
   func startAnimating() {
     beginTime = CACurrentMediaTime()
     startAnimatingWithBeginTime(beginTime)
