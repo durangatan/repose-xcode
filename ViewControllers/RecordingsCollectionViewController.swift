@@ -26,13 +26,13 @@ class RecordingsCollectionViewController: UICollectionViewController {
         // set the recordings array
         listRecordings()
         
-        let recognizer = UILongPressGestureRecognizer(target: self, action: "longPress:")
+        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(RecordingsCollectionViewController.longPress(_:)))
         recognizer.minimumPressDuration = 0.5 //seconds
         recognizer.delegate = self
         recognizer.delaysTouchesBegan = true
         self.collectionView?.addGestureRecognizer(recognizer)
         
-        let doubleTap = UITapGestureRecognizer(target:self, action:"doubleTap:")
+        let doubleTap = UITapGestureRecognizer(target:self, action:#selector(RecordingsCollectionViewController.doubleTap(_:)))
         doubleTap.numberOfTapsRequired = 2
         doubleTap.numberOfTouchesRequired = 1
         doubleTap.delaysTouchesBegan = true
@@ -42,19 +42,7 @@ class RecordingsCollectionViewController: UICollectionViewController {
     /**
     Get the cell with which you interacted.
     */
-//    func getCell(rec:UIGestureRecognizer) -> UICollectionViewCell {
-//        var cell:UICollectionViewCell!
-//        
-//        let p = rec.locationInView(self.collectionView)
-//        let indexPath = self.collectionView?.indexPathForItemAtPoint(p)
-//        if indexPath == nil {
-//            NSLog("couldn't find index path");
-//        } else {
-//            cell = self.collectionView?.cellForItemAtIndexPath(indexPath!)
-//            NSLog("found cell at \(indexPath!.row)")
-//        }
-//        return cell
-//    }
+
     
     func doubleTap(rec:UITapGestureRecognizer) {
         if rec.state != .Ended {

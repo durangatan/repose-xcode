@@ -11,7 +11,7 @@ import Foundation
 class Helper{
     static func isInEventState()->Bool{
         let defaults = NSUserDefaults.standardUserDefaults()
-        let eventStart = defaults.objectForKey("eventStart")
+        let eventStart = defaults.objectForKey("startTime")
         if eventStart != nil{
             return true
         }else{

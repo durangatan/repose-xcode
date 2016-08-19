@@ -54,9 +54,6 @@ class Lifeline: NSObject, NSCoding {
     
     // MARK: Methods
     func isAvailableNow()-> Bool{
-        let now = NSDate()
-        let cal = NSCalendar.currentCalendar()
-        let components = cal.components([.Hour], fromDate:now)
         
         return isPastStartHour() && isBeforeEndHour()
     }

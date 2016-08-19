@@ -16,7 +16,6 @@ class LifelinesTableViewController: UITableViewController {
     }
     
     func viewWillAppear() {
-        print("Hello")
 //        colorForIndex(indexPath.row)
     }
     
@@ -43,7 +42,7 @@ class LifelinesTableViewController: UITableViewController {
                 }
             }
 
-        var backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backAction")
+        let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(LifelinesTableViewController.backAction))
 
         navigationItem.leftBarButtonItem = backButton
         // Load any saved lifelines, otherwise load sample data.
@@ -86,12 +85,6 @@ class LifelinesTableViewController: UITableViewController {
     }
 
     
-//    func colorForIndex(index: Int) -> UIColor {
-//        let itemCount = lifelines.count - 1
-//        let val = (CGFloat(index) / CGFloat(itemCount)) * 0.8
-//        return UIColor(red: (20 + 62 * val)/255, green: (54 + 94 * val)/255, blue: (125 + 107 * val)/255, alpha: 1.0)
-//    }
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "LifelineTableViewCell"
@@ -105,8 +98,7 @@ class LifelinesTableViewController: UITableViewController {
         cell.firstName.text = lifeline.first
         cell.lastName.text = lifeline.last
         cell.phoneNumber.text = lifeline.phone
-        cell.startTime.text = String(lifeline.startTime!) ?? ""
-        cell.endTime.text = String(lifeline.endTime!) ?? ""
+
         if !lifeline.isAvailableNow() {
                         cell.contentView.backgroundColor = colorForIndex(indexPath.row)
 //            cell.contentView.backgroundColor = UIColor(red: 0.0, green: 0.4, blue: 1.0, alpha: 1.0)
@@ -124,7 +116,7 @@ class LifelinesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        _ = tableView.cellForRowAtIndexPath(indexPath)
         let url = NSURL(string: "tel://\(lifelines[indexPath.row].phone)")
 //        cell!.contentView.backgroundColor = UIColor.greenColor()
         UIApplication.sharedApplication().openURL(url!)

@@ -63,8 +63,8 @@ extension SurveyViewController : ORKTaskViewControllerDelegate {
             print("\(resultArray)")
             let defaults = NSUserDefaults.standardUserDefaults()
             let token = getBearerToken()
-            let startTime = defaults.doubleForKey("eventStart")
-            let endTime = defaults.doubleForKey("eventEnd")
+            let startTime = defaults.doubleForKey("startTime")
+            let endTime = defaults.doubleForKey("endTime")
             let event = [startTime, endTime]
             self.locationManager.requestLocation()
             let latitude = NSUserDefaults.standardUserDefaults().doubleForKey("eventLatitude")
@@ -80,7 +80,7 @@ extension SurveyViewController : ORKTaskViewControllerDelegate {
                         print("failed to save")
                     }
                 }
-            defaults.setValue(nil, forKey:"eventStart")
+            defaults.setValue(nil, forKey:"startTime")
             }
         }
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

@@ -41,7 +41,7 @@ class AboutViewController: UIViewController, UIWebViewDelegate {
         indicator.startAnimating()
         
     }
-    public func webViewDidFinishLoad(webView: UIWebView){
+    internal func webViewDidFinishLoad(webView: UIWebView){
         indicator.stopAnimating()
     }
 }

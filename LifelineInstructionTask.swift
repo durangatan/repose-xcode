@@ -13,7 +13,7 @@ public var LifelineInstructionTask: ORKOrderedTask{
 
     var steps = [ORKStep]()
     
-    var consentDocument = LifelineInstructions
+    let consentDocument = LifelineInstructions
     let visualConsentStep = ORKVisualConsentStep(identifier:"VisualConsentStep", document: consentDocument)
     steps += [visualConsentStep]
     

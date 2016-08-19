@@ -35,7 +35,6 @@
 		D887AEE21D62363A002B1F99 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECB1D62363A002B1F99 /* ConsentTask.swift */; };
 		D887AEE31D62363A002B1F99 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECC1D62363A002B1F99 /* LandingViewController.swift */; };
 		D887AEE51D62363A002B1F99 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECE1D62363A002B1F99 /* MenuTableViewController.swift */; };
-		D887AEE61D62363A002B1F99 /* MicrophoneTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AECF1D62363A002B1F99 /* MicrophoneTask.swift */; };
 		D887AEE71D62363A002B1F99 /* NewLifelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AED01D62363A002B1F99 /* NewLifelineViewController.swift */; };
 		D887AEEC1D623810002B1F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AEEB1D623810002B1F99 /* AppDelegate.swift */; };
 		D887AEEE1D623873002B1F99 /* StrikeThroughText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887AEED1D623873002B1F99 /* StrikeThroughText.swift */; };
@@ -43,8 +42,6 @@
 		D887B4461D625BD3002FF270 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D848717E1D62323A0086B4DC /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D88D32C31D6613810007F28B /* LifelinesInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D32C21D6613810007F28B /* LifelinesInstructions.swift */; };
 		D88D32C71D6615F60007F28B /* LifelineInstructionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D32C61D6615F60007F28B /* LifelineInstructionTask.swift */; };
-
-		D8916B701D660CEC0059005E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84DC01C1D5D1509000FF1FA /* Assets.xcassets */; };
 		D8ADA4AF1D65FA2B0019EF6F /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AC1D65FA2B0019EF6F /* RecorderViewController.swift */; };
 		D8ADA4B01D65FA2B0019EF6F /* RecordingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AD1D65FA2B0019EF6F /* RecordingCollectionViewCell.swift */; };
 		D8ADA4B11D65FA2B0019EF6F /* RecordingsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADA4AE1D65FA2B0019EF6F /* RecordingsCollectionViewController.swift */; };
@@ -167,7 +164,6 @@
 		D887AECB1D62363A002B1F99 /* ConsentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConsentTask.swift; path = ViewControllers/ConsentTask.swift; sourceTree = "<group>"; };
 		D887AECC1D62363A002B1F99 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LandingViewController.swift; path = ViewControllers/LandingViewController.swift; sourceTree = "<group>"; };
 		D887AECE1D62363A002B1F99 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = ViewControllers/MenuTableViewController.swift; sourceTree = "<group>"; };
-		D887AECF1D62363A002B1F99 /* MicrophoneTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MicrophoneTask.swift; path = ViewControllers/MicrophoneTask.swift; sourceTree = "<group>"; };
 		D887AED01D62363A002B1F99 /* NewLifelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewLifelineViewController.swift; path = ViewControllers/NewLifelineViewController.swift; sourceTree = "<group>"; };
 		D887AEEB1D623810002B1F99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = resources/AppDelegate.swift; sourceTree = "<group>"; };
 		D887AEED1D623873002B1F99 /* StrikeThroughText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StrikeThroughText.swift; path = ViewControllers/StrikeThroughText.swift; sourceTree = "<group>"; };
@@ -206,7 +202,6 @@
 		D8CAA5091D64F97F00C4DF24 /* water2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = water2.jpg; sourceTree = "<group>"; };
 		D8CAA51F1D65326800C4DF24 /* LayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerView.swift; sourceTree = "<group>"; };
 		D8CD251F1D60555D0058AFC7 /* AffirmationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AffirmationsViewController.swift; sourceTree = "<group>"; };
-		D8CD25201D60555D0058AFC7 /* BreathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathViewController.swift; sourceTree = "<group>"; };
 		D8CD25211D60555D0058AFC7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D8CD25221D60555D0058AFC7 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		D8CD25241D60555D0058AFC7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -290,8 +285,6 @@
 				D8F24C411D66A99E001F924B /* Icon-Small@3x.png */,
 				D8F24C361D66A82C001F924B /* Assets.xcassets */,
 				D8916B6D1D660CAD0059005E /* circle-xxl.png */,
-
-				D8CAA4EF1D64F8DB00C4DF24 /* Launch Screen.storyboard */,
 				D8CAA5071D64F97F00C4DF24 /* water2.imageset */,
 				D8CAA4F51D64F96B00C4DF24 /* SplashScreenUI */,
 				D8CAA4F31D64F94C00C4DF24 /* RootContainerViewController.swift */,
@@ -317,7 +310,6 @@
 				D887AEBC1D62363A002B1F99 /* LoginViewController.swift */,
 				D887AEC61D62363A002B1F99 /* MenuController.swift */,
 				D887AECE1D62363A002B1F99 /* MenuTableViewController.swift */,
-				D887AECF1D62363A002B1F99 /* MicrophoneTask.swift */,
 				D887AED01D62363A002B1F99 /* NewLifelineViewController.swift */,
 				D887AEC51D62363A002B1F99 /* ProfileViewController.swift */,
 				D887AEBF1D62363A002B1F99 /* SafetyChecklistViewController.swift */,
@@ -429,7 +421,6 @@
 				D8AFA5361D60A2FA0095BBC5 /* circleView.swift */,
 				D8AFA5341D60A2F50095BBC5 /* circleViewController.swift */,
 				D8CD251F1D60555D0058AFC7 /* AffirmationsViewController.swift */,
-				D8CD25201D60555D0058AFC7 /* BreathViewController.swift */,
 				D8CD25211D60555D0058AFC7 /* HomeViewController.swift */,
 				D8CD25221D60555D0058AFC7 /* LandingViewController.swift */,
 				D8CD25241D60555D0058AFC7 /* LoginViewController.swift */,
@@ -736,7 +727,6 @@
 				D887AEE31D62363A002B1F99 /* LandingViewController.swift in Sources */,
 				D887AEE51D62363A002B1F99 /* MenuTableViewController.swift in Sources */,
 				D8C4A3C51D6445EC00A7D2B6 /* LineGraphDataSource.swift in Sources */,
-				D887AEE61D62363A002B1F99 /* MicrophoneTask.swift in Sources */,
 				D8C4A3D21D644EBF00A7D2B6 /* Eventable.swift in Sources */,
 				D887AEE71D62363A002B1F99 /* NewLifelineViewController.swift in Sources */,
 				D81DBE4B1D64425B000894E6 /* Lifeline.swift in Sources */,

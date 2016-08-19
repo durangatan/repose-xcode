@@ -12,7 +12,6 @@ import MapKit
 
 extension EventMapViewController: MKMapViewDelegate {
     
-        // 1
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? Event {
             let identifier = "pin"

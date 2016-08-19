@@ -18,7 +18,6 @@ class LoginViewController: UIViewController{
     let loginButtonTag = 1
     @IBOutlet weak var loginButton: UIButton!
     
-    @IBOutlet weak var createInfoLabel: UILabel!
     
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -72,14 +71,14 @@ class LoginViewController: UIViewController{
         let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
         self.view.frame.origin.y += keyboardSize.height
     }
-
-    func keyboardWillShow(sender: NSNotification) {
     
+    func keyboardWillShow(sender: NSNotification) {
+        
         let userInfo: [NSObject : AnyObject] = sender.userInfo!
-
+        
         let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
         let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
-
+        
         if keyboardSize.height == offset.height {
             if self.view.frame.origin.y == 0 {
                 UIView.animateWithDuration(0.1, animations: { () -> Void in
@@ -94,14 +93,12 @@ class LoginViewController: UIViewController{
     }
     
     override func viewWillDisappear(animated: Bool) {
-    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: self.view.window)
-    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: self.view.window)
-}
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: self.view.window)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: self.view.window)
+    }
     
     
     override func viewDidAppear(animated: Bool) {
-        var label = generateLogoLabel()
-        self.view.addSubview(label)
     }
     
     
@@ -118,28 +115,20 @@ class LoginViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let blurEffect = UIBlurEffect(style: .Light)
-        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
-        blurredEffectView.frame = self.view.bounds
-        view.insertSubview(blurredEffectView, atIndex: 1)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: self.view.window)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: self.view.window)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: self.view.window)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: self.view.window)
         // check to see if the user has a login
         let hasLogin = NSUserDefaults.standardUserDefaults().valueForKey("hasReposeAccount") as? Bool
         // if they do, the button is a log in button
         if hasLogin == true {
-            loginButton.setTitle("LOGIN", forState: UIControlState.Normal)
-            loginButton.titleLabel!.font =  UIFont(name: "Helvetica Neue", size: 22)
+            loginButton.setTitle("Log in", forState: UIControlState.Normal)
             
             loginButton.tag = loginButtonTag
-            createInfoLabel.hidden = true
         } else {
             // if they don't, their button is a create button
             
-            loginButton.setTitle("CREATE", forState: UIControlState.Normal)
-            loginButton.titleLabel!.font =  UIFont(name: "Helvetica Neue", size: 22)
+            loginButton.setTitle("Create an account", forState: UIControlState.Normal)
             loginButton.tag = createLoginButtonTag
-            createInfoLabel.hidden = false
         }
         
         // 3 Load the user's email if they have one

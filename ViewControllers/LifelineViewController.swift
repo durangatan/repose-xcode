@@ -182,8 +182,8 @@ class LifelineViewController: UIViewController, CNContactPickerDelegate, CNConta
     }
 
     // The data to return for the row and component (column) that's being passed in
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return pickerData[row].debugDescription
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         let selection = pickerView.selectedRowInComponent(component)

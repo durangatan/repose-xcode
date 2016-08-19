@@ -17,9 +17,6 @@ class LifelineTableViewCell: UITableViewCell {
     @IBOutlet weak var lastName: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
     
-    @IBOutlet weak var endTime: UILabel!
-    @IBOutlet weak var startTime: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -33,17 +33,27 @@ class RecorderViewController: UIViewController {
     @IBOutlet weak var waveForm: SCWaveformView!
     
     var meterTimer:NSTimer!
-    
+    var gradientLayer = CAGradientLayer()
     var soundFileURL:NSURL!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        gradientLayer.frame = self.view.bounds
+        let color1 = UIColor(white: 1.0, alpha: 0.2).CGColor as CGColorRef
+        let color2 = UIColor(white: 1.0, alpha: 0.1).CGColor as CGColorRef
+        let color3 = UIColor.clearColor().CGColor as CGColorRef
+        let color4 = UIColor(white: 0.0, alpha: 0.1).CGColor as CGColorRef
+        gradientLayer.colors = [color1, color2, color3, color4]
+        gradientLayer.locations = [0.0, 0.10, 0.95, 1.0]
+        self.view.layer.insertSublayer(gradientLayer, atIndex: 0)
         stopButton.enabled = false
         playButton.enabled = false
         setSessionPlayback()
         askForNotifications()
         checkHeadphones()
+        if Helper.isInEventState(){
+            recordButton.hidden = true
+        }
 
 
     }
@@ -200,7 +210,7 @@ class RecorderViewController: UIViewController {
     func recordWithPermission(setup:Bool) {
         let session:AVAudioSession = AVAudioSession.sharedInstance()
         // ios 8 and later
-        if (session.respondsToSelector("requestRecordPermission:")) {
+        if (session.respondsToSelector(#selector(AVAudioSession.requestRecordPermission(_:)))) {
             AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
                 if granted {
                     print("Permission to record granted")
@@ -211,7 +221,7 @@ class RecorderViewController: UIViewController {
                     self.recorder.record()
                     self.meterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1,
                         target:self,
-                        selector:"updateAudioMeter:",
+                        selector:#selector(RecorderViewController.updateAudioMeter(_:)),
                         userInfo:nil,
                         repeats:true)
                 } else {
@@ -289,17 +299,17 @@ class RecorderViewController: UIViewController {
     func askForNotifications() {
         
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector:"background:",
+            selector:#selector(RecorderViewController.background(_:)),
             name:UIApplicationWillResignActiveNotification,
             object:nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector:"foreground:",
+            selector:#selector(RecorderViewController.foreground(_:)),
             name:UIApplicationWillEnterForegroundNotification,
             object:nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector:"routeChange:",
+            selector:#selector(RecorderViewController.routeChange(_:)),
             name:AVAudioSessionRouteChangeNotification,
             object:nil)
     }
@@ -346,35 +356,7 @@ class RecorderViewController: UIViewController {
             }
         }
         
-        // this cast fails. that's why I do that goofy thing above.
-//        if let reason = userInfo[AVAudioSessionRouteChangeReasonKey] as? AVAudioSessionRouteChangeReason {
-//        }
 
-        /*
-        AVAudioSessionRouteChangeReasonUnknown = 0,
-        AVAudioSessionRouteChangeReasonNewDeviceAvailable = 1,
-        AVAudioSessionRouteChangeReasonOldDeviceUnavailable = 2,
-        AVAudioSessionRouteChangeReasonCategoryChange = 3,
-        AVAudioSessionRouteChangeReasonOverride = 4,
-        AVAudioSessionRouteChangeReasonWakeFromSleep = 6,
-        AVAudioSessionRouteChangeReasonNoSuitableRouteForCategory = 7,
-        AVAudioSessionRouteChangeReasonRouteConfigurationChange NS_ENUM_AVAILABLE_IOS(7_0) = 8
-        
-        routeChange Optional([AVAudioSessionRouteChangeReasonKey: 1, AVAudioSessionRouteChangePreviousRouteKey: <AVAudioSessionRouteDescription: 0x17557350,
-        inputs = (
-        "<AVAudioSessionPortDescription: 0x17557760, type = MicrophoneBuiltIn; name = iPhone Microphone; UID = Built-In Microphone; selectedDataSource = Bottom>"
-        );
-        outputs = (
-        "<AVAudioSessionPortDescription: 0x17557f20, type = Speaker; name = Speaker; UID = Built-In Speaker; selectedDataSource = (null)>"
-        )>])
-        routeChange Optional([AVAudioSessionRouteChangeReasonKey: 2, AVAudioSessionRouteChangePreviousRouteKey: <AVAudioSessionRouteDescription: 0x175562f0,
-        inputs = (
-        "<AVAudioSessionPortDescription: 0x1750c560, type = MicrophoneBuiltIn; name = iPhone Microphone; UID = Built-In Microphone; selectedDataSource = Bottom>"
-        );
-        outputs = (
-        "<AVAudioSessionPortDescription: 0x17557de0, type = Headphones; name = Headphones; UID = Wired Headphones; selectedDataSource = (null)>"
-        )>])
-*/
     }
     
     func checkHeadphones() {
@@ -446,21 +428,7 @@ class RecorderViewController: UIViewController {
             let startTime = CMTimeMake(0, 1)
             let stopTime = CMTimeMake(5, 1)
             exporter.timeRange = CMTimeRangeFromTimeToTime(startTime, stopTime)
-            
-//            // set up the audio mix
-//            let tracks = asset.tracksWithMediaType(AVMediaTypeAudio)
-//            if tracks.count == 0 {
-//                return
-//            }
-//            let track = tracks[0]
-//            let exportAudioMix = AVMutableAudioMix()
-//            let exportAudioMixInputParameters =
-//            AVMutableAudioMixInputParameters(track: track)
-//            exportAudioMixInputParameters.setVolume(1.0, atTime: CMTimeMake(0, 1))
-//            exportAudioMix.inputParameters = [exportAudioMixInputParameters]
-//            // exporter.audioMix = exportAudioMix
-            
-            // do it
+
             exporter.exportAsynchronouslyWithCompletionHandler({
                 switch exporter.status {
                 case  AVAssetExportSessionStatus.Failed:
@@ -505,10 +473,7 @@ class RecorderViewController: UIViewController {
             exporter.outputFileType = AVFileTypeAppleM4A
             exporter.outputURL = trimmedSoundFileURL
             
-            
-            //             AVAudioTimePitchAlgorithmVarispeed
-            //             AVAudioTimePitchAlgorithmSpectral
-            //             AVAudioTimePitchAlgorithmTimeDomain
+
             exporter.audioTimePitchAlgorithm = AVAudioTimePitchAlgorithmVarispeed
             
             
@@ -519,13 +484,7 @@ class RecorderViewController: UIViewController {
                 print("sound is not long enough")
                 return
             }
-            // e.g. the first 5 seconds
-//            let startTime = CMTimeMake(0, 1)
-//            let stopTime = CMTimeMake(5, 1)
-//            let exportTimeRange = CMTimeRangeFromTimeToTime(startTime, stopTime)
-//            exporter.timeRange = exportTimeRange
-            
-            // do it
+
             exporter.exportAsynchronouslyWithCompletionHandler({
                 switch exporter.status {
                 case  AVAssetExportSessionStatus.Failed:

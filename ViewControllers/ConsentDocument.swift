@@ -14,17 +14,6 @@ public var ConsentDocument: ORKConsentDocument{
 let consentDocument = ORKConsentDocument()
     consentDocument.title = "Repose Consent"
     
-    //consent sections
-    
-    let consentSectionTypes: [ORKConsentSectionType] = [
-    .StudyTasks,
-    .DataGathering,
-    .Privacy,
-    .Withdrawing]
-    
-    // .studyTasks. .DataGathering, .Privacy, .Withdrawl
-  
-    
     let introSection = ORKConsentSection(type: .StudyTasks)
     introSection.title = "Welcome to Repose!"
     introSection.summary = "Repose gives you personalized ways to cope with anxiety, and provides powerful tools to help you find peace."

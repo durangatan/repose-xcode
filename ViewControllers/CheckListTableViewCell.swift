@@ -87,15 +87,7 @@ class TableViewCell: UITableViewCell, UITextFieldDelegate {
         gradientLayer.colors = [color1, color2, color3, color4]
         gradientLayer.locations = [0.0, 0.01, 0.95, 1.0]
         layer.insertSublayer(gradientLayer, atIndex: 0)
-        
-        
-        //        // add a layer that renders a green background when an item is complete
-        //        itemCompleteLayer = CALayer(layer: layer)
-        //        itemCompleteLayer.backgroundColor = UIColor(red: 0.0, green: 0.6, blue: 0.0, alpha: 1.0).CGColor
-        //        itemCompleteLayer.hidden = true
-        //        layer.insertSublayer(itemCompleteLayer, atIndex: 0)
-        
-        
+
         // add a pan recognizer
         let recognizer = UIPanGestureRecognizer(target: self, action: #selector(TableViewCell.handlePan(_:)))
         recognizer.delegate = self

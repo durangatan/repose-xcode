@@ -57,16 +57,6 @@ class ProfileViewController: UIViewController, ORKGraphChartViewDataSource, ORKG
         return plotPoints[plotIndex].count
     }
     
-//    func storeEventData(response: Response<AnyObject, NSError>)-> Void{
-//        do {
-//            let responseObject = try NSJSONSerialization.JSONObjectWithData(response.data!, options: []) as! [String:AnyObject]
-//            let eventArray = responseObject["events_data"]
-//            let eventPoints = eventArray.map
-//        } catch let error as NSError {
-//            print("error")
-//        }
-//    }
-    
     func convertStringToDictionary(text: String) -> [String:AnyObject]? {
         if let data = text.dataUsingEncoding(NSUTF8StringEncoding) {
             do {

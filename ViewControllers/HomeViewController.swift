@@ -48,17 +48,17 @@ class HomeViewController: UIViewController {
         self.helpButton.backgroundColor = UIColor.clearColor()
 
         if Helper.isInEventState(){
-            lifelineButton.setTitle("CALL A LIFELINE", forState: .Normal)
-            let helpTapped = UITapGestureRecognizer(target: self, action: Selector("helpButtonTapped:"))
+            lifelineButton.setTitle("Call A Lifeline", forState: .Normal)
+            let helpTapped = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.helpButtonTapped(_:)))
             helpButton.addGestureRecognizer(helpTapped)
             self.navigationController!.navigationBar.barTintColor = UIColor.init(red: 1, green: 0.5, blue: 0, alpha: 0.5)
 
         }
         else{
-            lifelineButton.setTitle("CONFIGURE YOUR LIFELINES", forState: .Normal)
-            let helpTapped = UITapGestureRecognizer(target: self, action: Selector("helpButtonTapped:"))
+            lifelineButton.setTitle("Configure Lifelines", forState: .Normal)
+            let helpTapped = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.helpButtonTapped(_:)))
             helpButton.addGestureRecognizer(helpTapped)
-        let longPress = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(HomeViewController.longPress(_:)))
         longPress.minimumPressDuration = 0.5
         helpButton.addGestureRecognizer(longPress)
         helpButton.userInteractionEnabled = true
@@ -72,11 +72,6 @@ class HomeViewController: UIViewController {
         if gesture.state == UIGestureRecognizerState.Began
         {
             self.beginPressTime = CACurrentMediaTime()
-//            UIColor(red: 13/255, green: 151/255, blue: 255/255, alpha: 1.0).setFill()
-//                    path.fill()
-//            self.helpButton.backgroundColor = UIColor.redColor()
-//            self.helpButton.blackColor().setStroke()
-//            UIColor.stroke()
 
             self.oldbounds = self.helpButton.bounds
 
@@ -88,7 +83,8 @@ class HomeViewController: UIViewController {
             let deltaTime = CACurrentMediaTime() - beginPressTime
             if deltaTime > 1.5{
                 self.navigationController!.navigationBar.barTintColor = UIColor.init(red: 1, green: 0.5, blue: 0, alpha: 0.5)
-                
+                lifelineButton.setTitle("Call A Lifeline", forState: .Normal)
+
             }
             UIView.animateWithDuration(0.5, animations: {
                 self.helpButton.bounds = CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.size.width + 22, height: bounds.size.height + 22)
@@ -103,7 +99,8 @@ class HomeViewController: UIViewController {
 //                self.helpButton.backgroundColor = UIColor.redColor()
                 let defaults = NSUserDefaults.standardUserDefaults()
                 let currentTime = CACurrentMediaTime()
-                defaults.setObject(currentTime, forKey:"eventStart")
+                
+                defaults.setObject(currentTime, forKey:"startTime")
             }
             else{
             UIView.animateWithDuration(0.5, animations: {
@@ -124,7 +121,7 @@ class HomeViewController: UIViewController {
         }else{
             let defaults = NSUserDefaults.standardUserDefaults()
             let eventEnd = CACurrentMediaTime()
-            defaults.setDouble(eventEnd, forKey:"eventEnd")
+            defaults.setDouble(eventEnd, forKey:"endTime")
             self.performSegueWithIdentifier("showSurvey", sender: self)
 //            self.helpButton.backgroundColor = UIColor.blueColor()
         }
@@ -149,11 +146,7 @@ class HomeViewController: UIViewController {
         print("Errors: " + error.localizedDescription)
     }
     
-//    func btnPushButton(supportButton: circleView)
-//    {
-//        supportButton.fillColor = UIColor.redColor()
-//        
-//    }
+
 
 
 }

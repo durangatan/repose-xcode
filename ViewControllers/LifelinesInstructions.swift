@@ -15,12 +15,6 @@ let consentDocument = ORKConsentDocument()
     consentDocument.title = "Lifelines"
     
     
-    let consentSectionTypes: [ORKConsentSectionType] = [
-        .StudyTasks,
-        .StudySurvey]
-    
-  
-    
     let introSection = ORKConsentSection(type: .StudyTasks)
     introSection.title = "Store Your Lifelines"
     introSection.summary = "Select some contacts who you'd like to be able call immediately when you need help."
