@@ -29,6 +29,8 @@ class LifelineViewController: UIViewController, CNContactPickerDelegate, CNConta
     @IBOutlet weak var phoneNumber: UIButton!
 
     @IBOutlet weak var ends: UITextField!
+    
+    
     @IBAction func cancel(sender: UIButton) {
     
     // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
@@ -49,9 +51,12 @@ class LifelineViewController: UIViewController, CNContactPickerDelegate, CNConta
     var selected: String? = ""
     var lifeline: Lifeline?
     var contacts: [CNContact]?
+    
+    
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
         super.viewDidLoad()
+        
         start.inputView = datePicker
         start.delegate = self
         ends.inputView = datePicker
@@ -73,6 +78,7 @@ class LifelineViewController: UIViewController, CNContactPickerDelegate, CNConta
         
         // Enable the Save button only if the text field has a valid lifeline name.
         checkValidLifelineName()
+        
     }
     
     // MARK: UITextFieldDelegate
