@@ -304,6 +304,7 @@
 				D887AEB71D6235A7002B1F99 /* Default-568h@2x.png */,
 				D887AEC31D62363A002B1F99 /* HomeViewController.swift */,
 				D887AECC1D62363A002B1F99 /* LandingViewController.swift */,
+				0956A11A1D65109C00123E85 /* LayerView.swift */,
 				D887AEBC1D62363A002B1F99 /* LoginViewController.swift */,
 				D887AEBE1D62363A002B1F99 /* ListItem.swift */,
 				D887AEC61D62363A002B1F99 /* MenuController.swift */,
