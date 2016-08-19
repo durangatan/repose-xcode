@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sn5-Cs-QoN">
-
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -554,13 +553,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vqK-So-odL">
-                                <rect key="frame" x="157" y="223" width="240" height="128"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vqK-So-odL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vqK-So-odL" firstAttribute="width" secondAttribute="width" id="B9Q-fM-Lxy"/>
+                            <constraint firstItem="vqK-So-odL" firstAttribute="centerY" secondItem="WsV-FX-1PS" secondAttribute="centerY" id="3Yp-Gf-WeI"/>
+                            <constraint firstItem="vqK-So-odL" firstAttribute="top" secondItem="WsV-FX-1PS" secondAttribute="topMargin" id="KnL-4y-wqC"/>
+                            <constraint firstItem="vqK-So-odL" firstAttribute="centerX" secondItem="WsV-FX-1PS" secondAttribute="centerX" id="YPT-iB-j2V"/>
+                            <constraint firstItem="vqK-So-odL" firstAttribute="width" secondItem="WsV-FX-1PS" secondAttribute="width" id="eev-sy-BZ5"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -569,7 +571,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="mapView" destination="vqK-So-odL" id="snB-E6-sxc"/>
+                        <outlet property="mapView" destination="vqK-So-odL" id="Bxp-l2-C44"/>
                         <outlet property="menuButton" destination="SvV-Wa-jPR" id="Mbl-95-v4T"/>
                     </connections>
                 </viewController>
@@ -606,15 +608,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yu2-Ej-JmO" customClass="ORKLineGraphChartView">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="oRc-RR-WBE">
+                                <rect key="frame" x="40" y="28" width="520" height="397"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Intensity vs Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vt-AI-5Hy">
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yu2-Ej-JmO" customClass="ORKLineGraphChartView">
+                                        <rect key="frame" x="0.0" y="21" width="520" height="376"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yu2-Ej-JmO" firstAttribute="centerY" secondItem="xPn-EC-7Nj" secondAttribute="centerY" id="UYx-EE-cde"/>
-                            <constraint firstItem="yu2-Ej-JmO" firstAttribute="centerX" secondItem="xPn-EC-7Nj" secondAttribute="centerX" id="dDA-QH-6r1"/>
+                            <constraint firstItem="oRc-RR-WBE" firstAttribute="leading" secondItem="xPn-EC-7Nj" secondAttribute="leadingMargin" constant="20" id="RuY-A0-WfQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oRc-RR-WBE" secondAttribute="trailing" constant="20" id="emU-fF-FXe"/>
+                            <constraint firstItem="oRc-RR-WBE" firstAttribute="top" secondItem="siZ-gg-5FB" secondAttribute="bottom" constant="20" id="lzI-Ts-eFP"/>
+                            <constraint firstItem="oRc-RR-WBE" firstAttribute="centerX" secondItem="xPn-EC-7Nj" secondAttribute="centerX" id="vFx-r6-yfF"/>
                         </constraints>
                     </view>
                     <toolbarItems>

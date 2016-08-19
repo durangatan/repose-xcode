@@ -40,6 +40,15 @@ class ProfileViewController: UIViewController, ORKGraphChartViewDataSource, ORKG
     ]
     
     //MARK: Actions
+    
+    func numberOfDivisionsInXAxisForGraphChartView(graphChartView: ORKGraphChartView) -> Int {
+    return 1
+    }
+    
+//    func graphChartView(graphChartView: ORKGraphChartView, titleForXAxisAtPointIndex pointIndex: Int) -> String? {
+//    return ""
+//    }
+    
     func graphChartView(graphChartView: ORKGraphChartView, pointForPointIndex pointIndex: Int, plotIndex: Int) -> ORKRangedPoint {
         return plotPoints[plotIndex][pointIndex]
     }
