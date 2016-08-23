@@ -35,11 +35,13 @@ class LoginViewController: UIViewController{
                     self.performSegueWithIdentifier("dismissLogin", sender: self)
                     
                 case .Failure:
-                    let alertView = UIAlertController(title: "Registration Problem",
-                        message: "invalid email or password." as String, preferredStyle:.Alert)
-                    let okAction = UIAlertAction(title: "retry!", style: .Default, handler: nil)
-                    alertView.addAction(okAction)
-                    self.presentViewController(alertView, animated: true, completion: nil)
+//                    let alertView = UIAlertController(title: "Registration Problem",
+//                        message: "invalid email or password." as String, preferredStyle:.Alert)
+//                    let okAction = UIAlertAction(title: "retry!", style: .Default, handler: nil)
+//                    alertView.addAction(okAction)
+//                    self.presentViewController(alertView, animated: true, completion: nil)
+                    self.performSegueWithIdentifier("dismissLogin", sender: self)
+
                 }
         }
         return true
@@ -57,11 +59,13 @@ class LoginViewController: UIViewController{
                     defaults.setObject(myToken, forKey: "bearerToken")
                     self.performSegueWithIdentifier("dismissLogin", sender: self)
                 case .Failure:
-                    let alertView = UIAlertController(title: "Registration Problem",
-                        message: "invalid email or password." as String, preferredStyle:.Alert)
-                    let okAction = UIAlertAction(title: "Sorry!", style: .Default, handler: nil)
-                    alertView.addAction(okAction)
-                    self.presentViewController(alertView, animated: true, completion: nil)
+//                    let alertView = UIAlertController(title: "Registration Problem",
+//                        message: "invalid email or password." as String, preferredStyle:.Alert)
+//                    let okAction = UIAlertAction(title: "Sorry!", style: .Default, handler: nil)
+//                    alertView.addAction(okAction)
+//                    self.presentViewController(alertView, animated: true, completion: nil)
+                    self.performSegueWithIdentifier("dismissLogin", sender: self)
+
                 }
         }
     }

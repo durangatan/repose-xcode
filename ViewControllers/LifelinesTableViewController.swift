@@ -23,8 +23,6 @@ class LifelinesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         self.view.backgroundColor = UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
         
         if Helper.isInEventState(){
@@ -54,7 +52,6 @@ class LifelinesTableViewController: UITableViewController {
         }
     }
     
-
     
     func loadSampleLifelines() {
         
@@ -100,7 +97,7 @@ class LifelinesTableViewController: UITableViewController {
         cell.phoneNumber.text = lifeline.phone
 
         if !lifeline.isAvailableNow() {
-                        cell.contentView.backgroundColor = colorForIndex(indexPath.row)
+            cell.contentView.backgroundColor = colorForIndex(indexPath.row)
 //            cell.contentView.backgroundColor = UIColor(red: 0.0, green: 0.4, blue: 1.0, alpha: 1.0)
         } else {
             cell.contentView.backgroundColor = colorForIndex(indexPath.row)
@@ -111,8 +108,11 @@ class LifelinesTableViewController: UITableViewController {
 
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+        if Helper.isInEventState() {
+           return false
+        }else{
         return true
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

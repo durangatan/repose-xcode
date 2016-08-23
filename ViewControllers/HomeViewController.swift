@@ -123,7 +123,8 @@ class HomeViewController: UIViewController {
             let eventEnd = CACurrentMediaTime()
             defaults.setDouble(eventEnd, forKey:"endTime")
             self.performSegueWithIdentifier("showSurvey", sender: self)
-//            self.helpButton.backgroundColor = UIColor.blueColor()
+            UINavigationBar.appearance().tintColor =  UIColor(red:0.27, green:0.56, blue:0.89, alpha:1.0)
+
         }
     }
 
